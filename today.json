@@ -1,0 +1,86 @@
+{
+  "date": "2026年8月5日 星期三 · 上面 1 分钟，下面 5 分钟",
+  "stamp": "2026-08-05",
+  "note": "数据时间：拼豆线上数据截至 2026 年 7 月 1 日，销售额为 2025 年全年；潮玩溢价为 2026 年 6 月；「今天」五条为 8 月 1–5 日。",
+  "items": [
+    {
+      "kind": "talk",
+      "title": "一截火箭残骸要撞月球了",
+      "body": "SpaceX 一个报废的火箭上面级，被地月引力甩了好几年，现在算出来会砸在月球背面。撞不着人，但这是头一回有人造垃圾以这种方式撞上去。今天抖音热榜第一。"
+    },
+    {
+      "kind": "talk",
+      "title": "河南出了带薪休假新政",
+      "body": "具体条款还得看文件，但「带薪休假」四个字一上热榜，就说明大家多在意这事。要是效果好，别的省大概率会跟。"
+    },
+    {
+      "kind": "you",
+      "title": "油又贵了，机票反倒便宜了一点",
+      "body": "92 号每升涨 5 毛 4，95 号涨 5 毛 7，今年第十次涨。同一天机票燃油附加费下调：800 公里以上每人 70 元，以下 40 元。开车的多掏，坐飞机的少掏。"
+    },
+    {
+      "kind": "tech",
+      "title": "投资人开始查 AI 的账了",
+      "body": "苹果和 Meta 明明赚得更多，股价还是大跌；微软和亚马逊业绩好，钱就往里涌。以前公司说一句「我们 All in AI」股价就涨，现在得回答「然后呢，赚回来了吗」。这个转向会一路影响到招聘和创业方向。"
+    },
+    {
+      "kind": "tech",
+      "title": "AI 解开了十道没人解开的数学题",
+      "body": "OpenAI 新模型 Astra 干的，证明写成了机器能一条条核验的格式，所以不存在蒙对。菲尔兹奖得主说其中一份他会毫不犹豫推荐给顶级期刊。以前 AI 做的是有答案的题，这次是没答案的。"
+    }
+  ],
+  "sources": [
+    {
+      "name": "腾讯新闻 拼豆热度",
+      "url": "https://news.qq.com/rain/a/20260507A01W8X00"
+    },
+    {
+      "name": "虎嗅 拼豆硬控年轻人",
+      "url": "https://www.huxiu.com/article/4876192.html"
+    },
+    {
+      "name": "21经济网 十亿的生意",
+      "url": "https://www.21jingji.com/article/20260407/herald/ecf9d498312e756a6812b5630142bc42.html"
+    },
+    {
+      "name": "消费日报 拼豆安全",
+      "url": "https://dzb.xfrb.com.cn/Html/2026-07-24/75285.html"
+    },
+    {
+      "name": "投资界 LABUBU降温",
+      "url": "https://news.pedaily.cn/202607/566000.shtml"
+    },
+    {
+      "name": "澎湃 潮玩下半场",
+      "url": "https://m.thepaper.cn/newsDetail_forward_33325330"
+    },
+    {
+      "name": "36氪 泡泡玛特踩刹车",
+      "url": "https://36kr.com/p/3875690969640969"
+    },
+    {
+      "name": "新浪财经 AI硬件",
+      "url": "https://finance.sina.com.cn/stock/t/2026-01-28/doc-inhivmkz9104400.shtml"
+    },
+    {
+      "name": "艾媒 新消费白皮书",
+      "url": "https://www.iimedia.cn/c400/109027.html"
+    },
+    {
+      "name": "今日热榜 抖音",
+      "url": "https://rebang.today/home?tab=douyin"
+    },
+    {
+      "name": "新浪财经 操盘必读",
+      "url": "https://finance.sina.com.cn/stock/cpbd/2026-08-05/doc-inimffsv4821989.shtml"
+    },
+    {
+      "name": "新浪财经 财经早报",
+      "url": "https://finance.sina.com.cn/stock/y/2026-08-03/doc-inikytnz2995558.shtml"
+    },
+    {
+      "name": "BuildFastWithAI",
+      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-august-2-2026"
+    }
+  ]
+}

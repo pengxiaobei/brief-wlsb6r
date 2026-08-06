@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+<title>今天 + 本周 · 2026年8月5日</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; }
+  h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
+  ul, ol { padding: 0; list-style: none; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<style>
+  :root {
+    --paper:       #FAFBFC;
+    --ink:         #0F1418;
+    --ink-body:    #333F49;
+    --ink-faint:   #7A8792;
+    --hair:        #E3E8ED;
+    --fill:        #F0F3F6;
+
+    --talk:        #14625E;
+    --talk-fill:   #E4F0EE;
+    --you:         #A83E10;
+    --you-fill:    #FCEBE1;
+    --tech:        #35558A;
+    --tech-fill:   #E6ECF6;
+
+    --sans: "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Microsoft YaHei", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:     #0F1216;
+      --ink:       #EAEFF4;
+      --ink-body:  #B3BFC9;
+      --ink-faint: #75828D;
+      --hair:      #232A31;
+      --fill:      #191F25;
+
+      --talk:      #5CC0B8;
+      --talk-fill: #122E2C;
+      --you:       #F2884F;
+      --you-fill:  #331B0F;
+      --tech:      #8AAEE0;
+      --tech-fill: #182233;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:     #0F1216;
+    --ink:       #EAEFF4;
+    --ink-body:  #B3BFC9;
+    --ink-faint: #75828D;
+    --hair:      #232A31;
+    --fill:      #191F25;
+    --talk:      #5CC0B8;
+    --talk-fill: #122E2C;
+    --you:       #F2884F;
+    --you-fill:  #331B0F;
+    --tech:      #8AAEE0;
+    --tech-fill: #182233;
+  }
+
+  :root[data-theme="light"] {
+    --paper:     #FAFBFC;
+    --ink:       #0F1418;
+    --ink-body:  #333F49;
+    --ink-faint: #7A8792;
+    --hair:      #E3E8ED;
+    --fill:      #F0F3F6;
+    --talk:      #14625E;
+    --talk-fill: #E4F0EE;
+    --you:       #A83E10;
+    --you-fill:  #FCEBE1;
+    --tech:      #35558A;
+    --tech-fill: #E6ECF6;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink-body);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .sheet {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 44px 22px 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ---------- 报头 ---------- */
+
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .masthead h1 {
+    margin: 0;
+    font-size: clamp(30px, 8vw, 40px);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+
+  .masthead .date {
+    font-size: 15px;
+    color: var(--ink-faint);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---------- 大区标题 ---------- */
+
+  .part {
+    margin-top: 68px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .part > h2 {
+    margin: 0;
+    font-size: clamp(26px, 7vw, 32px);
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  .part > .sub {
+    margin: 10px 0 0;
+    font-size: 15.5px;
+    color: var(--ink-faint);
+    line-height: 1.7;
+  }
+
+  .part > .sub strong { color: var(--ink-body); font-weight: 600; }
+
+  /* ---------- 今天：五条 ---------- */
+
+  .today {
+    list-style: none;
+    margin: 40px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+  }
+
+  .today li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    align-self: flex-start;
+    padding: 3px 10px;
+    border-radius: 3px;
+    line-height: 1.6;
+  }
+
+  .label.talk { color: var(--talk); background: var(--talk-fill); }
+  .label.you  { color: var(--you);  background: var(--you-fill); }
+  .label.tech { color: var(--tech); background: var(--tech-fill); }
+
+  .today h3 {
+    margin: 0;
+    font-size: clamp(21px, 5.4vw, 24px);
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+
+  .today p {
+    margin: 0;
+    font-size: 16.5px;
+    line-height: 1.85;
+    color: var(--ink-body);
+  }
+
+  /* ---------- 本周：趋势 ---------- */
+
+  .trends {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  .trend {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .trend h3 {
+    margin: 0;
+    font-size: clamp(23px, 6vw, 27px);
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+
+  /* 阶段条：四段，亮起当前所在的那段 */
+  .stage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+  }
+
+  .stage i {
+    font-style: normal;
+    font-size: 12.5px;
+    font-weight: 600;
+    text-align: center;
+    padding: 7px 2px;
+    background: var(--fill);
+    color: var(--ink-faint);
+    line-height: 1.5;
+    border-radius: 2px;
+  }
+
+  /* 亮起的那段用底色做字，浅色主题下是白字，深色主题下是深字——两边都够对比 */
+  .stage i.on { color: var(--paper); }
+
+  .stage.up   i.on { background: var(--talk); }
+  .stage.hot  i.on { background: var(--you); }
+  .stage.cold i.on { background: var(--tech); }
+
+  .facts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .facts li {
+    font-size: 16.5px;
+    line-height: 1.8;
+    color: var(--ink-body);
+    padding-left: 18px;
+    position: relative;
+  }
+
+  .facts li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.82em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--hair);
+  }
+
+  .facts b {
+    color: var(--ink);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .verdict {
+    background: var(--fill);
+    border-radius: 4px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .verdict::before {
+    content: "说人话";
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--ink-faint);
+  }
+
+  .verdict p {
+    margin: 0;
+    font-size: 16.5px;
+    line-height: 1.85;
+    color: var(--ink);
+  }
+
+  .verdict strong { font-weight: 700; }
+
+  /* ---------- 尺子 ---------- */
+
+  .ruler {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ruler h3 {
+    margin: 0;
+    font-size: clamp(22px, 5.6vw, 26px);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+
+  .ruler p { margin: 0; font-size: 16.5px; line-height: 1.85; }
+
+  .ruler p strong { color: var(--ink); font-weight: 700; }
+
+  .signals {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .signals li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .signals span {
+    font-size: 16.5px;
+    color: var(--ink);
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  .signals em {
+    font-style: normal;
+    font-size: 14.5px;
+    color: var(--ink-faint);
+    line-height: 1.6;
+  }
+
+  .signals li:nth-child(-n+2) em { color: var(--talk); }
+  .signals li:nth-last-child(-n+2) em { color: var(--you); }
+
+  /* ---------- 说明 ---------- */
+
+  .colophon {
+    margin-top: 76px;
+    padding-top: 28px;
+    border-top: 1px solid var(--hair);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .colophon h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .colophon p {
+    margin: 0;
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: var(--ink-body);
+  }
+
+  .colophon p strong { color: var(--ink); font-weight: 700; }
+
+  .src {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
+
+  .src a {
+    color: var(--ink-faint);
+    text-decoration: none;
+    border-bottom: 1px solid var(--hair);
+    padding-bottom: 1px;
+  }
+
+  .src a:hover,
+  .src a:focus-visible { color: var(--talk); border-bottom-color: var(--talk); }
+
+  a:focus-visible { outline: 2px solid var(--talk); outline-offset: 3px; border-radius: 2px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+
+  @media (max-width: 380px) {
+    .stage i { font-size: 11.5px; padding: 6px 1px; }
+  }
+</style>
+
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>今天 + 本周</h1>
+    <p class="date">2026年8月5日 星期三 · 上面 1 分钟，下面 5 分钟</p>
+  </header>
+
+  <!-- ===================== 今天 ===================== -->
+  <section class="part">
+    <h2>今天</h2>
+
+    <ol class="today">
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>一截火箭残骸要撞月球了</h3>
+        <p>SpaceX 一个报废的火箭上面级，被地月引力甩了好几年，现在算出来会砸在月球背面。撞不着人，但这是头一回有人造垃圾以这种方式撞上去。今天抖音热榜第一。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>河南出了带薪休假新政</h3>
+        <p>具体条款还得看文件，但「带薪休假」四个字一上热榜，就说明大家多在意这事。要是效果好，别的省大概率会跟。</p>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>油又贵了，机票反倒便宜了一点</h3>
+        <p>92 号每升涨 5 毛 4，95 号涨 5 毛 7，今年第十次涨。同一天机票燃油附加费下调：800 公里以上每人 70 元，以下 40 元。开车的多掏，坐飞机的少掏。</p>
+      </li>
+
+      <li>
+        <span class="label tech">科技</span>
+        <h3>投资人开始查 AI 的账了</h3>
+        <p>苹果和 Meta 明明赚得更多，股价还是大跌；微软和亚马逊业绩好，钱就往里涌。以前公司说一句「我们 All in AI」股价就涨，现在得回答「然后呢，赚回来了吗」。这个转向会一路影响到招聘和创业方向。</p>
+      </li>
+
+      <li>
+        <span class="label tech">科技</span>
+        <h3>AI 解开了十道没人解开的数学题</h3>
+        <p>OpenAI 新模型 Astra 干的，证明写成了机器能一条条核验的格式，所以不存在蒙对。菲尔兹奖得主说其中一份他会毫不犹豫推荐给顶级期刊。以前 AI 做的是有答案的题，这次是没答案的。</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ===================== 本周 ===================== -->
+  <section class="part">
+    <h2>本周：什么在冒头，什么在凉</h2>
+
+    <div class="trends">
+
+      <article class="trend">
+        <h3>拼豆</h3>
+        <div class="stage hot">
+          <i>刚冒头</i><i>正在起飞</i><i class="on">已经很热</i><i>在降温</i>
+        </div>
+        <ul class="facts">
+          <li>抖音相关播放 <b>387.8 亿</b>，小红书曝光 <b>100 亿</b>次，话题「我染上了拼豆」浏览超 <b>70 亿</b></li>
+          <li>2025 年电商销售额 <b>2.91 亿</b>元，同比涨了近 <b>9 倍</b>；机构预测 2026 年市场规模逼近 <b>10 亿</b></li>
+          <li>北京上海广州的拼豆体验店各自都<b>超过 200 家</b>，连汤泉、剧本杀、桌游店都加了这个项目</li>
+          <li>7 月已经出现「勿让拼豆热度危及消费者安全」这类报道</li>
+        </ul>
+        <div class="verdict">
+          <p>你要是现在才听说拼豆，那它对你已经不是风口了，是常识。注意最后那条——<strong>安全质疑上了媒体，通常是一个东西热度周期的后半段，不是前半段。</strong></p>
+        </div>
+      </article>
+
+      <article class="trend">
+        <h3>Labubu 和整个潮玩</h3>
+        <div class="stage cold">
+          <i>刚冒头</i><i>正在起飞</i><i>已经很热</i><i class="on">在降温</i>
+        </div>
+        <ul class="facts">
+          <li>2026 年 6 月溢价崩了：普通款<b>几小时内跌破发行价</b>，隐藏款溢价从 <b>25 倍</b>掉到 <b>5 倍</b></li>
+          <li>行业一整年没等来「第二个 Labubu」；截至 7 月，注册在案的潮玩企业超过 <b>3.6 万家</b></li>
+          <li>泡泡玛特创始人自己的说法：2025 年像 F1 新秀，2026 年「需要进维修站，加油换胎」</li>
+        </ul>
+        <div class="verdict">
+          <p>这条比任何上涨消息都值钱——它让你看清一个风口结束长什么样：<strong>溢价崩掉、同行挤满、连头部自己都说要减速。</strong>这三件事凑齐，就是尾声。以后看别的东西，可以拿这个当尺子。</p>
+        </div>
+      </article>
+
+      <article class="trend">
+        <h3>视频播客</h3>
+        <div class="stage up">
+          <i class="on">刚冒头</i><i>正在起飞</i><i>已经很热</i><i>在降温</i>
+        </div>
+        <ul class="facts">
+          <li>正在从小众往主流走，被行业点名为新的内容风口</li>
+          <li>越来越多「互联网原住民」带着自己的专业和网感入局</li>
+        </ul>
+        <div class="verdict">
+          <p>这周唯一一个还在早期的。说白了就是「播客但录像」，把音频播客搬到视频平台上。要做内容的话，这个位置比拼豆好得多——但也意味着还没被验证。</p>
+        </div>
+      </article>
+
+      <article class="trend">
+        <h3>原生 AI 硬件</h3>
+        <div class="stage hot">
+          <i>刚冒头</i><i class="on">正在起飞</i><i>已经很热</i><i>在降温</i>
+        </div>
+        <ul class="facts">
+          <li>国内大厂密集上产品：飞书「录音豆」、阿里 AI 眼镜、百度小度</li>
+          <li>荣耀那台带机械臂的手机（8 月 12 号发布）也是这个赛道</li>
+          <li>整个「情绪经济」盘子约 <b>2.72 万亿</b>元，AI 陪伴类产品算在里头</li>
+        </ul>
+        <div class="verdict">
+          <p>大厂全进场了，说明早期窗口关了；但离普及还远，所以还在起飞段。这类东西可以先当消费者观望——<strong>第一批产品通常都不好用。</strong></p>
+        </div>
+      </article>
+
+      <article class="trend">
+        <h3>三个小众正在变主流的</h3>
+        <div class="stage up">
+          <i class="on">刚冒头</i><i>正在起飞</i><i>已经很热</i><i>在降温</i>
+        </div>
+        <ul class="facts">
+          <li><b>网咖 2.0</b>——网吧加简餐，从上网的地方变成年轻人的社交据点</li>
+          <li><b>汽车音响改装</b>——2025 年市场已经 <b>186 亿</b>，年复合增长 <b>12.4%</b>，其实早就不小众了</li>
+          <li><b>笔尖密逃</b>——密室新玩法，得现场写一篇不少于 1000 字的文章才能开门出来</li>
+        </ul>
+        <div class="verdict">
+          <p>放这三个不是让你去干，是给你看「小众怎么变主流」长什么样：都是<strong>在一个老生意上加一件不相干的事</strong>（网吧 + 吃饭、密室 + 写作文）。这个模式复用性很强。</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer class="colophon">
+    <p class="note">数据时间：拼豆线上数据截至 2026 年 7 月 1 日，销售额为 2025 年全年；潮玩溢价为 2026 年 6 月；「今天」五条为 8 月 1–5 日。</p>
+
+    <h2>来源</h2>
+    <ul class="src">
+      <li><a href="https://news.qq.com/rain/a/20260507A01W8X00">腾讯新闻 拼豆热度</a></li>
+      <li><a href="https://www.huxiu.com/article/4876192.html">虎嗅 拼豆硬控年轻人</a></li>
+      <li><a href="https://www.21jingji.com/article/20260407/herald/ecf9d498312e756a6812b5630142bc42.html">21经济网 十亿的生意</a></li>
+      <li><a href="https://dzb.xfrb.com.cn/Html/2026-07-24/75285.html">消费日报 拼豆安全</a></li>
+      <li><a href="https://news.pedaily.cn/202607/566000.shtml">投资界 LABUBU降温</a></li>
+      <li><a href="https://m.thepaper.cn/newsDetail_forward_33325330">澎湃 潮玩下半场</a></li>
+      <li><a href="https://36kr.com/p/3875690969640969">36氪 泡泡玛特踩刹车</a></li>
+      <li><a href="https://finance.sina.com.cn/stock/t/2026-01-28/doc-inhivmkz9104400.shtml">新浪财经 AI硬件</a></li>
+      <li><a href="https://www.iimedia.cn/c400/109027.html">艾媒 新消费白皮书</a></li>
+      <li><a href="https://rebang.today/home?tab=douyin">今日热榜 抖音</a></li>
+      <li><a href="https://finance.sina.com.cn/stock/cpbd/2026-08-05/doc-inimffsv4821989.shtml">新浪财经 操盘必读</a></li>
+      <li><a href="https://finance.sina.com.cn/stock/y/2026-08-03/doc-inikytnz2995558.shtml">新浪财经 财经早报</a></li>
+      <li><a href="https://www.buildfastwithai.com/blogs/ai-news-today-august-2-2026">BuildFastWithAI</a></li>
+    </ul>
+  </footer>
+
+</div>
+
+</body>
+</html>
