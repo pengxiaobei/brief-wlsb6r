@@ -8,8 +8,9 @@
 |---|---|---|
 | `template.html` | **没人自动改** | 页面外壳 + 全部 CSS。排版已在真机验证过，别动 |
 | `today.json` | 日更任务 | 当天 5 条的结构化内容 |
-| `weekly.html` | 周更任务 | 「本周」那一段的 HTML 片段 |
 | `watchlist.json` | 周更任务 | 观察名单状态，周更靠它做 diff |
+| `weekly.json` | 周更任务 | 本周的变化日志 |
+| `prompts/` | 手改 | 两个任务的提示词。改文风改这里，不用重建任务 |
 | `index.html` | `build.py` 生成 | **不要手改**，改了下次会被覆盖 |
 | `archive/` | `build.py` 生成 | 每天存一份 |
 
@@ -21,7 +22,7 @@
 python3 build.py
 ```
 
-它把 `today.json` + `weekly.html` 灌进 `template.html`，生成 `index.html` 和当天存档。
+它把 `today.json` + `watchlist.json` + `weekly.json` 灌进 `template.html`，生成 `index.html` 和当天存档。
 自动任务只写 JSON、不碰 HTML，所以改不坏排版；内容里的特殊字符会被转义，注入不了。
 
 ## today.json 长这样

@@ -1,0 +1,5 @@
+{
+  "_说明": "周更的变化日志。type 只能是 new/up/down/out。周更任务每周改写这个文件和 watchlist.json，不碰 HTML。",
+  "updated": "2026-08-06",
+  "changes": []
+}

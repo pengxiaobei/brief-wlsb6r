@@ -42,6 +42,72 @@ def build_today(items):
     return "\n".join(out)
 
 
+STAGES = ["刚冒头", "正在起飞", "已经很热", "在降温"]
+# 阶段配色：早期用 up，热的用 hot，凉的用 cold
+STAGE_TONE = {"刚冒头": "up", "正在起飞": "up", "已经很热": "hot", "在降温": "cold"}
+CHANGE_MARK = {"up": "⬆", "down": "⬇", "new": "🆕", "out": "❌"}
+
+
+def stage_bar(stage):
+    cells = "".join(
+        f'<i class="on">{s}</i>' if s == stage else f"<i>{s}</i>" for s in STAGES
+    )
+    return f'        <div class="stage {STAGE_TONE.get(stage, "up")}">\n          {cells}\n        </div>'
+
+
+def build_weekly(watchlist, weekly):
+    """「本周」那一段：先讲这周的变化，再给一张全景板。
+
+    刚冒头排最前，在降温排最后 —— 早期的对读者最有价值。
+    """
+    out = ['    <div class="trends">']
+    changes = weekly.get("changes", [])
+
+    if changes:
+        order = {"new": 0, "up": 1, "down": 2, "out": 3}
+        for c in sorted(changes, key=lambda x: order.get(x.get("type"), 9)):
+            mark = CHANGE_MARK.get(c.get("type"), "·")
+            if c.get("type") == "new":
+                head = f'{mark} 新进名单：{esc(c["name"])}'
+            elif c.get("type") == "out":
+                head = f'{mark} 移出名单：{esc(c["name"])}'
+            else:
+                head = f'{mark} {esc(c["name"])}：{esc(c.get("from", ""))} → {esc(c.get("to", ""))}'
+            out += ['', '      <article class="trend">', f"        <h3>{head}</h3>"]
+            if c.get("to"):
+                out.append(stage_bar(c["to"]))
+            out += [
+                '        <div class="verdict">',
+                f'          <p>{esc(c.get("why", ""))}</p>',
+                "        </div>",
+                "      </article>",
+            ]
+    else:
+        n = len(watchlist.get("items", []))
+        out += [
+            "",
+            '      <article class="trend">',
+            "        <h3>这周没动静</h3>",
+            '        <div class="verdict">',
+            f"          <p>名单上 {n} 项全部维持原状，没有换阶段的，也没有新冒出来的。</p>",
+            "        </div>",
+            "      </article>",
+        ]
+
+    # 全景板：按阶段分组，让读者随时看得到整个名单
+    items = watchlist.get("items", [])
+    if items:
+        out += ["", '      <article class="trend">', "        <h3>名单全景</h3>", '        <ul class="facts">']
+        for st in STAGES:
+            names = [esc(i["name"]) for i in items if i.get("stage") == st]
+            if names:
+                out.append(f"          <li><b>{st}</b>　{'、'.join(names)}</li>")
+        out += ["        </ul>", "      </article>"]
+
+    out.append("    </div>")
+    return "\n".join(out)
+
+
 def build_sources(sources):
     if not sources:
         return ""
@@ -60,9 +126,17 @@ def main():
     template = (ROOT / "template.html").read_text(encoding="utf-8")
     today = json.loads((ROOT / "today.json").read_text(encoding="utf-8"))
 
-    # weekly.html 由周更任务维护；还没有就先留空，不影响日更
-    wk_path = ROOT / "weekly.html"
-    weekly = wk_path.read_text(encoding="utf-8").rstrip("\n") if wk_path.exists() else ""
+    # 「本周」那段由 watchlist.json + weekly.json 生成，周更任务只写这两个 JSON。
+    # 缺文件时退回已有的 weekly.html，保证日更不会因为周更没跑过就崩。
+    wl_path, wk_path = ROOT / "watchlist.json", ROOT / "weekly.json"
+    if wl_path.exists() and wk_path.exists():
+        weekly = build_weekly(
+            json.loads(wl_path.read_text(encoding="utf-8")),
+            json.loads(wk_path.read_text(encoding="utf-8")),
+        )
+    else:
+        legacy = ROOT / "weekly.html"
+        weekly = legacy.read_text(encoding="utf-8").rstrip("\n") if legacy.exists() else ""
 
     page = template
     page = page.replace("<!--DATE-->", esc(today.get("date", "")))
