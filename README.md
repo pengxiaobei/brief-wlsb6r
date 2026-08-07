@@ -55,25 +55,28 @@ python3 build.py
 
 ## 怎么跑起来的
 
-两个云端定时任务，都挂着这个仓库：
+全自动，跑在 GitHub Actions 上，不依赖任何本地机器。
 
-| 任务 | 时间 | 改哪些文件 |
+| 工作流 | 时间 | 改哪些文件 |
 |---|---|---|
-| 日更 5 条 | 每天 07:00（北京） | `today.json` |
-| 周更变化日志 | 每周一 09:00（北京） | `watchlist.json`、`weekly.json` |
+| `.github/workflows/daily.yml` | 每天 07:00（北京） | `today.json` |
+| `.github/workflows/weekly.yml` | 每周一 09:00（北京） | `watchlist.json`、`weekly.json` |
 
-任务的提示词很短，只说「读 `prompts/xxx.md` 并严格执行」。
-**想调文风或选题标准，改 `prompts/` 里的文件就行，不用动任务配置。**
+每次运行：跑 Claude 生成内容 → `build.py` 出页面 → 用内置 `GITHUB_TOKEN` 提交 → `notify.py` 发飞书。
 
-## ⚠ 会静默失效的地方
+**想调文风或选题标准，改 `prompts/` 里那两个文件就行**，不用动工作流。
 
-云端环境自带的 git 凭据是**只读**的，推不上去，所以两个任务的提示词里嵌了一个细粒度 PAT
-（只能写这一个仓库的 Contents）。
+想手动补跑：仓库 Actions 页面点 "Run workflow"，或者 `gh workflow run daily.yml`。
 
-**这个令牌有有效期，到期后简报会停止更新，而且不会有任何报错。**
+## 两个 secret
 
-本地有个 `notify-feishu.sh` 每天早上抓 `today.json` 推飞书提醒，
-它会检查 `stamp` 是不是今天——不是就推一条红色警告。这是目前唯一的失效预警。
+- `CLAUDE_CODE_OAUTH_TOKEN` —— `claude setup-token` 生成，走 Max 订阅，不额外计费
+- `FEISHU_WEBHOOK` —— 群机器人地址。**卡片标题必须含「简报」二字**，群里配了关键词校验
 
-令牌过期后要做的：重新生成一个（Contents: Read and write，只勾这个仓库），
-然后更新两个任务提示词里的令牌，以及 `~/.config/daily-brief/gh-token`。
+## 停更了怎么办
+
+`notify.py` 每次都会检查 `today.json` 的日期是不是今天，不是就发**红色告警卡片**——
+所以停更不会静默，飞书里能看到。
+
+收到告警后去仓库 Actions 页面看最近一次运行挂在哪一步。最可能的原因是订阅令牌过期，
+重新跑一次 `claude setup-token` 换掉那个 secret 即可。
