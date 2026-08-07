@@ -1,0 +1,77 @@
+name: 日更 5 条
+
+on:
+  schedule:
+    # 23:00 UTC = 次日 07:00 北京时间
+    - cron: '0 23 * * *'
+  workflow_dispatch:        # 手动也能触发，方便验证和补跑
+
+# 用内置的 GITHUB_TOKEN 推仓库，不需要额外的 PAT
+permissions:
+  contents: write
+
+# 同一时间只跑一个，避免手动触发和定时触发撞车导致推送冲突
+concurrency:
+  group: brief-write
+  cancel-in-progress: false
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 装 Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: 生成今天的内容
+        id: generate
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          claude -p "$(cat prompts/daily.md)
+
+          补充说明：你在仓库根目录工作。写完 today.json 后跑 python3 build.py 生成页面。
+          不要执行任何 git 命令，也不要跑 publish.py —— 工作流会处理提交和发布。" \
+            --model sonnet \
+            --permission-mode acceptEdits \
+            --allowedTools "Read" "Write" "Edit" "WebSearch" "WebFetch" "Bash(python3 *)" "Bash(date *)" "Bash(cat *)" "Bash(ls *)"
+
+      - name: 检查内容是不是今天的
+        id: check
+        run: |
+          STAMP=$(python3 -c "import json;print(json.load(open('today.json'))['stamp'])")
+          TODAY=$(date -u -d '+8 hours' +%Y-%m-%d)   # 按北京时间算
+          echo "stamp=$STAMP  today=$TODAY"
+          if [ "$STAMP" = "$TODAY" ]; then
+            echo "fresh=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "fresh=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::today.json 是 $STAMP，不是今天（$TODAY）"
+          fi
+
+      - name: 提交并推送
+        if: steps.check.outputs.fresh == 'true'
+        run: |
+          git config user.name  "daily-brief[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "没有改动，跳过提交"
+          else
+            git commit -m "日更 $(date -u -d '+8 hours' +%Y-%m-%d)"
+            git push
+          fi
+
+      # 不管上面成没成都要发：失败时飞书会收到红色告警，不会静默无声
+      - name: 发飞书
+        if: always()
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+        run: python3 notify.py

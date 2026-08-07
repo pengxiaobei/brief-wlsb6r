@@ -1,0 +1,68 @@
+name: 周更变化日志
+
+on:
+  schedule:
+    # 01:00 UTC 周一 = 周一 09:00 北京时间
+    - cron: '0 1 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# 跟日更共用一个并发组：两者改的文件不同，但都要推同一个分支，
+# 排队跑可以避免 push 撞车
+concurrency:
+  group: brief-write
+  cancel-in-progress: false
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30      # 要逐项复查名单，比日更慢
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: 装 Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: 复查名单，更新变化日志
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          claude -p "$(cat prompts/weekly.md)
+
+          补充说明：你在仓库根目录工作。只改 watchlist.json 和 weekly.json，
+          然后跑 python3 build.py 生成页面。
+          不要执行任何 git 命令 —— 工作流会处理提交。" \
+            --model sonnet \
+            --permission-mode acceptEdits \
+            --allowedTools "Read" "Write" "Edit" "WebSearch" "WebFetch" "Bash(python3 *)" "Bash(date *)" "Bash(cat *)" "Bash(ls *)"
+
+      - name: 校验两个 JSON 没写坏
+        run: |
+          python3 -c "
+          import json
+          w = json.load(open('watchlist.json'))
+          k = json.load(open('weekly.json'))
+          stages = {'刚冒头','正在起飞','已经很热','在降温'}
+          bad = [i['name'] for i in w['items'] if i.get('stage') not in stages]
+          assert not bad, f'这些项的 stage 不合法: {bad}'
+          print(f'✓ 名单 {len(w[\"items\"])} 项，本周变化 {len(k.get(\"changes\", []))} 条')
+          "
+
+      - name: 提交并推送
+        run: |
+          git config user.name  "weekly-brief[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "名单没变化，跳过提交"
+          else
+            git commit -m "周更 $(date -u -d '+8 hours' +%Y-%m-%d)"
+            git push
+          fi
