@@ -165,7 +165,16 @@ def build_column(col):
     """
     if not col or not col.get("points"):
         return ""
+
     who = esc(col.get("who", ""))
+
+    # 模型很容易在这里写超 —— 提示词说的是每条最多两句、60 字。
+    # 不拦（拦了整轮就废了），但要在 CI 日志里留个声，长期超标才看得见。
+    long = [p for p in col["points"] if len(p) > 90]
+    if long:
+        print(f"· 提醒：{who or '专栏'}那块有 {len(long)}/{len(col['points'])} 条超过 90 字，"
+              f"最长 {max(len(p) for p in long)} 字 —— 碎片时间读着会累")
+
     head = [
         '  <section class="part">',
         f"    <h2>{who}昨晚说了什么</h2>",
