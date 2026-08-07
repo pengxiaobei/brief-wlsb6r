@@ -524,7 +524,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月7日 星期五 · 前 5 条 1 分钟，全部约 3 分钟</p>
-    <p class="updated">共 11 条</p>
+    <p class="updated">最后更新 17:00 · 共 12 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -532,10 +532,28 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>机票退改签更宽松，燃油费也降了</h3>
+        <p>东方航空新规定：大部分经济舱机票提前14天可以免费退改签，不扣手续费；航班晚点超过15分钟（以前的标准是30分钟）也能免费改签或退票。另外国内航线燃油附加费从8月5号起又降了一次，800公里以内的航线降到40元、以上降到70元，比之前便宜10到30元。最近要坐飞机的话，这两条都能帮你省点钱、少些折腾。</p>
+      </li>
+
+      <li class="divider">
+        <span>更早</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>台风逼近，东南沿海本周末要防范</h3>
         <p>今天立秋，不过三伏还没出，该热还热。超强台风“白海豚”这两天靠近华东沿海，预计9号下午到10号早上在浙江、福建一带登陆，江浙沪闽这几天留意预警、少去海边、检查好门窗。华北、华南这几天还有强降雨风险，出门尽量绕开低洼路段和山路。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>北京今天已发布暴雨蓝色预警和雷电黄色预警，下午到半夜有强降雨伴7级以上大风，延庆、怀柔、密云、昌平、门头沟、房山这几个区受影响最明显，北京的朋友今晚出行躲着积水路段。</p>
+        </div>
       </li>
 
       <li>
@@ -548,6 +566,10 @@
         <span class="label you">影响你</span>
         <h3>内存暴涨，手机电脑要涨价了</h3>
         <p>这半年内存芯片价格涨了好几倍，联想、戴尔、惠普都上调了报价，笔记本最多涨5000块，手机中端机型也涨了一两百。这轮缺货可能要持续到2027年甚至2028年。如果你最近正打算换手机电脑，建议别等，大概率越等越贵。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>存储大厂高管透露，这个季度内存和闪存价格还要接着涨，内存合约价预计再涨两到三成，闪存涨三成半到四成，缺货可能要拖到2027年下半年到2028年才缓解。该换的电子产品真别再拖了。</p>
+        </div>
       </li>
 
       <li>
@@ -596,6 +618,10 @@
         <span class="label talk">在聊</span>
         <h3>iPhone18Pro曝12项升级</h3>
         <p>网上流传的爆料显示，苹果下一代iPhone18 Pro会换上更先进的芯片，主摄镜头能手动调节进光量，还传首次支持没网络信号时靠卫星刷网页。这些都还是传闻，新机预计9月发布，到时候才有准信。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>有爆料说iPhone18 Pro起售价可能要破万，往1万到1.1万一部走，比现在的Pro系列贵不少——不过这还是预测，具体价格得等9月发布会才知道。</p>
+        </div>
       </li>
     </ol>
   </section>
@@ -642,6 +668,11 @@
       <li><a href="https://finance.sina.com.cn/jjxw/2026-08-07/doc-inimmayz3664996.shtml">新浪财经-宇树科技8月10日申购</a></li>
       <li><a href="https://www.oschina.net/news/486035">OSCHINA-Qwen3.8-Max发布</a></li>
       <li><a href="https://digi.china.com/digi/20260807/202608071935441.html">中华网-iPhone18Pro曝12项升级</a></li>
+      <li><a href="https://news.china.com/socialgd/10000169/20260807/49661269.html">中华网-东航发布退改签新规</a></li>
+      <li><a href="https://www.ithome.com/0/984/222.htm">IT之家-国内航线燃油附加费8月5日起下调</a></li>
+      <li><a href="https://www.news.cn/politics/20260807/d31e4432171a4fda94f01b4b08c46907/c.html">新华网-北京将迎短时强降水</a></li>
+      <li><a href="https://news.china.com/socialgd/10000169/20260807/49661298.html">中华网-iPhone18Pro价格预测破万</a></li>
+      <li><a href="https://www.163.com/dy/article/L1D4EJ5F0511B8LM.html">网易-DDR4内存价格Q3预估环比涨50%</a></li>
     </ul>
   </footer>
 
@@ -653,7 +684,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-07/0";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-07/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
