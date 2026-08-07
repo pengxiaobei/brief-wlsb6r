@@ -51,6 +51,11 @@ jobs:
           echo "at=$AT" >> "$GITHUB_OUTPUT"
           echo "本轮：$AT（$(date '+%Y-%m-%d %H:%M %Z')）"
 
+      # 抓取放在 Claude 之前，用脚本确定性地拿 —— 微信原文有验证墙，模型自己 fetch 拿不到。
+      # 抓不到不会让这步失败，当天少这一块而已。
+      - name: 抓猫笔刀昨晚那篇
+        run: python3 fetch_column.py
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -67,6 +72,7 @@ jobs:
           补充说明：
           - 你在仓库根目录工作。
           - **本轮时间是 ${{ steps.round.outputs.at }}** —— 提示词里所有「本轮时间」都填这个值。
+          - 猫笔刀那篇已经抓好在 column_raw.txt（没这个文件就是没抓到，跳过那一块）。
           - 改完 today.json 后跑 python3 build.py 生成页面。
           - 如果本轮空转（既没新事也没新进展），就什么都别改，也别跑 build.py，直接结束。
           - 不要执行任何 git 命令，工作流会处理提交和发布。" \

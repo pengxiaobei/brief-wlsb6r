@@ -157,6 +157,31 @@ def build_weekly(watchlist, weekly):
     return "\n".join(out)
 
 
+def build_column(col):
+    """「猫笔刀昨晚说了什么」那一段。
+
+    没抓到（他没更新、或者 wechat2rss 挂了）时返回空串 —— 整块从页面上消失，
+    而不是留个空标题。这是别人的观点，不是简报自己的内容，缺了就该干净地缺掉。
+    """
+    if not col or not col.get("points"):
+        return ""
+    who = esc(col.get("who", ""))
+    head = [
+        '  <section class="part">',
+        f"    <h2>{who}昨晚说了什么</h2>",
+    ]
+    meta = " · ".join(p for p in (
+        f'《{esc(col["title"])}》' if col.get("title") else "",
+        esc(col.get("when", "")),
+    ) if p)
+    if meta:
+        head.append(f'    <p class="sub">{meta}</p>')
+    head += ["", '    <ul class="facts column">']
+    head += [f"      <li>{esc(p)}</li>" for p in col["points"]]
+    head += ["    </ul>", "  </section>"]
+    return "\n".join(head)
+
+
 def build_updated(today):
     """报头第二行：更新到哪一轮了、今天一共几条。
 
@@ -208,6 +233,7 @@ def main():
     page = page.replace("<!--DATE-->", esc(today.get("date", "")))
     page = page.replace("<!--UPDATED-->", build_updated(today))
     page = page.replace("    <!--TODAY-->", build_today(today.get("items", [])))
+    page = page.replace("  <!--COLUMN-->", build_column(today.get("column")))
     page = page.replace("    <!--WEEKLY-->", weekly)
     page = page.replace("<!--NOTE-->", esc(today.get("note", "")))
     page = page.replace("    <!--SOURCES-->", build_sources(today.get("sources", [])))
@@ -215,8 +241,8 @@ def main():
     # 顺便把内容里万一出现的引号转义掉，免得整段脚本被搞坏。
     page = page.replace("<!--BUILT-->", json.dumps(built))
 
-    left = [p for p in ("<!--DATE-->", "<!--UPDATED-->", "<!--TODAY-->", "<!--WEEKLY-->",
-                        "<!--NOTE-->", "<!--SOURCES-->", "<!--BUILT-->") if p in page]
+    left = [p for p in ("<!--DATE-->", "<!--UPDATED-->", "<!--TODAY-->", "<!--COLUMN-->",
+                        "<!--WEEKLY-->", "<!--NOTE-->", "<!--SOURCES-->", "<!--BUILT-->") if p in page]
     if left:
         sys.exit(f"还有占位符没填：{left}")
 
