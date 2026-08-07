@@ -193,6 +193,28 @@
     letter-spacing: -0.005em;
   }
 
+  /* 前 5 条推过飞书了，这条分界告诉读者下面是「有空再看」的 */
+  .today li.divider {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    margin: 4px 0;
+  }
+
+  .today li.divider::before,
+  .today li.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--hair);
+  }
+
+  .today li.divider span {
+    font-size: 14px;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+
   .today p {
     margin: 0;
     font-size: 16.5px;

@@ -21,6 +21,9 @@ def esc(s):
     return html.escape(str(s), quote=False)
 
 
+TOP_N = 5  # 前 N 条推飞书；网页给全部，在这里插一条分界
+
+
 def build_today(items):
     if not items:
         return '    <p class="sub">今天没生成内容。</p>'
@@ -31,6 +34,12 @@ def build_today(items):
             sys.exit(f"kind 只能是 talk/you/tech，收到：{kind!r}")
         if n:
             out.append("")  # 条与条之间留空行，跟手写版保持一致
+        # 前 TOP_N 条已经推过飞书了，后面的单独分一段
+        if n == TOP_N and len(items) > TOP_N:
+            out += ['      <li class="divider">',
+                    "        <span>下面是次要的，有空再看</span>",
+                    "      </li>",
+                    ""]
         out += [
             "      <li>",
             f'        <span class="label {kind}">{KINDS[kind]}</span>',

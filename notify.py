@@ -25,6 +25,7 @@ import urllib.request
 
 PAGE_URL = "https://pengxiaobei.github.io/brief-wlsb6r/"
 KIND = {"talk": "在聊", "you": "影响你", "tech": "科技"}
+TOP_N = 5  # 飞书只推前 5 条，其余留在网页；跟 build.py 里的 TOP_N 保持一致
 ROOT = pathlib.Path(__file__).parent
 
 
@@ -48,7 +49,12 @@ def build_card(d):
             "去 GitHub Actions 看一眼哪一步挂了。"}})
         blocks.append({"tag": "hr"})
 
-    items = d.get("items", [])
+    # 飞书只推最重要的前 TOP_N 条 —— 通勤时看，多了就不看了。
+    # items 已按重要性排序（见 prompts/daily.md），剩下的留在网页上。
+    all_items = d.get("items", [])
+    items = all_items[:TOP_N]
+    rest = len(all_items) - len(items)
+
     for n, it in enumerate(items):
         if n:
             blocks.append({"tag": "hr"})
@@ -57,8 +63,9 @@ def build_card(d):
             f"{it.get('body', '')}"}})
 
     blocks.append({"tag": "hr"})
+    tail = f"还有 {rest} 条次要的，" if rest > 0 else ""
     blocks.append({"tag": "div", "text": {"tag": "lark_md",
-                                          "content": f"[看网页版（含本周趋势）]({PAGE_URL})"}})
+                                          "content": f"{tail}[看网页版]({PAGE_URL})"}})
 
     return stale, {
         "msg_type": "interactive",
