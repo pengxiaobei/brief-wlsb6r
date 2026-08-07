@@ -1,0 +1,32 @@
+name: 早上推飞书
+
+# 跟日更分开，是因为两件事的时间点不一样：
+# 07:00 生成内容，08:00 才提醒读者。中间隔一小时，也够 Actions 的调度延迟兜底。
+on:
+  schedule:
+    - cron: '0 0 * * *'     # 08:00 北京时间
+  workflow_dispatch:
+
+# 只读仓库，不写
+permissions:
+  contents: read
+
+env:
+  # notify.py 靠本地日期判断内容过没过期，必须按北京时间算，
+  # 否则每天早上都会误判成停更、推一张红色告警卡。
+  TZ: Asia/Shanghai
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # 内容不是今天的时候，notify.py 会推红色告警卡而不是正常卡片 ——
+      # 简报停更必须有声音，不能静默。
+      - name: 发飞书
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+        run: python3 notify.py

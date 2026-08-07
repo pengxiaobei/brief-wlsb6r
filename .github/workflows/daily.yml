@@ -1,19 +1,27 @@
-name: 日更 5 条
+name: 日更
 
 on:
   schedule:
-    # 23:00 UTC = 次日 07:00 北京时间
-    - cron: '0 23 * * *'
+    # cron 只认 UTC。下面注释里是对应的北京时间。
+    - cron: '0 23 * * *'    # 07:00（次日）
+    - cron: '30 3 * * *'    # 11:30
+    - cron: '0 9 * * *'     # 17:00
   workflow_dispatch:        # 手动也能触发，方便验证和补跑
 
 # 用内置的 GITHUB_TOKEN 推仓库，不需要额外的 PAT
 permissions:
   contents: write
 
-# 同一时间只跑一个，避免手动触发和定时触发撞车导致推送冲突
+# 同一时间只跑一个。三轮之间、以及手动触发和定时触发之间都不会撞车。
 concurrency:
   group: brief-write
   cancel-in-progress: false
+
+env:
+  # runner 默认跑在 UTC，而这份简报从头到尾按北京时间算。
+  # 不设这个，07:00 那轮（23:00 UTC）里 `date` 会拿到前一天，
+  # stamp 写错 → 检查步骤判定不新鲜 → 整轮内容不提交。
+  TZ: Asia/Shanghai
 
 jobs:
   brief:
@@ -23,6 +31,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: 算出这是哪一轮
+        id: round
+        run: |
+          # 定时触发时 github.event.schedule 就是命中的那条 cron，查表最准 ——
+          # Actions 的调度常有 5-15 分钟延迟，按当前时间反推会把轮次算错。
+          case "${{ github.event.schedule }}" in
+            '0 23 * * *') AT=07:00 ;;
+            '30 3 * * *') AT=11:30 ;;
+            '0 9 * * *')  AT=17:00 ;;
+            *)
+              # 手动触发没有 schedule，按当前时间就近归一
+              H=$((10#$(date +%H%M)))
+              if   [ "$H" -lt 930 ];  then AT=07:00
+              elif [ "$H" -lt 1400 ]; then AT=11:30
+              else                         AT=17:00
+              fi ;;
+          esac
+          echo "at=$AT" >> "$GITHUB_OUTPUT"
+          echo "本轮：$AT（$(date '+%Y-%m-%d %H:%M %Z')）"
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -31,14 +59,17 @@ jobs:
         run: npm install -g @anthropic-ai/claude-code
 
       - name: 生成今天的内容
-        id: generate
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         run: |
           claude -p "$(cat prompts/daily.md)
 
-          补充说明：你在仓库根目录工作。写完 today.json 后跑 python3 build.py 生成页面。
-          不要执行任何 git 命令，也不要跑 publish.py —— 工作流会处理提交和发布。" \
+          补充说明：
+          - 你在仓库根目录工作。
+          - **本轮时间是 ${{ steps.round.outputs.at }}** —— 提示词里所有「本轮时间」都填这个值。
+          - 改完 today.json 后跑 python3 build.py 生成页面。
+          - 如果本轮空转（既没新事也没新进展），就什么都别改，也别跑 build.py，直接结束。
+          - 不要执行任何 git 命令，工作流会处理提交和发布。" \
             --model sonnet \
             --permission-mode acceptEdits \
             --allowedTools "Read" "Write" "Edit" "WebSearch" "WebFetch" "Bash(python3 *)" "Bash(date *)" "Bash(cat *)" "Bash(ls *)"
@@ -47,31 +78,23 @@ jobs:
         id: check
         run: |
           STAMP=$(python3 -c "import json;print(json.load(open('today.json'))['stamp'])")
-          TODAY=$(date -u -d '+8 hours' +%Y-%m-%d)   # 按北京时间算
+          TODAY=$(date +%Y-%m-%d)
           echo "stamp=$STAMP  today=$TODAY"
           if [ "$STAMP" = "$TODAY" ]; then
             echo "fresh=true" >> "$GITHUB_OUTPUT"
           else
-            echo "fresh=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::today.json 是 $STAMP，不是今天（$TODAY）"
+            echo "::error::today.json 是 $STAMP，不是今天（$TODAY）—— 本轮不提交"
+            exit 1
           fi
 
       - name: 提交并推送
-        if: steps.check.outputs.fresh == 'true'
         run: |
           git config user.name  "daily-brief[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then
-            echo "没有改动，跳过提交"
+            echo "没有改动 —— 本轮空转，跳过提交"
           else
-            git commit -m "日更 $(date -u -d '+8 hours' +%Y-%m-%d)"
+            git commit -m "日更 $(date +%Y-%m-%d) ${{ steps.round.outputs.at }}"
             git push
           fi
-
-      # 不管上面成没成都要发：失败时飞书会收到红色告警，不会静默无声
-      - name: 发飞书
-        if: always()
-        env:
-          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
-        run: python3 notify.py

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""把 today.json 的完整内容推到飞书群。
+"""每天早上 08:00 往飞书群推一条卡片，把人引到网页版。
 
 本地和 GitHub Actions 共用这一份，避免两边逻辑漂移。
 
@@ -25,7 +25,9 @@ import urllib.request
 
 PAGE_URL = "https://pengxiaobei.github.io/brief-wlsb6r/"
 KIND = {"talk": "在聊", "you": "影响你", "tech": "科技"}
-TOP_N = 5  # 飞书只推前 5 条，其余留在网页；跟 build.py 里的 TOP_N 保持一致
+# 卡片只推最重要的那一条。读者现在会在碎片时间主动开网页，
+# 飞书的职责已经从「简报本体」降级成「今天开始了，有空去看看」的钩子。
+TOP_N = 1
 ROOT = pathlib.Path(__file__).parent
 
 
@@ -39,8 +41,19 @@ def get_webhook():
     sys.exit("找不到 webhook：既没有 FEISHU_WEBHOOK 环境变量，也没有 ~/.config/daily-brief/feishu-webhook")
 
 
+def beijing_today():
+    """按北京时间算今天几号。
+
+    不能用 date.today()：CI runner 默认跑在 UTC，早上 8 点推送时 UTC 还是前一天，
+    会把当天的内容误判成过期，天天推一张红色告警卡。
+    这里写死 +8，跟运行环境的时区无关。
+    """
+    now = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(hours=8)
+    return now.date().isoformat()
+
+
 def build_card(d):
-    stale = d.get("stamp") != datetime.date.today().isoformat()
+    stale = d.get("stamp") != beijing_today()
     blocks = []
 
     if stale:
@@ -49,8 +62,7 @@ def build_card(d):
             "去 GitHub Actions 看一眼哪一步挂了。"}})
         blocks.append({"tag": "hr"})
 
-    # 飞书只推最重要的前 TOP_N 条 —— 通勤时看，多了就不看了。
-    # items 已按重要性排序（见 prompts/daily.md），剩下的留在网页上。
+    # 推 08:00 这一刻最重要的那条。items 已按重要性排序（见 prompts/daily.md）。
     all_items = d.get("items", [])
     items = all_items[:TOP_N]
     rest = len(all_items) - len(items)
@@ -63,7 +75,8 @@ def build_card(d):
             f"{it.get('body', '')}"}})
 
     blocks.append({"tag": "hr"})
-    tail = f"还有 {rest} 条次要的，" if rest > 0 else ""
+    # 白天还会跑 11:30 和 17:00 两轮，所以这里说的是「今天还会更新」，不是「就这些了」
+    tail = f"今天还有 {rest} 条，白天陆续更新，" if rest > 0 else "白天陆续更新，"
     blocks.append({"tag": "div", "text": {"tag": "lark_md",
                                           "content": f"{tail}[看网页版]({PAGE_URL})"}})
 

@@ -21,32 +21,72 @@ def esc(s):
     return html.escape(str(s), quote=False)
 
 
-TOP_N = 5  # 前 N 条推飞书；网页给全部，在这里插一条分界
+def group_by_round(items):
+    """按 at（哪一轮进来的）把 items 切成连续的几段。
+
+    增量轮是把整批新条目插到最前面的，所以同一轮的条目天然相邻——
+    按相邻分组就够，不用排序，那会打乱轮内的重要性顺序。
+
+    老数据没有 at 字段时全部落进同一段，页面就跟改动前一模一样。
+    """
+    groups = []
+    for it in items:
+        at = it.get("at")
+        if groups and groups[-1][0] == at:
+            groups[-1][1].append(it)
+        else:
+            groups.append([at, [it]])
+    return groups
+
+
+def build_item(it):
+    kind = it.get("kind", "talk")
+    if kind not in KINDS:
+        sys.exit(f"kind 只能是 talk/you/tech，收到：{kind!r}")
+    out = [
+        "      <li>",
+        f'        <span class="label {kind}">{KINDS[kind]}</span>',
+        f'        <h3>{esc(it["title"])}</h3>',
+        f'        <p>{esc(it["body"])}</p>',
+    ]
+    # 后面几轮跑出来的新进展：原文不动，变化挂在下面，读者不用整条重读
+    for u in it.get("updates", []):
+        at = u.get("at", "")
+        out += [
+            '        <div class="update">',
+            f'          <span>{esc(at)} 更新</span>' if at else '          <span>更新</span>',
+            f'          <p>{esc(u.get("text", ""))}</p>',
+            "        </div>",
+        ]
+    out.append("      </li>")
+    return out
 
 
 def build_today(items):
     if not items:
         return '    <p class="sub">今天没生成内容。</p>'
+
+    groups = group_by_round(items)
+    blocks = []  # 每个元素是一段 HTML 行；最后统一用空行隔开，跟手写版保持一致
+    for gi, (at, group) in enumerate(groups):
+        if gi:
+            # 上一轮和这一轮之间画条线，读者一眼看出往下是早先看过的
+            blocks.append(['      <li class="divider">',
+                           f'        <span>{esc(at)} 发的</span>' if at else "        <span>更早</span>",
+                           "      </li>"])
+        elif len(groups) > 1 and at:
+            # 只有一轮时不出现任何分段标记 —— 首轮当天的页面跟改动前完全一致
+            blocks.append(['      <li class="newmark">',
+                           f'        <span>{esc(at)} 新增</span>',
+                           "      </li>"])
+        for it in group:
+            blocks.append(build_item(it))
+
     out = ['    <ol class="today">']
-    for n, it in enumerate(items):
-        kind = it.get("kind", "talk")
-        if kind not in KINDS:
-            sys.exit(f"kind 只能是 talk/you/tech，收到：{kind!r}")
+    for n, b in enumerate(blocks):
         if n:
-            out.append("")  # 条与条之间留空行，跟手写版保持一致
-        # 前 TOP_N 条已经推过飞书了，后面的单独分一段
-        if n == TOP_N and len(items) > TOP_N:
-            out += ['      <li class="divider">',
-                    "        <span>下面是次要的，有空再看</span>",
-                    "      </li>",
-                    ""]
-        out += [
-            "      <li>",
-            f'        <span class="label {kind}">{KINDS[kind]}</span>',
-            f'        <h3>{esc(it["title"])}</h3>',
-            f'        <p>{esc(it["body"])}</p>',
-            "      </li>",
-        ]
+            out.append("")
+        out += b
     out.append("    </ol>")
     return "\n".join(out)
 
@@ -117,6 +157,20 @@ def build_weekly(watchlist, weekly):
     return "\n".join(out)
 
 
+def build_updated(today):
+    """报头第二行：更新到哪一轮了、今天一共几条。
+
+    一天跑三轮，读者打开第一眼想知道的就是「跟上次比有没有新的」。
+    """
+    runs = today.get("runs", [])
+    parts = []
+    if runs:
+        parts.append(f"最后更新 {esc(runs[-1])}")
+    if today.get("items"):
+        parts.append(f"共 {len(today['items'])} 条")
+    return " · ".join(parts)
+
+
 def build_sources(sources):
     if not sources:
         return ""
@@ -147,14 +201,22 @@ def main():
         legacy = ROOT / "weekly.html"
         weekly = legacy.read_text(encoding="utf-8").rstrip("\n") if legacy.exists() else ""
 
+    # 页面靠这个串判断自己旧没旧：stamp 换了是新的一天，runs 变长是当天又跑了一轮
+    built = f"{today.get('stamp', '')}/{len(today.get('runs', []))}"
+
     page = template
     page = page.replace("<!--DATE-->", esc(today.get("date", "")))
+    page = page.replace("<!--UPDATED-->", build_updated(today))
     page = page.replace("    <!--TODAY-->", build_today(today.get("items", [])))
     page = page.replace("    <!--WEEKLY-->", weekly)
     page = page.replace("<!--NOTE-->", esc(today.get("note", "")))
     page = page.replace("    <!--SOURCES-->", build_sources(today.get("sources", [])))
+    # 用 json.dumps 而不是 esc：这里落在 JS 字符串字面量的位置，得连引号一起给，
+    # 顺便把内容里万一出现的引号转义掉，免得整段脚本被搞坏。
+    page = page.replace("<!--BUILT-->", json.dumps(built))
 
-    left = [p for p in ("<!--DATE-->", "<!--TODAY-->", "<!--WEEKLY-->", "<!--NOTE-->", "<!--SOURCES-->") if p in page]
+    left = [p for p in ("<!--DATE-->", "<!--UPDATED-->", "<!--TODAY-->", "<!--WEEKLY-->",
+                        "<!--NOTE-->", "<!--SOURCES-->", "<!--BUILT-->") if p in page]
     if left:
         sys.exit(f"还有占位符没填：{left}")
 
@@ -166,7 +228,10 @@ def main():
         arch.mkdir(exist_ok=True)
         (arch / f"{stamp}.html").write_text(page, encoding="utf-8")
 
-    print(f"✓ index.html 已生成（{len(today.get('items', []))} 条，{len(page)} 字节）")
+    runs = today.get("runs", [])
+    updates = sum(len(i.get("updates", [])) for i in today.get("items", []))
+    print(f"✓ index.html 已生成（{len(today.get('items', []))} 条"
+          f"，{updates} 条新进展，跑过 {'/'.join(runs) or '—'}，{len(page)} 字节）")
     if stamp:
         print(f"✓ 存档 archive/{stamp}.html")
 
