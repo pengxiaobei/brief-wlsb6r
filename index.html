@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月8日 星期六</p>
-    <p class="updated">最后更新 11:30 · 共 10 条</p>
+    <p class="updated">最后更新 17:00 · 共 10 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -542,6 +542,10 @@
         <div class="update">
           <span>11:30 更新</span>
           <p>路径更明确了：预计9号下午到10号早上在浙江苍南到象山一带沿海登陆。卫星图上台风眼已经清晰打开，说明它正处在最强阶段，登陆前风力不会明显减弱。</p>
+        </div>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>登陆时间往后推了，改成9日晚上到10日早晨，登陆地点也扩大到浙江舟山至福建福鼎一带。台风眼在卫星图上变模糊了（气象上叫“闭眼”），这不代表台风变弱，之后还可能重新增强。未来三天浙江、上海、福建北部、山东南部有暴雨到大暴雨，局地特大暴雨，这些地方要留意积水和山洪风险。</p>
         </div>
       </li>
 
@@ -574,6 +578,10 @@
         <div class="update">
           <span>11:30 更新</span>
           <p>泰国总理最新通报，死伤比早上说的更严重：一共8人死亡、30多人受伤，其中9人伤势较重。</p>
+        </div>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>泰国总理阿努廷已经签发新规并正式生效：公职人员非执勤时不能带枪出门，普通民众则被全面禁止在公共场所带枪，违者要担责。</p>
         </div>
       </li>
 
@@ -672,6 +680,8 @@
       <li><a href="https://www.news.cn/world/20260803/05d3d512ebb649929ca0ae518acd919c/c.html">新华网-特朗普称美伊将就霍尔木兹海峡谈判</a></li>
       <li><a href="https://finance.sina.com.cn/jjxw/2026-08-06/doc-inimkskz4559665.shtml">新浪财经-台风白海豚移动路径确定</a></li>
       <li><a href="https://www.163.com/dy/article/L3OKTQQI0514R9P4.html">网易订阅-泰国总理通报暖武里枪击案8死30余伤</a></li>
+      <li><a href="https://finance.sina.com.cn/wm/2026-08-08/doc-inimqptv6528765.shtml">新浪财经-台风白海豚已闭眼，浙沪闽鲁将有暴雨</a></li>
+      <li><a href="https://www.guancha.cn/internation/2026_08_07_826555.shtml">观察者网-泰国校园枪击致8死，阿努廷宣布收紧枪支管控</a></li>
     </ul>
   </footer>
 
@@ -683,7 +693,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-08/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-08/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
