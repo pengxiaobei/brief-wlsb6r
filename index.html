@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月13日 星期四</p>
-    <p class="updated">最后更新 07:00 · 共 11 条</p>
+    <p class="updated">最后更新 11:30 · 共 12 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>网红手机壳可能在偷拍你</h3>
+        <p>最近网上卖得挺火的一种「折射手机壳」，外表跟普通壳没区别，其实壳里塞了个小镜片，能把镜头的拍摄方向偏到侧面，不用把手机对着人就能偷拍，据说锁屏了还能继续录。这东西能卖到大几百块，专家说不管是做的人还是用的人，都可能够上非法生产、销售、使用窃听窃照器材罪。买手机壳的时候留意一下，别稀里糊涂买到这种。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label talk">在聊</span>
         <h3>朱镕基逝世，享年98岁</h3>
@@ -581,6 +595,10 @@
         <span class="label talk">在聊</span>
         <h3>胖东来许昌老店要关了</h3>
         <p>开了24年的胖东来许昌生活广场，创始人于东来宣布年底前关掉。原因是十年前公司当时负责签合同的人没按规矩办事，导致部分门面房租被房东坐地起价涨到离谱，于东来说这次还是为了原则，宁可放弃这块生意也不忍受。门店目前正常营业，具体安置方案还没公布。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>于东来出面确认，胖东来不会离开许昌，会在许昌西区重新开店，目前正在跟当地政府协调选址。</p>
+        </div>
       </li>
 
       <li>
@@ -760,6 +778,8 @@
       <li><a href="https://news.china.com/socialgd/10000169/20260812/49670889.html">中华网-英仙座流星雨极大期</a></li>
       <li><a href="https://rebang.today/home?tab=weibo">rebang.today-微博热搜榜</a></li>
       <li><a href="https://rebang.today/home?tab=douyin">rebang.today-抖音热榜</a></li>
+      <li><a href="https://politics.gmw.cn/2026-08/11/content_38936510.htm">光明网-小心这种手机壳正在偷拍你！专家：生产使用均涉嫌违法</a></li>
+      <li><a href="https://www.sina.cn/news/detail/5331216374966009.html">新浪新闻-胖东来辟谣许昌门店闭店传言</a></li>
     </ul>
   </footer>
 
@@ -771,7 +791,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-13/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-13/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
