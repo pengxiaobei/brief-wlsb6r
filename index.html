@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月14日 星期五</p>
-    <p class="updated">最后更新 11:30 · 共 10 条</p>
+    <p class="updated">最后更新 17:00 · 共 11 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -536,7 +536,17 @@
 
     <ol class="today">
       <li class="newmark">
-        <span>11:30 新增</span>
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>华为天才少年离职，回村卖玉米</h3>
+        <p>华为「天才少年」计划专挑顶尖应届生，给的是校招最高一档年薪。今年宁博宇工作满1137天后离职，还回老家种了段时间玉米体验生活。他说不是嫌钱少，是这种偏研究性质的工作做久了没了成就感，更想做学术，现在已经拿到欧盟的博士后奖学金，要去瑞典皇家理工深造。</p>
+      </li>
+
+      <li class="divider">
+        <span>11:30 发的</span>
       </li>
 
       <li>
@@ -563,12 +573,20 @@
           <span>11:30 更新</span>
           <p>夜里周口贾鲁河、平顶山郏县的堤坝接连溃口，最宽的40多米，附近几千人连夜转移，抢险队伍正两头往里填石料封堵，目前没有人员伤亡。人在周口、平顶山一带的，这两天离河堤更要远远的。</p>
         </div>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>周口那处溃口已经淹到市第五人民医院和一家驾校，积水最深1.5米，消防连夜转移了432人（病人、医护加驾校学生），暂无伤亡。应急管理部又调了200人专业救援队、带110台大型机械（水陆两栖挖掘机等）赶到现场增援封堵，目前还没堵住，附近的人继续离远点。</p>
+        </div>
       </li>
 
       <li>
         <span class="label you">影响你</span>
         <h3>今晚油价要降，能等的明天再加</h3>
         <p>今晚12点，国内油价迎来新一轮调整，多家机构预测92号汽油每升要降三毛左右，加满一箱能省十几块。如果你车里的油还够用，不妨等调价生效以后，明天再去加油站。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>最终数字定了，92号汽油每升只降1毛8，比早上预测的三毛少不少，因为这段时间中东局势一度紧张，把国际油价的跌幅顶回去了一些。一箱油大概能省11块，别抱太大期待。</p>
+        </div>
       </li>
 
       <li>
@@ -774,6 +792,10 @@
       <li><a href="http://society.people.com.cn/n1/2026/0813/c1008-40779085.html">人民网-河南郏县长桥镇北汝河段民堤溃口 暂无人员伤亡</a></li>
       <li><a href="https://sports.sina.cn/2026-08-13/detail-ininecsn4767251.d.html?vt=4">新浪新闻-邹市明左眼视力0.1 复出前因后果梳理</a></li>
       <li><a href="https://k.sina.com.cn/article_7879923920_1d5ae18d002001i3fs.html?from=sports">新浪新闻-WTT大满贯：国乒男女双打双双止步八强</a></li>
+      <li><a href="https://www.chinanews.com.cn/sh/2026/08-14/10677509.shtml">中新网-河南周口堤坝溃口 医院驾校被淹 432人安全转移</a></li>
+      <li><a href="https://www.chinanews.com.cn/gn/2026/08-14/10677638.shtml">中新网-应急管理部紧急调派中国安能工程救援力量驰援河南周口</a></li>
+      <li><a href="https://news.sina.com.cn/s/2026-08-14/doc-ininhhrs2676244.shtml">新浪新闻-国内成品油价今晚下调，加满一箱油少花9元</a></li>
+      <li><a href="https://m.21jingji.com/article/20260814/herald/f344150b201151e42d20867e59ed5417.html">21财经-华为「天才少年」宁博宇回应离职</a></li>
     </ul>
   </footer>
 
@@ -785,7 +807,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-14/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-14/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
