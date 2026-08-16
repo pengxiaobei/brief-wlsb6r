@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月16日 星期日</p>
-    <p class="updated">最后更新 07:00 · 共 8 条</p>
+    <p class="updated">最后更新 11:30 · 共 9 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,10 +535,28 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label tech">科技</span>
+        <h3>马斯克的SpaceX 600亿美元收购AI编程工具Cursor</h3>
+        <p>AI写代码工具Cursor被马斯克的SpaceX以600亿美元全股票收购，这是目前AI圈子里金额最大的一笔并购。Cursor现在一年能赚26亿美元，以后会并进SpaceX做AI的部门，以后可能会跟星链、机器人这些业务绑在一起卖。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>太湖水位涨破警戒线，周口堤坝总算堵上了</h3>
         <p>太湖这两天水位涨到了4.2米，比警戒线高出0.4米，预计还要往上冲到4.3米以上，江苏南部、上海、浙江这两天还有大到暴雨，住在太湖周边、河网附近的人这几天离水远点。河南周口那个一度冲到117米宽的堤坝缺口，经过两天两夜抢险，15号晚上8点半总算堵上了，但当地已经宣布进入紧急防汛期，人在周口的还是别放松。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>沙颍河的洪峰已经过了周口，最紧张的阶段过去了，但16日水位还没退到安全线以下，刚补好的堤坝还在加固加高，当地人先别急着放松。</p>
+        </div>
       </li>
 
       <li>
@@ -744,6 +762,8 @@
       <li><a href="https://m.ithome.com/html/966202.htm">IT之家-消息称追觅系生态大调整：收缩、合并后回归四大主营业务</a></li>
       <li><a href="https://rebang.today/home?tab=weibo">rebang.today-微博热搜榜</a></li>
       <li><a href="https://rebang.today/home?tab=douyin">rebang.today-抖音热榜</a></li>
+      <li><a href="https://news.gmw.cn/2026-08/16/content_38945713.htm">光明网-河南周口贾鲁河堤坝溃口顺利合龙</a></li>
+      <li><a href="https://finance.yahoo.com/markets/stocks/article/spacex-announces-60-billion-cursor-deal-to-boost-ai-coding-125509159.html">Yahoo Finance-SpaceX announces $60 billion Cursor deal to boost AI coding</a></li>
     </ul>
   </footer>
 
@@ -755,7 +775,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-16/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-16/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
