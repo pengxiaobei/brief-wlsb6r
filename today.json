@@ -2,8 +2,14 @@
   "date": "2026年8月16日 星期日",
   "stamp": "2026-08-16",
   "note": "内容为 8 月 16 日。",
-  "runs": ["07:00", "11:30"],
+  "runs": ["07:00", "11:30", "17:00"],
   "items": [
+    {
+      "kind": "talk",
+      "at": "17:00",
+      "title": "朱镕基18日在京火化，天安门下半旗志哀",
+      "body": "前总理朱镕基8月12日在北京病逝，享年98岁。官方定在18日火化，当天天安门、新华门、人民大会堂等地，还有港澳和驻外使领馆，都会下半旗志哀。他当年在任时把中国带进了世贸组织，是很多人心里那段经济改革年代的代表人物。"
+    },
     {
       "kind": "tech",
       "at": "11:30",
@@ -16,7 +22,8 @@
       "title": "太湖水位涨破警戒线，周口堤坝总算堵上了",
       "body": "太湖这两天水位涨到了4.2米，比警戒线高出0.4米，预计还要往上冲到4.3米以上，江苏南部、上海、浙江这两天还有大到暴雨，住在太湖周边、河网附近的人这几天离水远点。河南周口那个一度冲到117米宽的堤坝缺口，经过两天两夜抢险，15号晚上8点半总算堵上了，但当地已经宣布进入紧急防汛期，人在周口的还是别放松。",
       "updates": [
-        {"at": "11:30", "text": "沙颍河的洪峰已经过了周口，最紧张的阶段过去了，但16日水位还没退到安全线以下，刚补好的堤坝还在加固加高，当地人先别急着放松。"}
+        {"at": "11:30", "text": "沙颍河的洪峰已经过了周口，最紧张的阶段过去了，但16日水位还没退到安全线以下，刚补好的堤坝还在加固加高，当地人先别急着放松。"},
+        {"at": "17:00", "text": "浙江湖州长兴那边因为山洪泥石流已经死了1人，还有3人没找到；苏州也对京杭运河发了洪水红色预警。江苏南部、浙江这边雨还没停，靠近山体和低洼地的人这两天格外要小心。"}
       ]
     },
     {
@@ -98,6 +105,8 @@
     {"name": "rebang.today-微博热搜榜", "url": "https://rebang.today/home?tab=weibo"},
     {"name": "rebang.today-抖音热榜", "url": "https://rebang.today/home?tab=douyin"},
     {"name": "光明网-河南周口贾鲁河堤坝溃口顺利合龙", "url": "https://news.gmw.cn/2026-08/16/content_38945713.htm"},
-    {"name": "Yahoo Finance-SpaceX announces $60 billion Cursor deal to boost AI coding", "url": "https://finance.yahoo.com/markets/stocks/article/spacex-announces-60-billion-cursor-deal-to-boost-ai-coding-125509159.html"}
+    {"name": "Yahoo Finance-SpaceX announces $60 billion Cursor deal to boost AI coding", "url": "https://finance.yahoo.com/markets/stocks/article/spacex-announces-60-billion-cursor-deal-to-boost-ai-coding-125509159.html"},
+    {"name": "新华网-朱镕基同志遗体18日火化 天安门等地将下半旗志哀", "url": "https://www.news.cn/politics/20260816/811689847d1f402292e1238d3faf429c/c.html"},
+    {"name": "财新网-太湖流域发生大洪水 湖州1人死亡、苏州发洪水红警", "url": "https://china.caixin.com/2026-08-16/102474628.html"}
   ]
 }

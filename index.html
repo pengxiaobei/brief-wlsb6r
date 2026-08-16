@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月16日 星期日</p>
-    <p class="updated">最后更新 11:30 · 共 9 条</p>
+    <p class="updated">最后更新 17:00 · 共 10 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -536,7 +536,17 @@
 
     <ol class="today">
       <li class="newmark">
-        <span>11:30 新增</span>
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>朱镕基18日在京火化，天安门下半旗志哀</h3>
+        <p>前总理朱镕基8月12日在北京病逝，享年98岁。官方定在18日火化，当天天安门、新华门、人民大会堂等地，还有港澳和驻外使领馆，都会下半旗志哀。他当年在任时把中国带进了世贸组织，是很多人心里那段经济改革年代的代表人物。</p>
+      </li>
+
+      <li class="divider">
+        <span>11:30 发的</span>
       </li>
 
       <li>
@@ -556,6 +566,10 @@
         <div class="update">
           <span>11:30 更新</span>
           <p>沙颍河的洪峰已经过了周口，最紧张的阶段过去了，但16日水位还没退到安全线以下，刚补好的堤坝还在加固加高，当地人先别急着放松。</p>
+        </div>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>浙江湖州长兴那边因为山洪泥石流已经死了1人，还有3人没找到；苏州也对京杭运河发了洪水红色预警。江苏南部、浙江这边雨还没停，靠近山体和低洼地的人这两天格外要小心。</p>
         </div>
       </li>
 
@@ -764,6 +778,8 @@
       <li><a href="https://rebang.today/home?tab=douyin">rebang.today-抖音热榜</a></li>
       <li><a href="https://news.gmw.cn/2026-08/16/content_38945713.htm">光明网-河南周口贾鲁河堤坝溃口顺利合龙</a></li>
       <li><a href="https://finance.yahoo.com/markets/stocks/article/spacex-announces-60-billion-cursor-deal-to-boost-ai-coding-125509159.html">Yahoo Finance-SpaceX announces $60 billion Cursor deal to boost AI coding</a></li>
+      <li><a href="https://www.news.cn/politics/20260816/811689847d1f402292e1238d3faf429c/c.html">新华网-朱镕基同志遗体18日火化 天安门等地将下半旗志哀</a></li>
+      <li><a href="https://china.caixin.com/2026-08-16/102474628.html">财新网-太湖流域发生大洪水 湖州1人死亡、苏州发洪水红警</a></li>
     </ul>
   </footer>
 
@@ -775,7 +791,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-16/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-16/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
