@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月17日 星期一</p>
-    <p class="updated">最后更新 11:30 · 共 12 条</p>
+    <p class="updated">最后更新 17:00 · 共 14 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -536,7 +536,23 @@
 
     <ol class="today">
       <li class="newmark">
-        <span>11:30 新增</span>
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label tech">科技</span>
+        <h3>宇树发布"超人"机器人，跳得比人还高</h3>
+        <p>宇树科技今天发布了一款人形机器人"超人"，原地能跳2米高，最快能跑到时速45公里左右，这两项都超过了人类纪录。这机器人从立项到做出来只花了三个多月，官方说后面还会继续优化。宇树最近正卡在要上市的节骨眼上，这波热度算是又添了把火。</p>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>别信999元云南跟团游，坑很深</h3>
+        <p>央视记者卧底暗访发现，网上卖的999元云南六天五晚跟团游，一路上要被倒手换5家旅行社，导游甚至威胁"不买翡翠就别想离开商场"，购物时间占了全程四分之一。云南当地已经连夜通报要彻查。想去云南玩的，别贪这种超低价团，基本都是先用低价把人骗上车，后面全靠强制购物赚钱。</p>
+      </li>
+
+      <li class="divider">
+        <span>11:30 发的</span>
       </li>
 
       <li>
@@ -577,6 +593,10 @@
         <span class="label you">影响你</span>
         <h3>高温今天结束，但多地有暴雨</h3>
         <p>折腾了好些天的高温闷热天气，今天就要结束了。不过四川、云南、广东、福建这些地方今天有暴雨甚至大暴雨，出门前看看天气，靠近山体、低洼地的这两天还是小心点。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>气象台说这波雨不是一两天的事，未来10天云南到华南南部沿海部分地方累计雨量可能超过250毫米，四川盆地这几天要格外小心山洪和地质灾害。</p>
+        </div>
       </li>
 
       <li>
@@ -726,6 +746,9 @@
       <li><a href="https://k.sina.com.cn/article_7879995959_1d5af323706801vw6i.html?from=home">新浪新闻-这种手机壳可能是医疗垃圾做的</a></li>
       <li><a href="https://finance.sina.com.cn/tech/roll/2026-08-17/doc-ininqpev7162141.shtml">新浪科技-苹果最快本月底前对iPhone 17系列全球涨价</a></li>
       <li><a href="https://www.ettoday.net/news/20260816/3220028.htm">ETtoday-美伊停火恐破局！临时协议8/17就要到期 伊朗拒回谈判桌</a></li>
+      <li><a href="https://finance.sina.com.cn/tech/roll/2026-08-17/doc-ininreaq9080529.shtml">新浪科技-突破人类极限！宇树科技发布"超人"</a></li>
+      <li><a href="https://www.163.com/dy/article/L4FTTIF5055040N3.html?clickfrom=w_travel">网易-央视曝光暑期游乱象：999元云南低价游购物占四分之一时间</a></li>
+      <li><a href="https://www.chinanews.com.cn/sh/2026/08-16/10678690.shtml">中新网-南方大范围强降雨预报，未来或有新台风酝酿</a></li>
     </ul>
   </footer>
 
@@ -737,7 +760,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-17/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-17/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
