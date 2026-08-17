@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月17日 星期一</p>
-    <p class="updated">最后更新 07:00 · 共 9 条</p>
+    <p class="updated">最后更新 11:30 · 共 12 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,32 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>便宜手机壳可能是医疗垃圾做的</h3>
+        <p>最近查出不少9.9元包邮的软壳手机壳，是拿废弃的医用针管、输液管这些回收塑料做的，闻着有刺鼻味的基本都苯超标，苯是一级致癌物。买手机壳认准包装上的GB4806.7标准或者3C认证，新买的壳子也建议先洗一洗晾一周再用。</p>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>iPhone 17这个月底可能要涨价</h3>
+        <p>消息说苹果最快这个月底就要给iPhone 17全系列涨价，国行大概每台涨500元左右，Pro和Pro Max可能从8999元、9999元涨到9499元、10499元。官方还没正式确认，但如果你正想买，不妨趁涨价前赶紧下手。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>美伊停火协议今天到期，谈判基本停滞</h3>
+        <p>美国和伊朗的临时停火协议今天到期，但双方谈判几乎没进展，伊朗表示不打算主动延长停火，伊朗军方还开出3万美元悬赏，奖励打死一个入境美军的人。真谈崩了，中东局势可能重新紧张起来，跟油价这些跟咱们生活相关的事也会有牵连。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label talk">在聊</span>
         <h3>江泽民百年诞辰纪念大会今天举行</h3>
@@ -697,6 +723,9 @@
       <li><a href="https://www.sina.cn/news/detail/5332656843659625.html">新浪新闻-39岁儿科医生杨国辉离世</a></li>
       <li><a href="https://rebang.today/home?tab=weibo">rebang.today-微博热搜榜</a></li>
       <li><a href="https://rebang.today/home?tab=douyin">rebang.today-抖音热榜</a></li>
+      <li><a href="https://k.sina.com.cn/article_7879995959_1d5af323706801vw6i.html?from=home">新浪新闻-这种手机壳可能是医疗垃圾做的</a></li>
+      <li><a href="https://finance.sina.com.cn/tech/roll/2026-08-17/doc-ininqpev7162141.shtml">新浪科技-苹果最快本月底前对iPhone 17系列全球涨价</a></li>
+      <li><a href="https://www.ettoday.net/news/20260816/3220028.htm">ETtoday-美伊停火恐破局！临时协议8/17就要到期 伊朗拒回谈判桌</a></li>
     </ul>
   </footer>
 
@@ -708,7 +737,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-17/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-17/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
