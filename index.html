@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月18日 星期二</p>
-    <p class="updated">最后更新 07:00 · 共 10 条</p>
+    <p class="updated">最后更新 11:30 · 共 12 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,26 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>内存暴涨到史上最贵，电脑要买趁现在</h3>
+        <p>现在电脑内存价格涨得离谱，一年涨了三倍多，32G内存条价格翻了好几倍，5000元以内的笔记本基本从市面上消失了，商务本动不动就要上万。原因是AI公司抢占工厂产能造服务器用的内存，挤占了普通电脑的产能。最近要是打算买电脑或者加内存，别再等了，价格还没见顶。</p>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>iPhone17传要涨价，最高涨近千元</h3>
+        <p>有消息说苹果打算月底前上调iPhone17全系列价格，国行可能每台涨500元左右，顶配版最多涨近千元。不过这只是供应链传出来的消息，苹果官方还没正式宣布，目前售价也没变。要是本来就打算换iPhone17，可以留意一下，真涨价前入手更划算。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label talk">在聊</span>
         <h3>朱镕基遗体今天在京火化，多地下半旗志哀</h3>
@@ -563,6 +583,10 @@
         <span class="label talk">在聊</span>
         <h3>杭州一场庆功宴上，女营销被严重伤害</h3>
         <p>网传杭州两家地产公司合作拿地后办庆功宴，饭局上唯一在场的女性——一名女营销，被曝遭到暴力对待，脾脏、肾脏都受了伤。招商蛇口杭州公司总经理已经被免职，具体案情还在调查，官方通报还没出来，细节等后续。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>涉事的招商蛇口浙江公司总经理已经被警方刑事拘留，不只是免职了。另外当时在场的滨江区一名副区长，官网上的简历也被悄悄撤下，是不是也被调查官方还没通报。</p>
+        </div>
       </li>
 
       <li>
@@ -685,6 +709,10 @@
       <li><a href="https://stock.cngold.org/c/2026-08-17/c10696066.html">金投网-8月17日大盘走势</a></li>
       <li><a href="https://rebang.today/home?tab=douyin">热榜-抖音</a></li>
       <li><a href="https://rebang.today/home?tab=weibo">热榜-微博</a></li>
+      <li><a href="https://finance.sina.com.cn/tech/roll/2026-08-18/doc-inintats8681333.shtml">新浪科技-内存末日降临，DDR5高容量内存价格翻10倍</a></li>
+      <li><a href="https://finance.sina.com.cn/wm/2026-08-17/doc-ininqxus9123374.shtml">新浪财经-iPhone17系列或月底前全球涨价</a></li>
+      <li><a href="https://news.ifeng.com/c/8vfrNUwJ9en">凤凰网-杭州地产酒局：招商蛇口高管已被免职</a></li>
+      <li><a href="https://www.aboluowang.com/2026/0816/2421469.html">阿波罗网-涉性侵女营销丑闻，杭州副区长简历从官网撤下</a></li>
     </ul>
   </footer>
 
@@ -696,7 +724,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-18/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-18/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
