@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月19日 星期三</p>
-    <p class="updated">最后更新 11:30 · 共 12 条</p>
+    <p class="updated">最后更新 17:00 · 共 14 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -536,13 +536,33 @@
 
     <ol class="today">
       <li class="newmark">
-        <span>11:30 新增</span>
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>A股大跌，创业板跌超6%</h3>
+        <p>今天沪指跌了2.4%，创业板指跌了6.26%，全市场五千多只股票下跌，上百只跌停。主要是美股走弱、中东局势紧张推高油价，加上前几天涨太猛，今天不少人开始获利了结。手里拿着最近涨得凶的科技股、机器人概念股的，这两天多留意波动。</p>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>石家庄一居民楼凌晨部分坍塌</h3>
+        <p>河北石家庄新华区一栋建于上世纪八十年代的老宿舍楼，19号凌晨5点多突然坍塌，3、4楼部分垮塌，居民说是被巨响惊醒的，伤者已送医，坍塌原因还在查。家里住的是八九十年代的老楼，平时可以留意一下墙体裂缝、地基下沉这些迹象。</p>
+      </li>
+
+      <li class="divider">
+        <span>11:30 发的</span>
       </li>
 
       <li>
         <span class="label talk">在聊</span>
         <h3>四川升学宴墙塌，5死17伤</h3>
         <p>长宁县一户人家给孩子办升学宴，院子里搭的雨棚积水太多，把固定雨棚绳子拴着的墙给拉塌了，5人当场或送医后死亡，17人还在医院治疗。家里办酒席在院子搭棚子的，绳子别往承重墙上绑，下雨天更要留意棚顶别积水太多。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>官方通报确认，塌的是不承重的女儿墙，跟之前的地震没关系；17名伤者目前生命体征平稳，当地已经在排查周边老房子的安全隐患。</p>
+        </div>
       </li>
 
       <li>
@@ -590,6 +610,10 @@
         <div class="update">
           <span>11:30 更新</span>
           <p>今天开盘直接暴涨629%，市值冲到4449亿，中一签的人差不多能赚47万。</p>
+        </div>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>收盘涨幅回落到460%，报845元一股，总市值3418亿元，中一签的人浮盈还剩三十多万。</p>
         </div>
       </li>
 
@@ -741,6 +765,11 @@
       <li><a href="https://www.chinanews.com.cn/sh/2026/08-19/10680124.shtml">中新网-四川长宁升学宴墙体倒塌致5死17伤</a></li>
       <li><a href="https://www.xinhuanet.com/20260819/bae2eec33309421c8416f12d5ebdb878/c.html">新华网-我国首次实现火箭陆地回收</a></li>
       <li><a href="https://finance.sina.com.cn/tech/discovery/2026-08-19/doc-ininvfsv7067568.shtml">新浪科技-内存三季度还要再涨50%</a></li>
+      <li><a href="https://www.pconline.com.cn/ai/2180/21805926.html">太平洋科技-宇树科技上市首日高开629%，收盘涨幅回落至460%</a></li>
+      <li><a href="https://www.cnr.cn/hebei/yzkx/20260819/t20260819_527782276.shtml">央广网-石家庄一居民楼部分坍塌</a></li>
+      <li><a href="https://news.qq.com/rain/a/20260819A04OOT00">腾讯新闻-四川长宁升学宴墙塌事故最新进展</a></li>
+      <li><a href="https://finance.sina.com.cn/tob/2026-08-19/doc-ininvshr7071131.shtml">新浪财经-收评：创指低开低走大跌6.26%</a></li>
+      <li><a href="http://hkstock.cnfol.com/shichangfenxi/20260819/32339851.shtml">中金在线-A股收评：CPO、芯片遭重挫，煤炭股走强</a></li>
     </ul>
   </footer>
 
@@ -752,7 +781,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-19/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-19/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
