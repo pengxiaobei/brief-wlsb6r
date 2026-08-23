@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月23日 星期日</p>
-    <p class="updated">最后更新 11:30 · 共 10 条</p>
+    <p class="updated">最后更新 17:00 · 共 11 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>陌生人荐股，六天骗光789万积蓄</h3>
+        <p>浙江一位大哥省吃俭用20年攒了789万，接到陌生电话说能带他炒股赚钱，先让他小赚三万块建立信任，之后半个月内分六次把全部身家转了过去，结果对方一句“你是我有史以来最大的客户”之后，APP直接打不开了，钱全没了。记住：主动打电话或私信推荐股票、承诺稳赚不赔的都是诈骗，不明APP不要装，转大额之前先打110或96110核实一下。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>河北查获甲醛白菜，鉴别就闻这两下</h3>
@@ -722,6 +736,8 @@
       <li><a href="https://www.news.cn/legal/20260822/f3b5010b3e6745b59312d1c8378e1858/c.html">新华网-河北康保回应“白菜收购环节蘸取甲醛溶液”相关问题</a></li>
       <li><a href="https://www.163.com/dy/article/L4V8FFAF0553Y9KS.html">网易-新进展！河北甲醛白菜事件：爆料属实！白菜已送检，多部门联合介入</a></li>
       <li><a href="https://finance.sina.com.cn/tech/2026-08-22/doc-inipeyim7303160.shtml">新浪财经-第二届世界人形机器人运动会100米田径预赛：天工Ultra人形机器人跑出9.39秒，打破博尔特世界纪录</a></li>
+      <li><a href="https://cj.sina.com.cn/articles/view/5787187353/v158f17899020027md6">新浪财经头条-浙江男子20年攒下789万元，6天被炒股骗局收割！牢记五点，守住血汗钱</a></li>
+      <li><a href="https://news.qq.com/rain/a/20260822A0894N00">腾讯新闻-男子住破房穿20元衣服 20年攒下789万元 跟陌生人炒股6天被骗光</a></li>
     </ul>
   </footer>
 
@@ -733,7 +749,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-23/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-23/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
