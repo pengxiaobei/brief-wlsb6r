@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月25日 星期二</p>
-    <p class="updated">最后更新 11:30 · 共 13 条</p>
+    <p class="updated">最后更新 17:00 · 共 15 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -536,7 +536,23 @@
 
     <ol class="today">
       <li class="newmark">
-        <span>11:30 新增</span>
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>电动车限速要提高，自动驾驶出事车企担责</h3>
+        <p>全国人大常委会这两天在审道路交通安全法修订草案，电动自行车在非机动车道的限速打算从每小时15公里提到20公里，逆行、边骑边看视频接电话还是不许干，也得戴头盔。草案里还专门写了自动驾驶：车子处于自动驾驶状态时出的交通违法，由造车企业来担责，不用车主背锅；但要是没开自动驾驶、或者只是辅助驾驶，还是按老规矩车主自己负责。这是一审草案，还没定下来正式生效，后面还要再审几轮。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>特朗普放话，加拿大车钢关税提到50%</h3>
+        <p>特朗普说从2027年1月1号起，美国对加拿大的汽车、零部件和钢铁关税统一提到50%，但如果是在美国本土生产就零关税。他还撂话说加拿大离不开美国，95%的生意都跟美国有关。加拿大总理卡尼已经回应，从9月8号起对美国的钢铁、乳制品、农机、纸浆这些商品加征报复性关税还击。跟咱们没直接关系，全球贸易战又添了一把火，当谈资知道一下就行。</p>
+      </li>
+
+      <li class="divider">
+        <span>11:30 发的</span>
       </li>
 
       <li>
@@ -562,6 +578,10 @@
         <div class="update">
           <span>11:30 更新</span>
           <p>紫檀已经把广西13条河流冲到超警戒水位，登陆时间也比早上说的更明确了：今晚到明天早上就会在雷州半岛西侧到广西沿海登陆。住在江河边、地势低的朋友这两天尽量避开，别抱侥幸。</p>
+        </div>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>紫檀这边广西已经拉响洪水红色预警，去海南的琼州海峡轮渡从今天上午9点起全部停航，要去海南的这两天别指望走这条道了。沙德尔那边有个好消息：已经从超强台风减弱成强台风，路径还是奔浙江南部到福建方向，但劲儿比早上说的小了些。</p>
         </div>
       </li>
 
@@ -779,6 +799,11 @@
       <li><a href="https://www.stcn.com/article/detail/4102737.html">证券时报-台风紫檀已致广西13条河流19个站超警</a></li>
       <li><a href="https://news.china.com/socialgd/10000169/20260824/49694720.html">中华网-阿里巴巴港股跌超10% 新股配售引发市场波动</a></li>
       <li><a href="https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b/">TechCrunch-Hugging Face reportedly in talks to be acquired for $13B</a></li>
+      <li><a href="https://www.sina.cn/news/detail/5335741226027957.html">新浪-台风紫檀即将登陆，广西发布洪水红色预警</a></li>
+      <li><a href="https://finance.sina.com.cn/jjxw/2026-08-25/doc-inipnpyw9740257.shtml">新浪财经-沙德尔减弱为强台风级，将趋向浙闽沿海</a></li>
+      <li><a href="https://news.qq.com/rain/a/20260825A0411G00">腾讯新闻-电动自行车非机动车道限速拟从15公里提至20公里</a></li>
+      <li><a href="https://www.ithome.com/0/993/853.htm">IT之家-明确自动驾驶违法由车企担责，道路交通安全法修订草案提请审议</a></li>
+      <li><a href="https://www.news.cn/world/20260825/332435f235e74f21872ca8add982d385/c.html">新华网-特朗普说美对加汽车和钢铁进口关税将提高至50%</a></li>
     </ul>
   </footer>
 
@@ -790,7 +815,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-25/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-25/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
