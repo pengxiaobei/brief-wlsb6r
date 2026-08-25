@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月25日 星期二</p>
-    <p class="updated">最后更新 07:00 · 共 11 条</p>
+    <p class="updated">最后更新 11:30 · 共 13 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,10 +535,34 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>阿里砸800亿搞AI，股价应声跌9%</h3>
+        <p>阿里巴巴这两天宣布要在境外发行800亿港元新股，筹到的钱全部拿去砸AI基础设施建设。消息一出股价当天跌了8%多，一度跌超10%，因为新股一发，老股东手里的股票就被稀释了、含金量变低了。阿里这是拿短期股价换AI领域的领先位置。</p>
+      </li>
+
+      <li>
+        <span class="label tech">科技</span>
+        <h3>AI开源社区抱抱脸传出要卖身</h3>
+        <p>全球最大的开源AI模型库Hugging Face（大家都叫它抱抱脸）最近在找买家，估值谈到130亿美元，差不多是三年前融资时的三倍。之前英伟达想拿5亿美元换股份，被它拒了，理由是不想让一家投资方说了算。现在还没定买家，只是刚开始找。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>两个台风来了，广西广东浙闽要留意</h3>
         <p>台风紫檀这两天转向东北，往广西东南部到广东雷州半岛靠近，沿海风力有9到12级，广西、广东北部这两天有大雨到暴雨。另一个台风沙德尔已经长成超强台风，26号前后进东海，最大概率28到29号在浙江南部到福建、台湾一带登陆。这几个省份的朋友这几天多留意本地停工停课通知，出行提前查一下路线。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>紫檀已经把广西13条河流冲到超警戒水位，登陆时间也比早上说的更明确了：今晚到明天早上就会在雷州半岛西侧到广西沿海登陆。住在江河边、地势低的朋友这两天尽量避开，别抱侥幸。</p>
+        </div>
       </li>
 
       <li>
@@ -752,6 +776,9 @@
       <li><a href="https://mp.weixin.qq.com/s?__biz=MzE5ODk2NjUwOA==&amp;mid=2247498196&amp;idx=1&amp;sn=7267be328240d57db12228a0b06a8a9c">公众号-猫笔刀《韩国人想绕开咱们》</a></li>
       <li><a href="https://rebang.today/home?tab=douyin">热榜-抖音</a></li>
       <li><a href="https://rebang.today/home?tab=weibo">热榜-微博</a></li>
+      <li><a href="https://www.stcn.com/article/detail/4102737.html">证券时报-台风紫檀已致广西13条河流19个站超警</a></li>
+      <li><a href="https://news.china.com/socialgd/10000169/20260824/49694720.html">中华网-阿里巴巴港股跌超10% 新股配售引发市场波动</a></li>
+      <li><a href="https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b/">TechCrunch-Hugging Face reportedly in talks to be acquired for $13B</a></li>
     </ul>
   </footer>
 
@@ -763,7 +790,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-25/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-25/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
