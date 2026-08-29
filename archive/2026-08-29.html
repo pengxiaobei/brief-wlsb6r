@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月29日 星期六</p>
-    <p class="updated">最后更新 17:00 · 共 10 条</p>
+    <p class="updated">最后更新 07:00 · 共 11 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>07:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>军委副主席张又侠被正式免职</h3>
+        <p>全国人大常委会8月28日表决通过，正式免去张又侠的中央军委副主席职务——这是仅次于军委主席习近平的高层位置，同时刘振立的军委委员职务也被免去，另有钟绍军等多名军队将领被除名人大代表资格。两人今年1月就被曝出接受调查，这次算是官方第一次正式盖章，说明这事是真的、也有了结论。</p>
+      </li>
+
+      <li class="divider">
+        <span>17:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>房贷最长能贷40年了，月供能少一截</h3>
@@ -741,6 +755,7 @@
       <li><a href="https://www.thepaper.cn/newsDetail_forward_33968154">澎湃新闻-著名京剧表演艺术家、国家级非遗代表性传承人李维康去世</a></li>
       <li><a href="https://news.china.com/socialgd/10000169/20260828/49705213.html">中华网-台风沙德尔登陆玉环或波及9省区</a></li>
       <li><a href="https://rebang.today/home?tab=weibo">热榜-微博</a></li>
+      <li><a href="https://china.caixin.com/2026-08-28/102479361.html">财新网-张又侠、刘振立被免职</a></li>
       <li><a href="https://mp.weixin.qq.com/s?__biz=MzE5ODk2NjUwOA==&amp;mid=2247498223&amp;idx=1&amp;sn=09e5fdef93c47364e4bf69ec982d57e9">公众号-猫笔刀《灰产价格》</a></li>
     </ul>
   </footer>
@@ -753,7 +768,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-29/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-29/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
