@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月29日 星期六</p>
-    <p class="updated">最后更新 07:00 · 共 11 条</p>
+    <p class="updated">最后更新 11:30 · 共 14 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -536,7 +536,29 @@
 
     <ol class="today">
       <li class="newmark">
-        <span>07:00 新增</span>
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>请3天假，中秋国庆能连休13天</h3>
+        <p>中秋节9月25到27日放假，国庆节10月1到7日放假，中间9月28、29、30号请3天年假，两个假期就能连成一个13天长假，代价是9月20日和10月10日要正常上班补课。这个拼法这两天在网上传开了，想休的话最好现在就找单位申请，别等大家都请在你前头。</p>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>国内油价今天凌晨又涨了</h3>
+        <p>今天零点起，92号汽油每升涨了2毛9，95号涨3毛1，柴油涨3毛1，私家车加满一箱50升大概多掏15块钱。这是今年第11次涨价，主要是国际油价这阵子涨得猛。下一次调价窗口要等到9月11日，这段时间油价先就定在这个价了。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>习近平下周出访，去比什凯克开上合峰会</h3>
+        <p>习近平将在8月30日到9月3日出席在吉尔吉斯斯坦比什凯克举行的上海合作组织峰会，之后再顺访吉尔吉斯斯坦和埃及。这是近期最重要的一场外交活动，接下来几天的国际新闻大概率会围着这场峰会转。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
       </li>
 
       <li>
@@ -565,6 +587,10 @@
         <span class="label you">影响你</span>
         <h3>中尼边境山洪：遇难破579，堰塞湖还有二次决堤风险</h3>
         <p>尼泊尔那边最新数字是579人遇难、1924人失联，其中517人是外国人。上游堰塞湖已经开始往外溢水，接下来几天还有大量水汇进去，随时可能再冲一次，尼泊尔那边一度暂停了搜救。家里人最近要是打算去西藏吉隆或者尼泊尔那边，还是先缓一缓。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>遇难人数升到626人、失联2426人。卫星还在上游发现了第二个堰塞湖，离第一个只有5公里，蓄水量差不多两个西湖，风险比早上说的更大了。</p>
+        </div>
       </li>
 
       <li>
@@ -757,6 +783,11 @@
       <li><a href="https://rebang.today/home?tab=weibo">热榜-微博</a></li>
       <li><a href="https://china.caixin.com/2026-08-28/102479361.html">财新网-张又侠、刘振立被免职</a></li>
       <li><a href="https://mp.weixin.qq.com/s?__biz=MzE5ODk2NjUwOA==&amp;mid=2247498223&amp;idx=1&amp;sn=09e5fdef93c47364e4bf69ec982d57e9">公众号-猫笔刀《灰产价格》</a></li>
+      <li><a href="https://www.sohu.com/a/1052444697_122545087">搜狐-2026中秋国庆拼假公式出炉：仅请3天假，直接连休13天</a></li>
+      <li><a href="https://www.chinanews.com.cn/cj/2026/08-28/10685975.shtml">中新网-中国成品油价迎年内“第十一涨”</a></li>
+      <li><a href="https://www.news.cn/politics/leaders/20260826/7f6af0664c814b8b9ab2dc2bbe8e72a8/c.html">新华网-习近平将出席2026年上海合作组织峰会并对吉尔吉斯斯坦、埃及进行国事访问</a></li>
+      <li><a href="https://www.163.com/dy/article/L5GJEMSL0534A4SC.html">网易-尼泊尔山洪已致626人遇难、2426人失联</a></li>
+      <li><a href="https://www.163.com/dy/article/L5GURFSC0514BE2Q.html">网易-发现第二处堰塞湖！“一旦溃决对下方堰塞湖冲击很大”</a></li>
     </ul>
   </footer>
 
@@ -768,7 +799,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-29/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-29/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
