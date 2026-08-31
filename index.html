@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年8月31日 星期一</p>
-    <p class="updated">最后更新 07:00 · 共 11 条</p>
+    <p class="updated">最后更新 11:30 · 共 13 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,26 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>羽毛球协会副主席夏煊泽被查</h3>
+        <p>带出过林丹、谌龙、陈雨菲三位奥运冠军的夏煊泽，现任中国羽协副主席，8月31日被官方通报涉嫌严重违纪违法，正接受纪律审查和监察调查。协会原副主席兼秘书长王伟也一起被查。</p>
+      </li>
+
+      <li>
+        <span class="label tech">科技</span>
+        <h3>上市即巅峰，宇树股价快腰斩了</h3>
+        <p>做机器狗和人形机器人的宇树科技，8月20日刚上市就被爆炒，开盘当天一度冲到发行价的7倍多。四个交易日过去，股价已经从最高点跌掉了近一半，专家说是被炒得太高，脱离了公司实际的业绩水平。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>ETC没有被取消，以后能刷手机通行</h3>
@@ -551,6 +571,10 @@
         <span class="label talk">在聊</span>
         <h3>尼泊尔山洪：遇难破734人</h3>
         <p>尼泊尔山洪泥石流的遇难人数已经涨到734人，还有2498人失联，其中589人是外国人。之前担心冰川崩塌形成的堰塞湖会再次溃坝冲下来，水利部门30日上午通报说这个堰塞湖已经基本排空、自然泄流了，风险有所缓解，但现场排查和救援还在继续。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>遇难人数继续往上涨，截至31日已经到903人，失联4247人。原本说排空了的堰塞湖，30日又发出新警报：中国边境附近一条河的水位在涨，还有再次决堤引发新一轮山洪的风险。</p>
+        </div>
       </li>
 
       <li>
@@ -599,6 +623,10 @@
         <span class="label talk">在聊</span>
         <h3>伊朗最高领袖罕见连续发声</h3>
         <p>伊朗最高领袖穆杰塔巴·哈梅内伊这几天接连发声，先是要求国内别出现动摇人心的言论，后来又说西亚国家得认清"真正的敌人"，点名美国和以色列是团结的死敌。他此前半年多没怎么公开露面，这次连续表态被外界解读为想稳住内部士气。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>31日凌晨真的擦枪走火了：美军先炸了伊朗两处导弹发射设施，伊朗随后用导弹和无人机反击了美军在约旦、阿联酋的基地。伊朗说来袭导弹基本被拦截，暂时没有重大损失，但这轮冲突已经把国际油价推高了。</p>
+        </div>
       </li>
     </ol>
   </section>
@@ -673,6 +701,10 @@
       <li><a href="https://www.chinanews.com.cn/gj/2026/08-30/10686875.shtml">中新网-伊朗最高领袖最新声明：美以是地区团结之敌</a></li>
       <li><a href="https://rebang.today/home?tab=weibo">热榜-微博</a></li>
       <li><a href="https://rebang.today/home?tab=douyin">热榜-抖音</a></li>
+      <li><a href="https://www.chinanews.com.cn/gj/2026/08-31/10687168.shtml">中新网-尼泊尔泥石流灾害已致903人遇难</a></li>
+      <li><a href="https://www.chinanews.com.cn/gj/2026/08-31/10686968.shtml">中新网-美伊再度交火：美军袭击伊朗导弹阵地，伊朗回击</a></li>
+      <li><a href="https://www.chinanews.com.cn/gn/2026/08-31/10687298.shtml">中新网-中国羽毛球协会副主席夏煊泽接受纪律审查和监察调查</a></li>
+      <li><a href="https://finance.sina.com.cn/jjxw/2026-08-24/doc-inipmhfq1990786.shtml">新浪财经-专家解读宇树科技暴跌原因：股价炒太高，脱离基本面</a></li>
     </ul>
   </footer>
 
@@ -684,7 +716,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-08-31/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-08-31/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
