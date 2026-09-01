@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月1日 星期二</p>
-    <p class="updated">最后更新 07:00 · 共 14 条</p>
+    <p class="updated">最后更新 11:30 · 共 15 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -536,7 +536,17 @@
 
     <ol class="today">
       <li class="newmark">
-        <span>07:00 新增</span>
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>百万粉丝网红"曹奶奶"去世，享年94岁</h3>
+        <p>拍vlog记录日常生活攒下上百万粉丝的"曹奶奶"，8月28日凌晨安详离世。她这几年一直被阿尔茨海默病困扰，记性只剩几秒钟，常常认不出身边人。她是博主"小娇一家人"的婆婆，这两天这条消息刷了不少人的手机屏幕。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
       </li>
 
       <li>
@@ -606,6 +616,10 @@
         <div class="update">
           <span>07:00 更新</span>
           <p>赛后教练组确认杨瀚森会缺席男篮接下来的世预赛，但没公布具体原因，球迷还在等官方进一步说明。</p>
+        </div>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>原因说清楚了：接下来11月和明年2、3月这两个比赛窗口正好跟NBA常规赛撞期，杨瀚森得留在开拓者队里争轮换位置，没法请假回来打球。</p>
         </div>
       </li>
 
@@ -741,6 +755,7 @@
       <li><a href="https://sports.sina.cn/2026-09-01/detail-iniqfzhf6983209.d.html">新浪体育-杨瀚森绝杀后为何缺席后续世预赛</a></li>
       <li><a href="https://www.ithome.com/0/990/809.htm">IT之家-史上最疯旗舰潮！9月6厂20新机</a></li>
       <li><a href="https://www.sina.cn/gc/article/ninhnxp2862165.html">新浪-手机价格全线暴涨，幕后推手竟是它</a></li>
+      <li><a href="https://news.china.com/socialgd/10000169/20260901/49712126.html">中华网-网红曹奶奶生前患有阿尔茨海默病 94岁安详离世</a></li>
     </ul>
   </footer>
 
@@ -752,7 +767,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-01/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-01/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
