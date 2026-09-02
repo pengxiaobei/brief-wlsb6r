@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月2日 星期三</p>
-    <p class="updated">最后更新 11:30 · 共 12 条</p>
+    <p class="updated">最后更新 17:00 · 共 13 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -536,7 +536,17 @@
 
     <ol class="today">
       <li class="newmark">
-        <span>11:30 新增</span>
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label tech">科技</span>
+        <h3>OpenAI新模型太能打,首次踩到"高危"红线</h3>
+        <p>OpenAI下一代模型Astra,在网络安全能力上第一次达到了公司自己划定的"临界"风险等级——说白了就是它自己就能挖出能实战用的系统漏洞,甚至能独立策划一整套网络攻击。测试中它已经在真实系统里挖出了2个此前没人发现的漏洞,满分通过了专门测这类能力的题库。OpenAI这次先只给防御方和受限测试者用,面向大众的版本会先砍掉一部分能力。</p>
+      </li>
+
+      <li class="divider">
+        <span>11:30 发的</span>
       </li>
 
       <li>
@@ -569,6 +579,10 @@
           <span>11:30 更新</span>
           <p>美军9月2日完成了对伊朗革命卫队目标长达6个半小时的打击,伊朗随即反击,击落一架美军无人机,冲突已经波及约旦、巴林、科威特、伊拉克四国。国际油价继续大涨(布伦特站上94美元一桶),黄金这次反而是跌的,同时受冲突和加息预期两头压制。</p>
         </div>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>特朗普放话,伊朗要是敢报复就等着挨一场"终极打击"。伊朗一场婚礼被美军空袭波及,4人死亡、50人受伤。受冲突拖累,今天A股三大指数跌了1%到2%多,不过军工板块逆势大涨。</p>
+        </div>
       </li>
 
       <li>
@@ -578,6 +592,10 @@
         <div class="update">
           <span>11:30 更新</span>
           <p>最新预报是科罗旺这两天原地少动,9月2日起转向偏北,对台湾暂时没有影响,但路径还有变数。另外受此前台风"沙德尔"残留降雨影响,福建福鼎9月1日下了特大暴雨,街道内涝,当地全部中小学9月2日停课一天。</p>
+        </div>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>台风"沙德尔"在南海海面"复活"重新加强,福建普降大暴雨到特大暴雨,福鼎已经全市停工停产停课休市,部分铁路线路也停运了。这两天在福建、广东沿海有出行安排的要格外留意。</p>
         </div>
       </li>
 
@@ -715,6 +733,12 @@
       <li><a href="https://www.163.com/dy/article/L5O6CKDF05560LKB.html">网易新闻</a></li>
       <li><a href="https://thewitnesshk.com/%E5%AF%A6%E6%99%82%E6%9B%B4%E6%96%B0-%E9%BB%83%E4%B9%8B%E9%8B%92%E8%A2%AB%E6%8E%A7%E4%B8%B2%E8%AC%80%E5%8B%BE%E7%B5%90%E4%BB%8A%E7%AD%94%E8%BE%AF%E5%88%A4%E5%88%91-%E9%80%BE30%E4%BA%BA%E9%80%9A/">法庭线 The Witness</a></li>
       <li><a href="https://tidenews.com.cn/news.html?id=3546955">潮新闻</a></li>
+      <li><a href="https://news.sina.com.cn/w/2026-09-02/doc-iniqkqve4593678.shtml">新浪新闻</a></li>
+      <li><a href="https://www.thepaper.cn/newsDetail_forward_33993073">澎湃新闻</a></li>
+      <li><a href="https://www.fj.chinanews.com.cn/news/2026/2026-09-01/590024.html">中新网福建</a></li>
+      <li><a href="https://news.fznews.com.cn/fzyw/20260902/N28ik3z16b.shtml">福州新闻网</a></li>
+      <li><a href="https://www.ithome.com/0/987/221.htm">IT之家</a></li>
+      <li><a href="https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/">TechCrunch</a></li>
     </ul>
   </footer>
 
@@ -726,7 +750,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-02/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-02/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
