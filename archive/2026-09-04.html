@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月4日 星期五</p>
-    <p class="updated">最后更新 07:00 · 共 10 条</p>
+    <p class="updated">最后更新 11:30 · 共 13 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,32 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>灵活就业人员参保医保,以后更方便</h3>
+        <p>国家医保局9月4日说,以后灵活就业、经常换城市工作的人参加职工医保会更方便——超大城市要全面取消参保的户籍和常住地限制,交居民医保的年限以后还能折算成职工医保的年限,职工医保缴费年限也能按月一点点累计,不用非得整年整年地算。自由职业者、经常换工作城市的人以后办医保能少跑很多弯路。</p>
+      </li>
+
+      <li>
+        <span class="label tech">科技</span>
+        <h3>OpenAI发布新模型,称AGI时代到了</h3>
+        <p>OpenAI凌晨发布新一代模型GPT-6 Astra,公司总裁说"欢迎来到AGI时代"——AGI指的是那种什么活儿都能干、还干得比大多数人好的通用AI。这次它在写代码、做科研、操作电脑这些任务上都测出了目前的最高水平。不过OpenAI自己的安全评估也第一次把它打到了最高风险级别,说明它同时也具备被人拿去搞网络攻击之类坏事的能力。目前只对少数机构开放,普通用户这几天才会陆续用上。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>上海市长换人,龚正辞职朱忠明代理</h3>
+        <p>上海市人大常委会9月4日开会,同意了龚正辞去上海市市长职务的请求,朱忠明接任副市长、代理市长。朱忠明这个月29号已经先当上了市政府党组书记,这次算是把市长的职务也正式交接了,他之前在浙江、湖南、财政部都任过职。龚正卸任后的去向目前还没公布。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>中秋国庆连着放,请3天能连休13天</h3>
@@ -569,6 +595,10 @@
         <span class="label talk">在聊</span>
         <h3>武大女教授被举报权色交易</h3>
         <p>有网友自称是武汉大学一位教授的女儿,发了86页材料实名举报该校化学学院一名女教授,说她跟已婚导师有不正当关系,还破坏了自己父母的婚姻长达十年,材料里还提到涉嫌学术造假。武汉大学9月3日晚通报说已经关注到举报,校纪委正在加快调查,后续会公布处理结果。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>举报材料里那位已婚导师被扒出是付磊,武汉大学教授出身,现在是安徽大学副校长。安徽大学9月4日回应确认了这个身份,说也在调查。</p>
+        </div>
       </li>
 
       <li>
@@ -682,6 +712,10 @@
       <li><a href="https://news.mydrivers.com/1/1147/1147789.htm">快科技</a></li>
       <li><a href="https://finance.sina.com.cn/roll/2026-09-02/doc-iniqkvch7919823.shtml">新浪财经</a></li>
       <li><a href="https://k.sina.cn/article_7880068208_1d5b04c7006801gsx6.html">新浪新闻</a></li>
+      <li><a href="https://www.chinanews.com.cn/gn/2026/09-04/10690100.shtml">中新网</a></li>
+      <li><a href="https://www.chinanews.com.cn/gn/2026/09-04/10690212.shtml">中新网</a></li>
+      <li><a href="https://news.qq.com/rain/a/20260904A03YU400">腾讯新闻</a></li>
+      <li><a href="https://finance.sina.com.cn/wm/2026-09-04/doc-iniqrtwu4068869.shtml">新浪财经</a></li>
     </ul>
   </footer>
 
@@ -693,7 +727,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-04/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-04/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
