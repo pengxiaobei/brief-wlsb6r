@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月5日 星期六</p>
-    <p class="updated">最后更新 11:30 · 共 12 条</p>
+    <p class="updated">最后更新 17:00 · 共 15 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -536,7 +536,29 @@
 
     <ol class="today">
       <li class="newmark">
-        <span>11:30 新增</span>
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>吃避孕药别久坐,当心肺栓塞</h3>
+        <p>最近又有年轻女性因为长期吃避孕药、又久坐不动查出肺栓塞——避孕药里的雌激素会让血液更容易凝固结块。如果你在吃避孕药,长途旅行、久坐办公时最好每一两个小时起来走两步,一旦出现胸痛、喘不上气要赶紧去医院。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>特朗普确认:习近平9月24日访美</h3>
+        <p>特朗普9月4日说,他已经邀请习近平9月24日到访白宫,还要摆国宴招待,习近平会带夫人彭丽媛一起去,据说还有一大批中国企业家跟着去。这是最近中美之间最高规格的一次互动,能不能谈出实质性的经贸协议,现在还不知道。</p>
+      </li>
+
+      <li>
+        <span class="label tech">科技</span>
+        <h3>字节跳动借296亿美元,砸钱扩AI</h3>
+        <p>字节跳动谈成了一笔296亿美元的银团贷款,是今年亚洲第二大的美元贷款。这笔钱跟它今年要把AI相关投入加到700亿美元(差不多是去年两倍)的计划挂钩,主要拿去建数据中心。银行愿意借这么大一笔钱,说明市场也看好它这笔AI投入能收得回来。</p>
+      </li>
+
+      <li class="divider">
+        <span>11:30 发的</span>
       </li>
 
       <li>
@@ -563,6 +585,10 @@
           <span>11:30 更新</span>
           <p>救援通道已经打通,人员和物资能从陆路进入核心区了,现场投入了2300多人搜救,当地12个基站也恢复了通信。</p>
         </div>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>灾害尼泊尔一侧最后1名受困的中国公民,9月5日也确认获救了。</p>
+        </div>
       </li>
 
       <li>
@@ -578,6 +604,10 @@
         <div class="update">
           <span>11:30 更新</span>
           <p>东海附近还有一个热带扰动在酝酿,未来两三天可能长成新台风,会不会影响国内沿海还要再看。</p>
+        </div>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>另一个台风沙德尔减弱后在福建莆田引发了破纪录暴雨,一个工业区被淹,近50家企业受灾,3000多名工人连夜转移,还有老房子倒塌。最近要去福建沿海的,多留意当地最新预警。</p>
         </div>
       </li>
 
@@ -711,6 +741,11 @@
       <li><a href="https://finance.sina.com.cn/jjxw/2026-09-05/doc-iniqsvkn5833795.shtml">新浪财经</a></li>
       <li><a href="https://finance.sina.com.cn/jjxw/2026-09-03/doc-iniqqnck4262718.shtml">新浪财经</a></li>
       <li><a href="https://news.qq.com/rain/a/20260904A0BHXX00">腾讯新闻</a></li>
+      <li><a href="https://www.voachinese.com/a/trump-confirms-xi-s-september-24-visit-as-chinese-leader-reportedly-plans-large-business-delegation-20260904/8194334.html">美国之音中文网</a></li>
+      <li><a href="http://www.eeo.com.cn/2026/0903/1022189.shtml">经济观察网</a></li>
+      <li><a href="https://y.dxy.cn/hospital/214/1044083.html">丁香园</a></li>
+      <li><a href="https://www.chinanews.com.cn/gn/2026/09-05/10690952.shtml">中新网</a></li>
+      <li><a href="https://m.gmw.cn/2026-09/05/content_38985974.htm">光明网</a></li>
     </ul>
   </footer>
 
@@ -722,7 +757,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-05/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-05/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
