@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月6日 星期日</p>
-    <p class="updated">最后更新 07:00 · 共 10 条</p>
+    <p class="updated">最后更新 11:30 · 共 12 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,26 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>江西遂川泥石流致3死9失联</h3>
+        <p>还是这轮台风带的强降雨闯的祸,江西吉安遂川县高坪镇9月5日凌晨发生泥石流,已经确认3人遇难,还有9人失联,当地紧急转移了5000多名群众。跟莆田的城市内涝不是一回事,这次是山体滑坡,家在江西山区或者最近要去那边的,这两天离山脚、河沟边远一点。</p>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>研究生卖黄金12万,账户被跨省冻结近3个月</h3>
+        <p>北京一名研究生在闲鱼上线下卖了12.4万的黄金,收款没多久,名下所有银行账户就被湖南警方以涉诈骗案为由跨省冻结,连实习工资卡都开不了。北京警方后来查清他本人没问题,但湖南那边三个月都没给解冻结论。线下卖贵重物品收大额转账要留好身份和聊天记录,买家的钱一旦有问题,自己的账户也可能被连带冻结很久。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>莆田水患加重,30万人转移避险</h3>
@@ -545,6 +565,10 @@
         <span class="label talk">在聊</span>
         <h3>美军炸伊朗油轮,伊朗放话要反击</h3>
         <p>伊朗革命卫队朝两艘正在附近巡逻的美军舰艇发射导弹后,美军9月5日反手把3艘伊朗油轮打瘫痪,其中一艘直接报废,官方说法是这样能掐住伊朗的石油命脉。伊朗军方随后警告,可能会对美国发动更大规模的打击。这轮美伊对峙已经持续了半年,一旦真打起来,国际油价大概率会跟着往上跳。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>伊朗真动手回击了:革命卫队说自己用弹道导弹打中了美军一艘航空母舰和一艘导弹驱逐舰,但美方说这两艘军舰都成功躲开了,没有受损。双方各说各话,但冲突明显又升级了一步。</p>
+        </div>
       </li>
 
       <li>
@@ -575,6 +599,10 @@
         <span class="label tech">科技</span>
         <h3>苹果折叠iPhone,预计9月发布</h3>
         <p>苹果第一款折叠屏iPhone预计9月亮相,展开后接近8英寸,合上跟普通手机差不多大。国行版价格预测集中在1.5万到2万元之间,顶配版可能破2万,首批发货可能要拖到10月甚至11月才到手。想买的话,现在看到的都还是预测价,等正式发布会才有准数。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>发布会定档了:北京时间9月10日凌晨1点,折叠屏这款可能就叫iPhone Ultra,计划9月18日跟其他新iPhone一起上市。</p>
+        </div>
       </li>
 
       <li>
@@ -681,6 +709,10 @@
       <li><a href="https://edu.cnr.cn/dj/20260904/t20260904_527804766.shtml">央广网</a></li>
       <li><a href="https://finance.sina.com.cn/jjxw/2026-09-06/doc-iniqveri9981163.shtml">新浪财经</a></li>
       <li><a href="https://news.sina.com.cn/c/2026-09-05/doc-iniqutzt0608556.shtml">新浪新闻</a></li>
+      <li><a href="https://www.jiemian.com/article/15059768.html">界面新闻</a></li>
+      <li><a href="https://www.sina.cn/gc/article/nipuiyp5226810.html">新浪科技</a></li>
+      <li><a href="https://www.sina.cn/news/detail/5340073625391311.html">新浪新闻</a></li>
+      <li><a href="https://news.sina.com.cn/c/2026-09-06/doc-iniqwhca6961528.shtml">新浪新闻</a></li>
     </ul>
   </footer>
 
@@ -692,7 +724,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-06/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-06/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
