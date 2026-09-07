@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月7日 星期一</p>
-    <p class="updated">最后更新 07:00 · 共 10 条</p>
+    <p class="updated">最后更新 11:30 · 共 12 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,26 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>特斯拉降价:Model Y直降1万,月供最低2894</h3>
+        <p>特斯拉中国宣布,9月30日前下单提现车能享受现金激励,Model 3减5000元、Model Y减1万元。叠加5年0息政策后,Model Y首付7.99万起,月供最低约2894元一个月。有网友觉得这其实是变相降价清库存,想买车的可以留意这个月底的截止时间。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>武汉长江段驳船疑倾倒不明黑色固体</h3>
+        <p>有网友拍到武汉江面上多艘驳船往长江里倒黑色物质,江水很快被染黑,大约一个半小时里目击了三艘船这么干,视频传出后网上都在猜是不是化工废料。武汉市生态环境局已经联合公安、交通部门赶到现场调查,具体是什么、有没有污染还没有结论。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>东南沿海这周大风暴雨,出行留意</h3>
@@ -593,6 +613,10 @@
         <span class="label tech">科技</span>
         <h3>华为新芯片技术,散热要求变高</h3>
         <p>华为公布了新一代芯片设计方案的细节,简单说就是让电流在芯片里"走的路更短",这样更省电、跑得更快,过去六年已经用在381款芯片上。但代价是芯片发热会越来越集中,以后手机电脑光靠现在的散热片可能不够用,对做散热生意的公司来说不算好消息。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>今天华为发布会把这项技术的实际产品端出来了:新旗舰芯片麒麟9050 Pro亮相,首发装在Mate XT2三折叠手机上,多核性能比上一代提升52%。</p>
+        </div>
       </li>
     </ol>
   </section>
@@ -663,6 +687,9 @@
       <li><a href="https://finance.sina.cn/2026-09-04/detail-iniqsraq1083661.d.html">新浪财经</a></li>
       <li><a href="https://rebang.today/home?tab=douyin">今日热榜(抖音)</a></li>
       <li><a href="https://rebang.today/home?tab=weibo">今日热榜(微博)</a></li>
+      <li><a href="https://news.qq.com/rain/a/20260907A055KU00">腾讯新闻(特斯拉降价)</a></li>
+      <li><a href="https://www.thepaper.cn/newsDetail_forward_34022495">澎湃新闻(长江黑色物质)</a></li>
+      <li><a href="https://tech.ifeng.com/c/8wE4gXJeH6G">凤凰网科技(麒麟9050 Pro)</a></li>
     </ul>
   </footer>
 
@@ -674,7 +701,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-07/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-07/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
