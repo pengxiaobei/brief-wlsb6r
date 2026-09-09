@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月9日 星期三</p>
-    <p class="updated">最后更新 07:00 · 共 9 条</p>
+    <p class="updated">最后更新 11:30 · 共 10 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>西安21年前分尸案告破</h3>
+        <p>2004年西安一男子伙同怀孕的妻子,杀害邻居家一个女孩后分尸抛尸,案子一直没破。去年警方用新技术从当年留下的塑料袋上提取到男方的DNA,才锁定两人身份并抓获,前后拖了21年。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>本周五油价要涨,加油趁早</h3>
@@ -545,6 +559,10 @@
         <span class="label tech">科技</span>
         <h3>苹果今晚发布会,折叠屏iPhone登场</h3>
         <p>苹果的秋季发布会定在今晚,北京时间明天(9月10日)凌晨1点开始,压轴的是苹果第一款横向对折的iPhone,外屏5.5寸、展开后内屏7.8寸,和小平板差不多大。同时发布的还有iPhone18 Pro系列。库克这个月刚卸任CEO,这是新CEO坦纳斯上任后第一次登台。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>发布会开完了,价格出来了:折叠屏iPhone国行14999元起,iPhone18 Pro是9999元起、Pro Max是10999元起,比上一代都涨了价。</p>
+        </div>
       </li>
 
       <li>
@@ -581,6 +599,10 @@
         <span class="label talk">在聊</span>
         <h3>长沙女子称被4岁男童摸臀起诉</h3>
         <p>长沙一家餐厅里,一个4岁男孩跑动时手碰到了一名女子,监控显示是不小心的,但女子要求孩子父母书面道歉、录视频道歉、写管教保证书,被拒绝后她说自己气到呼吸性碱中毒送医。派出所调解了三次都没成,现在她已经正式起诉到法院,要走法律程序。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>曝出更多细节:争执中是这名女子先反手把孩子脖子勒出了红印,孩子父母已经道歉并赔了医药费,但她还要对方写保证书、拍视频道歉,这才谈不拢。</p>
+        </div>
       </li>
 
       <li>
@@ -657,6 +679,9 @@
       <li><a href="https://bbs.hupu.com/642322267.html">虎扑(女篮对阵波多黎各时间)</a></li>
       <li><a href="https://rebang.today/home?tab=douyin">今日热榜(抖音)</a></li>
       <li><a href="https://rebang.today/home?tab=weibo">今日热榜(微博)</a></li>
+      <li><a href="https://news.qq.com/rain/a/20260908A0DNM900">腾讯新闻(西安分尸案告破)</a></li>
+      <li><a href="https://post.smzdm.com/p/a3m0e67n/">什么值得买(苹果发布会定价)</a></li>
+      <li><a href="https://www.sina.cn/news/detail/5340912230076819.html">新浪新闻(长沙男童摸臀纠纷新细节)</a></li>
     </ul>
   </footer>
 
@@ -668,7 +693,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-09/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-09/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
