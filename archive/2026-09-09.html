@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月9日 星期三</p>
-    <p class="updated">最后更新 11:30 · 共 10 条</p>
+    <p class="updated">最后更新 17:00 · 共 12 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -536,7 +536,23 @@
 
     <ol class="today">
       <li class="newmark">
-        <span>11:30 新增</span>
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>美国和伊朗互相开火,中东局势升温</h3>
+        <p>伊朗革命卫队今天说,报复性打击了约旦的美军基地机库、两艘美军军舰和好几艘美国油轮,还有导弹落进了约旦境内。这是这几天双方来回打的最新一轮,要是继续升级,霍尔木兹海峡那边的油轮不敢走,全球油价可能会跟着往上蹿。</p>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>18岁小伙熬夜猝死,账号名字叫早睡</h3>
+        <p>辽宁一个18岁男生长期熬夜失眠,9月3号那晚又没睡,后半夜心脏骤停没抢救过来,他自己的社交账号名字就叫"早些睡"。医生说熬夜本身不会直接导致猝死,但长期缺觉会让神经一直紧绷,血压心率跟着升高,猝死风险明显变大。</p>
+      </li>
+
+      <li class="divider">
+        <span>11:30 发的</span>
       </li>
 
       <li>
@@ -602,6 +618,10 @@
         <div class="update">
           <span>11:30 更新</span>
           <p>曝出更多细节:争执中是这名女子先反手把孩子脖子勒出了红印,孩子父母已经道歉并赔了医药费,但她还要对方写保证书、拍视频道歉,这才谈不拢。</p>
+        </div>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>有律师分析,她把不同的事混在一起说,这么闹到法院,她自己反而可能涉嫌寻衅滋事。她的抖音、微博账号目前都已经被平台限制关注。</p>
         </div>
       </li>
 
@@ -682,6 +702,9 @@
       <li><a href="https://news.qq.com/rain/a/20260908A0DNM900">腾讯新闻(西安分尸案告破)</a></li>
       <li><a href="https://post.smzdm.com/p/a3m0e67n/">什么值得买(苹果发布会定价)</a></li>
       <li><a href="https://www.sina.cn/news/detail/5340912230076819.html">新浪新闻(长沙男童摸臀纠纷新细节)</a></li>
+      <li><a href="https://www.news.cn/world/20260909/b79d8ee1bb274170b818f6c9d9561dc4/c.html">新华网(美伊互袭升级)</a></li>
+      <li><a href="https://www.163.com/dy/article/L6D31V52053469LG.html">网易新闻(18岁男生熬夜猝死)</a></li>
+      <li><a href="https://news.sina.com.cn/c/2026-09-08/doc-inirayqy4673533.shtml">新浪新闻(长沙男童摸臀事件律师分析)</a></li>
     </ul>
   </footer>
 
@@ -693,7 +716,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-09/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-09/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
