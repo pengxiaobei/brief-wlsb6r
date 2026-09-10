@@ -2,8 +2,14 @@
   "date": "2026年9月10日 星期四",
   "stamp": "2026-09-10",
   "note": "内容为 9 月 10 日。",
-  "runs": ["07:00", "11:30"],
+  "runs": ["07:00", "11:30", "17:00"],
   "items": [
+    {
+      "kind": "talk",
+      "at": "17:00",
+      "title": "青岛货轮起火,25人遇难",
+      "body": "青岛北海造船厂一艘外籍货轮今天上午检修时突然起火,船上42人,12人自己撤了出来、5人受伤送医但暂无生命危险,剩下25人一开始联系不上。明火下午两点半扑灭,到晚上7点多确认这25人全部遇难。习近平已经作出批示,要求抓紧查清事故原因、严肃追究责任。"
+    },
     {
       "kind": "you",
       "at": "07:00",
@@ -114,6 +120,8 @@
     {"name": "中新网(霍尔木兹海峡油轮大战)", "url": "https://www.chinanews.com.cn/gj/2026/09-10/10693699.shtml"},
     {"name": "新浪财经(IAEA伊核决议中国投反对票)", "url": "https://finance.sina.com.cn/roll/2026-09-10/doc-inirhvxe3148853.shtml"},
     {"name": "IT之家(罗永浩点评iPhone Duo)", "url": "https://www.ithome.com/1/000/810.htm"},
-    {"name": "网易新闻(9月10日俄乌局势)", "url": "https://c.m.163.com/news/a/K94B76PT0528MQRO.html"}
+    {"name": "网易新闻(9月10日俄乌局势)", "url": "https://c.m.163.com/news/a/K94B76PT0528MQRO.html"},
+    {"name": "中新网(青岛货轮火灾25人遇难)", "url": "https://www.chinanews.com.cn/sh/2026/09-10/10694230.shtml"},
+    {"name": "星岛头条(习近平就货轮火灾作出批示)", "url": "https://www.stheadline.com/zh-hans/realtime-china/3613822/"}
   ]
 }

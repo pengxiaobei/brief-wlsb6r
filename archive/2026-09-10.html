@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月10日 星期四</p>
-    <p class="updated">最后更新 11:30 · 共 10 条</p>
+    <p class="updated">最后更新 17:00 · 共 11 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>青岛货轮起火,25人遇难</h3>
+        <p>青岛北海造船厂一艘外籍货轮今天上午检修时突然起火,船上42人,12人自己撤了出来、5人受伤送医但暂无生命危险,剩下25人一开始联系不上。明火下午两点半扑灭,到晚上7点多确认这25人全部遇难。习近平已经作出批示,要求抓紧查清事故原因、严肃追究责任。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>请3天年假拼出13天长假</h3>
@@ -684,6 +698,8 @@
       <li><a href="https://finance.sina.com.cn/roll/2026-09-10/doc-inirhvxe3148853.shtml">新浪财经(IAEA伊核决议中国投反对票)</a></li>
       <li><a href="https://www.ithome.com/1/000/810.htm">IT之家(罗永浩点评iPhone Duo)</a></li>
       <li><a href="https://c.m.163.com/news/a/K94B76PT0528MQRO.html">网易新闻(9月10日俄乌局势)</a></li>
+      <li><a href="https://www.chinanews.com.cn/sh/2026/09-10/10694230.shtml">中新网(青岛货轮火灾25人遇难)</a></li>
+      <li><a href="https://www.stheadline.com/zh-hans/realtime-china/3613822/">星岛头条(习近平就货轮火灾作出批示)</a></li>
     </ul>
   </footer>
 
@@ -695,7 +711,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-10/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-10/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
