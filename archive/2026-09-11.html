@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月11日 星期五</p>
-    <p class="updated">最后更新 07:00 · 共 10 条</p>
+    <p class="updated">最后更新 11:30 · 共 12 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,26 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>青岛货轮起火,25人遇难</h3>
+        <p>9月10日中午,一艘外籍货轮在青岛北海造船厂检修时突然起火,当时船上有42人,最后确认25人遇难、5人受伤。习近平已作出指示,要求抓紧善后、尽快查明原因、严肃追责。起火的具体原因还没正式公布。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>印度机构建议查小米,外交部回应</h3>
+        <p>印度一个政府机构以涉嫌违反外资相关法规为由,建议对小米公司展开调查。中国外交部回应说不了解具体情况,并要求印方给中国企业提供公平、透明、非歧视的营商环境。这是中印经贸摩擦的最新一次,目前还没有实质处罚。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>台风白海豚北上,华北也要防几天</h3>
@@ -569,6 +589,10 @@
         <span class="label talk">在聊</span>
         <h3>美联储下周四开会,加息概率涨到七成</h3>
         <p>美国下周四(9月17号)凌晨要开会决定利率,受通胀压力和这轮油价暴涨影响,市场预计加息的概率已经从之前的三成多涨到了七成左右。真要加息的话,人民币汇率、A股和大宗商品价格短期都可能跟着波动。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>美国隔夜公布的8月PPI数据比预期还高,加息预期又往上推了一截,机构测算的概率一度冲到七成三以上。今晚要公布的CPI数据是最后关键,如果核心通胀也超预期,下周四加息基本就实锤了。</p>
+        </div>
       </li>
 
       <li>
@@ -661,6 +685,9 @@
       <li><a href="https://cn.investing.com/central-banks/fed-rate-monitor">Investing.com - 美联储利率观测器</a></li>
       <li><a href="https://rebang.today/home?tab=douyin">今日热榜 - 抖音热榜</a></li>
       <li><a href="https://rebang.today/home?tab=weibo">今日热榜 - 微博热搜</a></li>
+      <li><a href="https://news.sina.com.cn/c/2026-09-10/doc-inirixks2782497.shtml">新浪新闻 - 青岛北海造船货轮火灾25人遇难</a></li>
+      <li><a href="https://www.sohu.com/a/1074431833_161795">搜狐 - 印度建议调查小米,中方回应</a></li>
+      <li><a href="https://cn.investing.com/news/stock-market-news/article-3561892">英为财情 - 美联储决议前PPI数据推高加息概率</a></li>
     </ul>
   </footer>
 
@@ -672,7 +699,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-11/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-11/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
