@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月12日 星期六</p>
-    <p class="updated">最后更新 11:30 · 共 12 条</p>
+    <p class="updated">最后更新 17:00 · 共 14 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -536,7 +536,23 @@
 
     <ol class="today">
       <li class="newmark">
-        <span>11:30 新增</span>
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>支联会案宣判:李卓人邹幸彤领刑7年多</h3>
+        <p>香港法院就“煽动颠覆国家政权”案宣判:支联会前主席李卓人判监7年,前副主席邹幸彤7年3个月,另一位副主席何俊仁因开庭前认罪减到5年2个月,支联会这个组织本身被罚150万港元。三人是因为组织纪念活动被定罪,法官认定情节严重。李卓人和邹幸彤已经表示会上诉。</p>
+      </li>
+
+      <li>
+        <span class="label tech">科技</span>
+        <h3>200部AI短剧才出1个爆款,九成在亏钱</h3>
+        <p>今年上半年全网新出的AI短剧超过22万部,差不多一分钟就冒出一部,但播放量能破亿的连0.5%都不到,大概200部才能跑出1个爆款。现在做一部AI短剧,每万次播放能拿到的分成从去年的三五十块跌到了五到十块,九成做这行的公司都在亏钱。想靠AI短剧赚快钱的,风口已经过去了。</p>
+      </li>
+
+      <li class="divider">
+        <span>11:30 发的</span>
       </li>
 
       <li>
@@ -575,6 +591,10 @@
         <span class="label you">影响你</span>
         <h3>内存涨价带崩手机价,新机贵千元起</h3>
         <p>这几天苹果、小米、华为撞车发布折叠屏旗舰,背后是这个月存储芯片普遍涨价,厂商压箱底的新机定价比上一代贵了1000到2000元。最近想换手机又不着急的话,可以考虑买上一代,或者等等看厂商之间打价格战。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>iPhone18 Pro今晚8点开放预购,官网和天猫官方旗舰店共享首批库存、供货相对充足,其他小店可能很快就抢空。真想买首发的,建议直接蹲官网或天猫旗舰店。</p>
+        </div>
       </li>
 
       <li>
@@ -694,6 +714,9 @@
       <li><a href="https://www.chinanews.com.cn/cj/2026/09-12/10695225.shtml">中新网-菲尔兹奖得主警告AI数学错位</a></li>
       <li><a href="https://www.sina.cn/news/detail/5342101143553484.html">新浪新闻-美国8月CPI数据</a></li>
       <li><a href="https://www.sohu.com/a/1074907293_121117596">搜狐-台风杜鹃路径预测</a></li>
+      <li><a href="https://www.voachinese.com/a/hong-kong-court-sentences-tiananmen-activists-5-to-7-years-in-jail-20260911/8196975.html">美国之音-支联会案宣判</a></li>
+      <li><a href="https://news.sina.com.cn/o/2026-09-11/doc-inirnaka5711722.shtml">新浪新闻-AI短剧九成亏损</a></li>
+      <li><a href="https://post.smzdm.com/p/am98wenz/">什么值得买-iPhone18 Pro预购攻略</a></li>
     </ul>
   </footer>
 
@@ -705,7 +728,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-12/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-12/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
