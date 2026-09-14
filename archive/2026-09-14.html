@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月14日 星期一</p>
-    <p class="updated">最后更新 11:30 · 共 12 条</p>
+    <p class="updated">最后更新 17:00 · 共 14 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -536,13 +536,33 @@
 
     <ol class="today">
       <li class="newmark">
-        <span>11:30 新增</span>
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>一汽广汽传出合并,广汽紧急停牌</h3>
+        <p>市场传出一汽要入股广汽、两家车企要联营重组,广汽A股周一紧急停牌一天,港股一度大涨超8%。官方回应说收盘后会发公告,具体怎么合还没定。要是这事成了,国内车企格局会有一次大洗牌。</p>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>孕期哺乳期别瞎忌碘,当心影响孩子说话</h3>
+        <p>有妈妈听信“无碘盐更健康”的说法,怀孕和哺乳期都不吃碘,结果孩子2岁多了还不太会说话,反应也比同龄孩子慢半拍。医生说甲状腺结节大多是良性的,不用刻意忌碘;真正该多补碘的反而是孕期和哺乳期女性,没有医嘱别自己瞎忌口。</p>
+      </li>
+
+      <li class="divider">
+        <span>11:30 发的</span>
       </li>
 
       <li>
         <span class="label you">影响你</span>
         <h3>海南暴雨紧急转移4万多人</h3>
         <p>海南这两天连续下暴雨,部分地方单日雨量破了纪录,保亭、五指山、乐东等地累计雨量能到100到150毫米,局部超过250毫米。全省已经紧急转移4万2千多人,多地停课,要警惕山体滑坡、泥石流这类次生灾害。在海南或者这两天打算去的,出行安排要留个心眼。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>灾情又升级了:局部雨量已经破900毫米,五指山因为山洪冲坏了供水供气管道,已经全城停水停气。人在海南的尽量少出门,家里备点水和吃的。</p>
+        </div>
       </li>
 
       <li>
@@ -719,6 +739,9 @@
       <li><a href="https://mp.weixin.qq.com/s?__biz=MzE5ODk2NjUwOA==&amp;mid=2247498365&amp;idx=1&amp;sn=e7bf81f3211bc767718594f426b6ad11">猫笔刀公众号</a></li>
       <li><a href="https://www.chinanews.com.cn/sh/2026/09-14/10696202.shtml">中新网-海南暴雨转移人口</a></li>
       <li><a href="https://news.china.com/socialgd/10000169/20260914/49739900.html">中华网-程序员删89TB数据获刑</a></li>
+      <li><a href="https://www.chinanews.com.cn/sh/2026/09-14/10696338.shtml">中新网-海南暴雨雨量破纪录</a></li>
+      <li><a href="https://stock.jrj.com.cn/2026/09/14100358424974.shtml">金融界-广汽集团停牌回应</a></li>
+      <li><a href="https://www.stheadline.com/zh-hans/realtime-china/3615292">星岛头条-孕妇误信无碘盐更健康</a></li>
     </ul>
   </footer>
 
@@ -730,7 +753,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-14/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-14/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
