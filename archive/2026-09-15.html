@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月15日 星期二</p>
-    <p class="updated">最后更新 11:30 · 共 10 条</p>
+    <p class="updated">最后更新 17:00 · 共 12 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -536,7 +536,23 @@
 
     <ol class="today">
       <li class="newmark">
-        <span>11:30 新增</span>
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>川渝陕鄂持续暴雨,警惕内涝山洪</h3>
+        <p>四川东部、重庆、陕西南部、湖北这些地方从今晚开始到18号,会连续下大雨到暴雨,局部地方雨量能到100毫米以上。水利部和气象局已经发了山洪灾害预警,重庆市区还专门提醒有10个区县内涝风险偏高。这几天在这些地方的人,尽量避开地下车库、涵洞这些容易积水的地方,山区也留意山体滑坡。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>钟薛高508项资产过户完成,或将复活</h3>
+        <p>网红雪糕品牌钟薛高破产后,508项商标和专利今年5月被拍卖,卖了2110万,这几天法院正式把这些资产过户给了买家。淘宝上的钟薛高官方店已经搜不到了,但接盘公司背后跟做冰淇淋的"皇家小虎"是关联公司,大概率会拿这个牌子重新出产品。罗永浩前两天还在微博上说怀念这个牌子,没想到马上就有后续。</p>
+      </li>
+
+      <li class="divider">
+        <span>11:30 发的</span>
       </li>
 
       <li>
@@ -722,6 +738,9 @@
       <li><a href="https://m.bjnews.com.cn/detail/1789377196129051.html">北京青年报-近20省份公布社保缴费新基数</a></li>
       <li><a href="https://www.163.com/dy/article/L6IMJLVS0553OOJ3.html">网易-红海告急曼德海峡战火逼近油价飙升</a></li>
       <li><a href="https://news.qq.com/rain/a/20260915A0367000">腾讯新闻-一汽丰田股份交易一汽换股入主广汽</a></li>
+      <li><a href="https://news.qq.com/rain/a/20260914A0B8CJ00">腾讯新闻-钟薛高508件无形资产完成过户</a></li>
+      <li><a href="https://m.gmw.cn/2026-09/15/content_1304564031.htm">光明网-重庆发布城市内涝风险预警</a></li>
+      <li><a href="https://news.qq.com/rain/a/20260914A0DDS800">腾讯新闻-山洪灾害气象预警</a></li>
     </ul>
   </footer>
 
@@ -733,7 +752,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-15/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-15/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
