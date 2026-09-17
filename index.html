@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月17日 星期四</p>
-    <p class="updated">最后更新 07:00 · 共 7 条</p>
+    <p class="updated">最后更新 11:30 · 共 10 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,10 +535,40 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>台风杜鹃生成,但基本不会来国内</h3>
+        <p>第25号台风"杜鹃"16号晚上在西太平洋生成,专家说得比较明确了:它接下来会转向往日本那边走,不会登陆中国,连挨上日本的概率都在往下掉。这几天惦记着台风会不会打乱周末安排的,这份担心可以先放下。</p>
+      </li>
+
+      <li>
+        <span class="label tech">科技</span>
+        <h3>问界要从华为的店里搬出去单干了</h3>
+        <p>有消息说问界明年1月1号起会正式撤出鸿蒙智行和华为专卖店,以后自己开店卖车,不再跟华为其他几个"界"的车摆一块儿卖。原因是问界这两年卖得最好,去年卖了42万多辆,均价39万,算是在华为这套模式里"毕业"了。已经买了问界车的人,售后和车机升级都不受影响。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>央视主持人敬一丹追悼会今天办了</h3>
+        <p>前央视主持人敬一丹9月13号去世,享年71岁,今早告别仪式在北京八宝山举行。她主持过《焦点访谈》《东方时空》这些老牌栏目,朱军、水均益等同行都去送了,挽联写的是"一生悲悯放大弱者声音"。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>美联储时隔三年再次加息</h3>
         <p>北京时间今天凌晨,美联储把利率从3.5%到3.75%上调到3.75%到4%,这是2023年7月以来头一次加息。原本大家都猜要降息,连特朗普都在喊快点降息,结果美联储反着来,说明通胀压得太狠、压不住。这两天A股科技股和黄金已经提前涨了一波,今天走势可能还会有波动,想抄底的再多看看风向。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>加息真落地之后,美股当天尾盘反而跳水了,道琼斯指数跌1.21%,标普跌0.45%。美联储主席在发布会上说通胀几乎没降下来,暗示后面可能还要接着加。手里有美股或相关基金的,这两天的波动估计还没走完。</p>
+        </div>
       </li>
 
       <li>
@@ -683,6 +713,10 @@
       <li><a href="https://www.sohu.com/a/1076729120_122066679">赵露思自导自演新剧官宣</a></li>
       <li><a href="https://rebang.today/home?tab=douyin">抖音热榜</a></li>
       <li><a href="https://rebang.today/home?tab=weibo">微博热搜</a></li>
+      <li><a href="https://m.gmw.cn/2026-09/17/content_1304564577.htm">台风杜鹃最新路径</a></li>
+      <li><a href="https://www.sina.cn/weibo/detail/5344154083393607.html">问界撤出鸿蒙智行门店</a></li>
+      <li><a href="https://news.sina.cn/zt_d/subject-1789257728">敬一丹追悼会举行</a></li>
+      <li><a href="https://finance.sina.com.cn/stock/y/2026-09-17/doc-inisatum3482035.shtml">美联储加息后美股尾盘下跌</a></li>
     </ul>
   </footer>
 
@@ -694,7 +728,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-17/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-17/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
