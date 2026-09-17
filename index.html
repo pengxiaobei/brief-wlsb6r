@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月17日 星期四</p>
-    <p class="updated">最后更新 11:30 · 共 10 条</p>
+    <p class="updated">最后更新 17:00 · 共 12 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -536,7 +536,23 @@
 
     <ol class="today">
       <li class="newmark">
-        <span>11:30 新增</span>
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>油价9月24日要涨,想加油趁早</h3>
+        <p>国内成品油下一次调价窗口是9月24日24点,受中东局势影响国际油价涨得猛,国内这轮预计每升涨4到5毛,一辆车加满一箱大概多花20多块。这几天要是油箱不满,建议先去加满,等过了24号可能就贵了。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>平陆运河通航,广西多了条出海路</h3>
+        <p>新中国成立以来第一条国家层面统筹建的通江达海运河——平陆运河16号正式通航,从广西南宁一路通到北部湾出海口。以后西南地区的货走这条水路运到东南亚能少绕560多公里,物流成本能降18%到30%,算是给中国跟东盟做生意开了条新捷径。</p>
+      </li>
+
+      <li class="divider">
+        <span>11:30 发的</span>
       </li>
 
       <li>
@@ -569,6 +585,10 @@
           <span>11:30 更新</span>
           <p>加息真落地之后,美股当天尾盘反而跳水了,道琼斯指数跌1.21%,标普跌0.45%。美联储主席在发布会上说通胀几乎没降下来,暗示后面可能还要接着加。手里有美股或相关基金的,这两天的波动估计还没走完。</p>
         </div>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>银行股跌得最惨,单日跌了近3%,是今年2月以来最大的一次。美联储自己的预测显示,官员们觉得年底前大概率还要再加一次息。手里有美股或银行股基金的,心里先有个数。</p>
+        </div>
       </li>
 
       <li>
@@ -593,6 +613,10 @@
         <span class="label tech">科技</span>
         <h3>苹果折叠屏微信不能双开惹争议</h3>
         <p>苹果第一款折叠屏手机iPhone Duo开卖后,最大的争议是微信不支持双开——原本大家以为翻开大屏就能同时挂两个微信号,结果系统压根没把它当平板认,微信也没跟着适配。要是你买它就是冲着工作、生活两个号同时挂着去的,现在这功能用不了,可以再等等适配消息。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>原因搞清楚了:不是苹果卡着不让用,是微信自己还没跟上苹果新开放的那套多窗口功能。iPhone Duo要到10月23号才正式开卖,微信还有一个多月时间抓紧适配,想买的可以再等等看。</p>
+        </div>
       </li>
 
       <li>
@@ -717,6 +741,10 @@
       <li><a href="https://www.sina.cn/weibo/detail/5344154083393607.html">问界撤出鸿蒙智行门店</a></li>
       <li><a href="https://news.sina.cn/zt_d/subject-1789257728">敬一丹追悼会举行</a></li>
       <li><a href="https://finance.sina.com.cn/stock/y/2026-09-17/doc-inisatum3482035.shtml">美联储加息后美股尾盘下跌</a></li>
+      <li><a href="https://news.china.com/socialgd/10000169/20260917/49748727.html">9月24日油价调整预估上调</a></li>
+      <li><a href="http://finance.people.com.cn/n1/2026/0917/c1004-40800203.html">平陆运河正式通航</a></li>
+      <li><a href="https://finance.sina.com.cn/wm/2026-09-17/doc-inisatuq9414355.shtml">鹰派加息吓坏美股银行股大跌</a></li>
+      <li><a href="https://k.sina.cn/article_7879923514_1d5ae173a06801hlqk.html">iPhone Duo微信双开原因解析</a></li>
     </ul>
   </footer>
 
@@ -728,7 +756,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-17/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-17/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
