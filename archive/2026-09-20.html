@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月20日 星期日</p>
-    <p class="updated">最后更新 07:00 · 共 10 条</p>
+    <p class="updated">最后更新 11:30 · 共 12 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,26 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>沙特首都利雅得罕见拉响防空警报</h3>
+        <p>也门胡塞武装跟沙特这段时间冲突又升级了,19日凌晨利雅得城区拉响防空警报,能听到拦截爆炸声,机场附近一处油罐还着了火。这是这轮冲突以来利雅得第一次拉警报,大概十分钟后当地说"危险已解除"。中东这边一紧张,国际油价容易跟着波动,但会不会传导到国内油价还要再看。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>特朗普称拿下格陵兰岛"永久控制权"</h3>
+        <p>特朗普宣布跟丹麦谈成协议,拿到了格陵兰岛安全事务的"永久控制权",以后没有美方书面同意,别的国家不能在那儿建军事基地、驻军。丹麦这边赶紧出来说这不是主权转让,格陵兰主权还是丹麦和格陵兰人自己的,协议预计下周联合国大会期间签,签完还要丹麦议会和美国国会批准才算数。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>公积金新规今天施行,装修交物业费能提了</h3>
@@ -563,6 +583,10 @@
         <span class="label talk">在聊</span>
         <h3>西贝被传要倒闭,官方否认但日子不好过</h3>
         <p>有认证博主说西贝2到3个月内就会倒闭,创始人贾国龙准备放弃股份、只留100来家赚钱的店。西贝客服和官方都出来否认说在正常经营,但去年"预制菜"风波后西贝确实已经关了近一半门店、裁员4000多人,亏损也有好几个亿。如果你手里还有西贝的储值卡或者预付卡,不妨这两个月抓紧去消费掉。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>爆料的博主说自己接到了贾国龙本人的电话,但他还是坚持之前爆料的内容没错。双方各说各的,目前还没个准信。</p>
+        </div>
       </li>
 
       <li>
@@ -593,6 +617,10 @@
         <span class="label talk">在聊</span>
         <h3>名古屋亚运会开幕,今天决出31枚金牌</h3>
         <p>第20届亚运会19号晚在日本名古屋开幕,中国代表团815名运动员参赛。今天是开幕后第一个比赛日,游泳一天要决出7枚金牌,潘展乐参加的男子100米自由泳也在今天进行,武术、铁人三项、现代五项等项目也会产生首金。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>本届首金出来了:男子个人铁人三项,东道主日本选手夺冠,中国选手张熙锐只差0.09秒屈居亚军,拿下中国代表团本届第一枚奖牌。</p>
+        </div>
       </li>
     </ol>
   </section>
@@ -703,6 +731,10 @@
       <li><a href="https://www.sohu.com/a/1078282226_122066678">Figure发布Helix 2.5模型，人形机器人可自主完成家务</a></li>
       <li><a href="https://news.qq.com/rain/a/20260919A0A90Y00">名古屋亚运会开幕，9月20日中国队将冲击"首金"</a></li>
       <li><a href="https://weibo.com/a/hot/realtime">微博热搜实时榜</a></li>
+      <li><a href="https://www.voachinese.com/a/saudi-issues-first-air-raid-alert-since-latest-escalation-with-yemen-20260919/8201850.html">也门战事升级以来，沙特首都利雅得首次拉响空袭警报</a></li>
+      <li><a href="https://news.qq.com/rain/a/20260920A02ALC00">特朗普称'永久控制'格陵兰岛，丹麦称'一周内签字'</a></li>
+      <li><a href="https://finance.sina.com.cn/roll/2026-09-19/doc-iniskccv2389174.shtml">“西贝被曝将彻底倒闭”冲上热搜，最新回应</a></li>
+      <li><a href="https://news.qq.com/rain/a/20260920A03YJH00">名古屋亚运会首金诞生</a></li>
     </ul>
   </footer>
 
@@ -714,7 +746,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-20/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-20/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
