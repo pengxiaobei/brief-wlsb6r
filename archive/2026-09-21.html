@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月21日 星期一</p>
-    <p class="updated">最后更新 11:30 · 共 10 条</p>
+    <p class="updated">最后更新 17:00 · 共 12 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,26 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>公积金新规生效,装修物业费能提了</h3>
+        <p>住房公积金新规从昨天(20号)开始施行,以后装修自己住的房子、交物业费也能提取公积金了,具体额度各地不一样,一般按房子面积算,封顶从几万到二十万不等。租房提取公积金以前要求房租超过工资一定比例才行,现在这个门槛也取消了。想用的话可以去当地公积金官网查一下自己城市的具体标准。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>深圳原市长一个月内落马</h3>
+        <p>覃伟中今年8月才以"工作岗位变动"为由辞去深圳市长职务,没想到这个月(21号)就被中央纪委宣布正在接受调查,说他涉嫌严重违纪违法。他之前当过广东省副省长、中石油副总经理,还是中央候补委员,官不算小。从辞职到被查只隔了一个月,这个节奏比较少见。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>这周四加满油,要涨价了</h3>
@@ -594,6 +614,10 @@
         <div class="update">
           <span>11:30 更新</span>
           <p>第二比赛日已经拿下第12、13金:男子10米气步枪团体破了世界纪录,铁人三项混合接力也拿了金牌。</p>
+        </div>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>第二比赛日收官,中国队这一天总共拿下12块金牌。体操张博恒拿了男子个人全能金牌,游泳这边徐嘉余、万乐天分别拿下男女50米仰泳金牌,男子4x200自由泳接力最后50米反超日本队夺冠。</p>
         </div>
       </li>
 
@@ -723,6 +747,9 @@
       <li><a href="https://k.sina.com.cn/article_7857201856_1d45362c001908o6m6.html">新浪AI热点-特斯拉Optimus量产审厂</a></li>
       <li><a href="https://finance.sina.com.cn/money/future/fmnews/2026-09-21/doc-inispuec0906243.shtml">新浪财经-特朗普称胡塞武装同意不与美国交战</a></li>
       <li><a href="https://www.chinanews.com.cn/ty/2026/09-21/10700558.shtml">中新网-中国队夺亚运会铁人三项混合接力金牌</a></li>
+      <li><a href="https://www.163.com/dy/article/L7B5FV3K053469RG.html">网易-新修订住房公积金管理条例9月20日起施行</a></li>
+      <li><a href="https://www.singtaousa.com/2026/09/21/news/china/former-shenzhen-mayor-investigated-for-discipline-violations/">星岛日报-前深圳市长覃伟中涉严重违纪违法被查</a></li>
+      <li><a href="https://m.gmw.cn/2026-09/21/content_1304566534.htm">光明网-亚运会中国队单日斩获12枚金牌</a></li>
     </ul>
   </footer>
 
@@ -734,7 +761,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-21/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-21/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
