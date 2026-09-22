@@ -2,8 +2,20 @@
   "date": "2026年9月22日 星期二",
   "stamp": "2026-09-22",
   "note": "内容为 9 月 22 日。",
-  "runs": ["07:00", "11:30"],
+  "runs": ["07:00", "11:30", "17:00"],
   "items": [
+    {
+      "kind": "talk",
+      "at": "17:00",
+      "title": "中国女排3比0逆转日本,亚运三连冠",
+      "body": "决赛第三局一度2比10落后,中国女排硬是追回来拿下25比23,总比分3比0横扫东道主日本,拿到队史第10个亚运金牌,也是继2018、2023之后的亚运三连冠。之前半决赛对泰国也是先输两局又逆转赢回来的,这支队伍这几场都够悬。"
+    },
+    {
+      "kind": "tech",
+      "at": "17:00",
+      "title": "阿里喊话2032年数据中心规模翻10倍",
+      "body": "阿里巴巴在杭州云栖大会上说,以后要重仓砸钱做AI的\"底座\"——芯片、模型、云三样一起投,目标是到2032年把全球数据中心规模做到现在的10倍。同时还要训练一个参数规模5到10万亿的新模型,比现在主流模型大出好几圈。这基本是在说:阿里认为AI这波还远没到头,愿意压上真金白银赌未来七年。"
+    },
     {
       "kind": "talk",
       "at": "11:30",
@@ -99,6 +111,8 @@
     {"name": "新浪科技-苹果或跳过iPhone19直接叫20", "url": "https://www.sina.cn/weibo/detail/5345579643437802.html"},
     {"name": "中央气象台-南方未来两天仍有大到暴雨", "url": "https://www.nmc.cn/publish/weather-bulletin/index.htm"},
     {"name": "美国之音-白宫公布迎接习近平来访细节安排", "url": "https://www.voachinese.com/a/white-house-released-details-for-xi-visit-20260921/8202378.html"},
-    {"name": "21经济网-罗永浩回应贾国龙要求下跪才肯和解谣传", "url": "https://www.21jingji.com/article/20260922/herald/eddcb7434ff50c09dcaec5722af83042.html"}
+    {"name": "21经济网-罗永浩回应贾国龙要求下跪才肯和解谣传", "url": "https://www.21jingji.com/article/20260922/herald/eddcb7434ff50c09dcaec5722af83042.html"},
+    {"name": "光明网-中国女排亚运三连冠夺队史第十金", "url": "https://m.gmw.cn/2026-09/22/content_1304567031.htm"},
+    {"name": "IT之家-阿里吴泳铭:目标2032年阿里云全球数据中心规模超20GW", "url": "https://www.ithome.com/1/005/587.htm"}
   ]
 }
