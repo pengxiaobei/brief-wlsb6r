@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月22日 星期二</p>
-    <p class="updated">最后更新 07:00 · 共 9 条</p>
+    <p class="updated">最后更新 11:30 · 共 10 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>习近平本周访美,24日白宫国宴见特朗普</h3>
+        <p>习近平23号到25号访问华盛顿,特朗普会亲自去机场接他,24号在白宫办国宴,请了贝佐斯、马斯克、奥特曼这些科技大佬。这次谈的重点还是关税——现在的休战期11月10日就要到期,稀土、芯片这些问题也还没谈拢,这场见面基本决定接下来中美关系是缓和还是重新绷紧。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label talk">在聊</span>
         <h3>军委原副主席张又侠被开除党籍军籍</h3>
@@ -581,6 +595,10 @@
         <span class="label talk">在聊</span>
         <h3>西贝老板发声:分清网暴和监督</h3>
         <p>之前有博主说西贝要"彻底倒闭",西贝回应说全国门店都正常营业。西贝创始人贾国龙这两天公开发声,说这次教训很惨痛,希望监管部门能把正常的舆论监督和"网络软暴力"分开,别让大流量账号想说什么就说什么。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>网上传"贾国龙要求罗永浩下跪才愿意和解",罗永浩21号回应说这是谣言,他已经取证,接下来该起诉的起诉。</p>
+        </div>
       </li>
 
       <li>
@@ -705,6 +723,8 @@
       <li><a href="https://news.qq.com/rain/a/20260921A057X600">腾讯新闻-贾国龙呼吁厘清网络言论边界</a></li>
       <li><a href="https://www.sina.cn/weibo/detail/5345579643437802.html">新浪科技-苹果或跳过iPhone19直接叫20</a></li>
       <li><a href="https://www.nmc.cn/publish/weather-bulletin/index.htm">中央气象台-南方未来两天仍有大到暴雨</a></li>
+      <li><a href="https://www.voachinese.com/a/white-house-released-details-for-xi-visit-20260921/8202378.html">美国之音-白宫公布迎接习近平来访细节安排</a></li>
+      <li><a href="https://www.21jingji.com/article/20260922/herald/eddcb7434ff50c09dcaec5722af83042.html">21经济网-罗永浩回应贾国龙要求下跪才肯和解谣传</a></li>
     </ul>
   </footer>
 
@@ -716,7 +736,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-22/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-22/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
