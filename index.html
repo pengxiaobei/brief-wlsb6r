@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月23日 星期三</p>
-    <p class="updated">最后更新 11:30 · 共 11 条</p>
+    <p class="updated">最后更新 17:00 · 共 11 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -543,6 +543,10 @@
         <span class="label you">影响你</span>
         <h3>两个台风逼近,华南华东沿海有大风</h3>
         <p>19号台风紫檀在广西北海附近海面,20号台风简拉维在台湾东北方向海面,两个都还在加强。从广西、海南到江苏、上海、浙江、福建的沿海这两天都有6到8级大风,住在沿海或者要出海、坐船的这两天多看看当地预警。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>预警更新了,福建沿海风力会到9到10级,阵风11到12级,比广东广西的6到8级更猛;福建、广西、广东部分地区还有强降雨,容易引发山洪,出门躲着点。</p>
+        </div>
       </li>
 
       <li>
@@ -593,6 +597,10 @@
         <span class="label tech">科技</span>
         <h3>小米18今晚发布,起售价或7000+</h3>
         <p>小米18 Pro系列今晚7点发布，首发新一代骁龙8至尊芯片，全系双2亿像素镜头，电池预计有7000毫安以上。业内预测Pro版起售价7000元左右，Pro Max版8000元左右，具体价格等发布会公布。想换手机的可以再等等看今晚的实际报价。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>发布会开完了,价格公布:小米18 Pro从5999元起(国补后5499元),比早上预测的7000+便宜不少;顶配版国补后最高9999元。</p>
+        </div>
       </li>
 
       <li>
@@ -611,6 +619,10 @@
         <span class="label talk">在聊</span>
         <h3>奥运冠军存款被妈妈攥着不给</h3>
         <p>跳水奥运冠军张家齐在综艺里自曝，从10岁起比赛奖金、代言费全是妈妈在管，自己没碰过银行卡。22岁退役后想拿回钱学理财，被妈妈以"你不懂"拒绝，具体存了多少、花没花都不清楚。成年之后监护人本该把代管的财产还给本人，这事在网上吵得挺凶。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>律师站出来说话了:奖金在法律上是张家齐自己的财产,父母只是代管,没有权利拿去花,张家齐退役后有权要回来。</p>
+        </div>
       </li>
     </ol>
   </section>
@@ -731,6 +743,9 @@
       <li><a href="https://www.nmc.cn/publish/typhoon/warning_index.html">中国气象局-台风预警</a></li>
       <li><a href="https://news.china.com/socialgd/10000169/20260923/49761130.html">中华网-油价调整</a></li>
       <li><a href="https://www.chinatimes.com/realtimenews/20260922003093-260408">中时新闻网-稀土摩擦卡卡</a></li>
+      <li><a href="https://www.21jingji.com/article/20260923/herald/49e579a667dc6ca968c61e3e068b453d.html">21经济网-台风大风预警</a></li>
+      <li><a href="https://www.sina.cn/weibo/detail/5346401479295530.html">新浪-小米18系列定价</a></li>
+      <li><a href="https://news.qq.com/rain/a/20260923A02XHY00">腾讯新闻-张家齐律师解读</a></li>
     </ul>
   </footer>
 
@@ -742,7 +757,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-23/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-23/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
