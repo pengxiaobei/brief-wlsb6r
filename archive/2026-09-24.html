@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月24日 星期四</p>
-    <p class="updated">最后更新 07:00 · 共 10 条</p>
+    <p class="updated">最后更新 11:30 · 共 13 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,32 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>游本昌去世,曾演济公,享年93</h3>
+        <p>演员游本昌今天早上在北京去世,8天前刚过完93岁生日。他演的《济公》是好几代人的童年记忆,从事表演70多年。</p>
+      </li>
+
+      <li>
+        <span class="label tech">科技</span>
+        <h3>全球首个机器人主题乐园今天开园</h3>
+        <p>智元机器人和长隆合作的这个乐园今天在广东横琴开门,里面有300多台机器人,能看机器人表演、跟机器人互动,还有机器人玩空中特技。这是能动能干活的机器人第一次大规模开进普通人能逛的乐园,不再只是摆在展会上看看。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>日本首相见特朗普,只谈了35分钟</h3>
+        <p>就在习近平抵达华盛顿前,日本首相高市早苗抢先在纽约见了特朗普,但只聊了35分钟。她是想趁中美关系缓和的当口,提前跟美国对一下调子,主要是怎么一起应对中国。这么短的会面时间,也被外界解读成日本这次的分量不如从前。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label talk">在聊</span>
         <h3>习特会谈完:贸易休战延到明年1月</h3>
@@ -557,6 +583,10 @@
         <span class="label you">影响你</span>
         <h3>明天中秋放假,高速不像国庆免费</h3>
         <p>中秋假期明天(9月25号)开始,放3天,不用调休。跟国庆不一样,中秋假期高速是不免费的,别按国庆的记忆去算。这个周五和周日(25、27号)预计是出行高峰,能错峰的尽量错峰。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>官方预计今天下午4点到8点是出程小高峰,明天(25号)上午10点是全国最堵的时段,这两个时间段能避开就避开。</p>
+        </div>
       </li>
 
       <li>
@@ -714,6 +744,10 @@
       <li><a href="https://www.sina.cn/weibo/detail/5346457956909531.html">新浪-豆包成边缘产品</a></li>
       <li><a href="https://www.163.com/dy/article/L7F9ADJ90519DTSV.html">网易-山姆采购换帅</a></li>
       <li><a href="https://mp.weixin.qq.com/s?__biz=MzE5ODk2NjUwOA==&amp;mid=2247498464&amp;idx=1&amp;sn=d75ecc30623dbbf6243749fffd4743e8">微信公众号-猫笔刀</a></li>
+      <li><a href="https://news.ifeng.com/c/8wg13xOKvBc">凤凰网-游本昌去世</a></li>
+      <li><a href="https://news.qq.com/rain/a/20260920A07I5400">腾讯新闻-全球首个具身智能主题乐园开园</a></li>
+      <li><a href="https://news.sina.com.cn/c/2026-09-22/doc-inissyrf1996703.shtml">新浪新闻-高市早苗提前会见特朗普</a></li>
+      <li><a href="https://m.21jingji.com/article/20260924/herald/5522d094bdd5974dd08e565793213c4b.html">21财经-中秋假期高速流量预测</a></li>
     </ul>
   </footer>
 
@@ -725,7 +759,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-24/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-24/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
