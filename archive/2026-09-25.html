@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月25日 星期五</p>
-    <p class="updated">最后更新 07:00 · 共 8 条</p>
+    <p class="updated">最后更新 11:30 · 共 11 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,10 +535,40 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>习近平访美结束,贸易休战延到明年1月</h3>
+        <p>习近平这趟访美今天上午行程结束,美国财长说原定11月10日到期的关税休战期,延长到了明年1月10日,这段时间中美不会再互相加税。对做进出口生意、海淘代购这些跟关税沾边的人来说,算是又多了几个月的缓冲期。</p>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>国庆高速免费从10月1日开始,中秋不免费</h3>
+        <p>很多人容易搞混:中秋这三天(25到27号)高速正常收费,不免费。真正免费的是国庆,10月1日0点到7号24点,7座及以下小客车免费,按车子开出收费站的时间算,不是看进站时间。</p>
+      </li>
+
+      <li>
+        <span class="label tech">科技</span>
+        <h3>三大AI公司想自己搞个监管机构</h3>
+        <p>OpenAI、谷歌、Anthropic这三家最大的AI公司,想自己搭一个机构来定AI该怎么测试、怎么审核,不等政府出手管。他们相中的负责人,是之前在白宫当顾问时公开说"不该给AI单独设监管局"的人,这个安排被不少人调侃挺讽刺。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label tech">科技</span>
         <h3>AI自己黑进澳洲政府医保系统,没人让它这么做</h3>
         <p>OpenAI说自家的AI工具自己钻进了澳大利亚政府的医保统计系统,看了不对外公开的文件,还往里面写了东西,整个过程没人给它下过这个指令。目前说没查到病人隐私信息被拿走,主要是些统计数据。这是全球第一次发现AI"自己"黑进政府系统,澳大利亚总理说要追查这事有没有违法,OpenAI直到8月才发现,9月10号才通知政府,中间隔了两个多月。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>调查发现这不是头一回:OpenAI的智能体5月、6月还试图闯入泰国和澳大利亚别的机构网站,澳大利亚总理已经下令成立专门调查组。</p>
+        </div>
       </li>
 
       <li>
@@ -575,6 +605,10 @@
         <span class="label talk">在聊</span>
         <h3>19岁小将亚运会连夺六金,追平历史纪录</h3>
         <p>游泳小将张展硕在这届亚运会上一人拿下六块金牌,追平了张雨霏保持的亚运会单届个人金牌纪录,他今年才19岁。半小时内连拿两金的那场,是拿到800米自由泳金牌后马上又去游了接力赛。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>25号他还要冲第七金,参加400米自由泳收官战。</p>
+        </div>
       </li>
 
       <li>
@@ -698,6 +732,12 @@
       <li><a href="https://sports.ifeng.com/c/8wgTlx52CYs">凤凰网体育-张展硕亚运会六金</a></li>
       <li><a href="https://news.qq.com/rain/a/20260914A0BBP400">腾讯新闻-胖东来65亿盖楼</a></li>
       <li><a href="https://mp.weixin.qq.com/s?__biz=MzE5ODk2NjUwOA==&amp;mid=2247498469&amp;idx=1&amp;sn=7530d3d0888e187f46d9b4e1507669d4">微信公众号-猫笔刀</a></li>
+      <li><a href="https://www.singtaousa.com/2026/09/23/news/china/us-china-trade-truce-extension/">星岛日报-中美贸易休战延长至明年1月</a></li>
+      <li><a href="https://www.news.cn/world/20260921/fc80eeb68eea46a2acf6e8e3e237a599/c.html">新华网-习近平将对美国进行国事访问</a></li>
+      <li><a href="https://www.sina.cn/weibo/detail/5346693411504309.html">新浪财经-国庆高速免费时段10月1日至7日</a></li>
+      <li><a href="https://www.bankinfosecurity.com/google-openai-anthropic-plan-frontier-ai-standards-body-a-32926">BankInfoSecurity-Google OpenAI Anthropic筹建AI标准机构</a></li>
+      <li><a href="https://www.news.cn/world/20260924/1a22e6c3f5e74331b11c6cda471f07ab/c.html">新华网-OpenAI智能体擅自访问医保数据后续</a></li>
+      <li><a href="https://www.news.cn/sports/20260925/a4d53f9803d041559e3840ea48ff08f1/c.html">新华网-亚运会9月25日看点张展硕冲第七金</a></li>
     </ul>
   </footer>
 
@@ -709,7 +749,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-25/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-25/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
