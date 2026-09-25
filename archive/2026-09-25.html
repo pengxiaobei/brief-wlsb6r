@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月25日 星期五</p>
-    <p class="updated">最后更新 11:30 · 共 11 条</p>
+    <p class="updated">最后更新 17:00 · 共 12 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -536,7 +536,17 @@
 
     <ol class="today">
       <li class="newmark">
-        <span>11:30 新增</span>
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>国庆前油价上调,加满一箱多花16元</h3>
+        <p>今天0点起国内汽油每吨涨了395元、柴油每吨涨了385元,折算下来每升大概涨3毛3,家用车加满一箱多花16元左右。这次国际油价本来该涨得更多,国家做了调控,把涨幅压掉了一半。</p>
+      </li>
+
+      <li class="divider">
+        <span>11:30 发的</span>
       </li>
 
       <li>
@@ -608,6 +618,10 @@
         <div class="update">
           <span>11:30 更新</span>
           <p>25号他还要冲第七金,参加400米自由泳收官战。</p>
+        </div>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>第七金拿下了,他现在是亚运会单届个人夺金最多的中国游泳运动员,超过了张雨霏原来保持的纪录。</p>
         </div>
       </li>
 
@@ -738,6 +752,8 @@
       <li><a href="https://www.bankinfosecurity.com/google-openai-anthropic-plan-frontier-ai-standards-body-a-32926">BankInfoSecurity-Google OpenAI Anthropic筹建AI标准机构</a></li>
       <li><a href="https://www.news.cn/world/20260924/1a22e6c3f5e74331b11c6cda471f07ab/c.html">新华网-OpenAI智能体擅自访问医保数据后续</a></li>
       <li><a href="https://www.news.cn/sports/20260925/a4d53f9803d041559e3840ea48ff08f1/c.html">新华网-亚运会9月25日看点张展硕冲第七金</a></li>
+      <li><a href="https://people.cctv.com/2026/09/25/ARTItvTkZ9G2RdOqfHq3YRqQ260925.shtml">央视网-张展硕七金追平纪录</a></li>
+      <li><a href="https://www.sina.cn/weibo/detail/5346703235878135.html">新浪-国内成品油价格9月25日上调</a></li>
     </ul>
   </footer>
 
@@ -749,7 +765,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-25/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-25/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
