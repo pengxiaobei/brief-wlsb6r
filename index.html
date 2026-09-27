@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月27日 星期日</p>
-    <p class="updated">最后更新 11:30 · 共 8 条</p>
+    <p class="updated">最后更新 17:00 · 共 9 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>国足热身赛0比3负新西兰</h3>
+        <p>中国男足在重庆打了场热身赛,上半场就被新西兰队连丢两球,下半场又丢一个,最终0比3告负,防线被对手轻松打穿好几次。这是国足面对世界杯球队时的老问题,最近6场比赛只赢过一场。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>中美谈成8条,300亿美元商品要互相降税</h3>
@@ -577,6 +591,10 @@
         <span class="label talk">在聊</span>
         <h3>亚运会:国足半决赛10月30日战韩国,日本乒乓男单全军覆没</h3>
         <p>名古屋亚运会男足半决赛对阵出来了,U23国足10月30号在大阪碰韩国队,这是中国男足28年来头一次打进亚运会男足四强。乒乓球男单那边,林诗栋4比2淘汰了日本的松岛辉空,连同早前出局的张本智和,日本队男单选手这次全部止步四强之外,一个没剩下。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>乒乓球女单决赛王曼昱4比2逆转拿下金牌,孙颖莎摘银。跳水队这届亚运会参加的项目全部包揽冠军,标枪小将严子怡还破了亚运会纪录。</p>
+        </div>
       </li>
 
       <li>
@@ -589,6 +607,10 @@
         <span class="label talk">在聊</span>
         <h3>特朗普拒了伊朗的停火提议</h3>
         <p>特朗普私下拒绝了伊朗提出的一份为期7天的停火方案,原因据说是现在局势对美国比较有利——霍尔木兹海峡靠阿曼一侧的南线水雷已经排完,美军正指挥少量油轮通航,不过规模比开战前小很多。有媒体爆料说特朗普私下跟幕僚讲,11月中期选举结束后要接着打伊朗,现在没动手主要是弹药库存不够,正在补充。这事跟油价直接挂钩,霍尔木兹海峡是全球石油运输的重要通道。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>伊朗军方已经进入戒备状态,准备迎接美国可能的新一轮打击。伊朗总统也松口说以后不太信谈判了,理由是每次谈完美国照样动手、照样加制裁。</p>
+        </div>
       </li>
     </ol>
   </section>
@@ -710,6 +732,9 @@
       <li><a href="https://rebang.today/home?tab=weibo">rebang.today 抖音/微博热榜</a></li>
       <li><a href="https://m.gmw.cn/2026-09/27/content_1304568607.htm">光明网-舒力基加强为台风级</a></li>
       <li><a href="https://www.21jingji.com/article/20260927/herald/1868831c7228395c9cc99c485640d6b0.html">21经济网-多地强降水冰雹预警</a></li>
+      <li><a href="https://www.163.com/dy/article/L7S5T13605299JMD.html">网易-国足0比3不敌新西兰</a></li>
+      <li><a href="https://www.sohu.com/a/1081491602_121924582">搜狐-亚运会中国队多线夺金</a></li>
+      <li><a href="https://www.sohu.com/a/1081490848_122657368">搜狐-特朗普拒绝重开霍尔木兹海峡</a></li>
     </ul>
   </footer>
 
@@ -721,7 +746,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-27/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-27/3";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
