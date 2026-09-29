@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月29日 星期二</p>
-    <p class="updated">最后更新 17:00 · 共 9 条</p>
+    <p class="updated">最后更新 11:30 · 共 10 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>强冷空气南下,国庆前气温创半年新低</h3>
+        <p>这两天中东部自北向南陆续降温,不少地方会降到半年来最低。北京29号夜间到30号有大风,阵风6到7级,山区更大。南方29号到10月1号大范围下雨,部分地方雨比较大。出门记得加外套、带伞,自驾的注意路面湿滑积水。北京国庆假期整体晴到多云,白天21到25度,适合出行。</p>
+      </li>
+
+      <li class="divider">
+        <span>17:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>国庆高速免费,这几个时段最堵</h3>
@@ -569,6 +583,10 @@
         <span class="label tech">科技</span>
         <h3>华为Mate90定档10月1号发布</h3>
         <p>华为把新旗舰Mate90系列的发布会定在了国庆当天下午2点半,最大看点是用上了自研的麒麟9050 Pro芯片,在拿不到最先进光刻机的情况下,靠把芯片结构像盖楼一样往上堆层来提升性能。具体价格和参数官方还没公布,网上传的价格从5500元到1万多都有,想换华为手机的不妨等发布会官宣了再决定。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>发布时间有更新:官方说10月1号上午10点发布,12点08分开售,不是下午2点半。价格官方还没公布,传闻标准版约5500到6000元,比上一代贵300到1000元,主要是内存涨价。</p>
+        </div>
       </li>
 
       <li>
@@ -667,6 +685,8 @@
       <li><a href="https://rebang.today/home?tab=weibo">rebang.today 微博热榜</a></li>
       <li><a href="https://rebang.today/home?tab=douyin">rebang.today 抖音热榜</a></li>
       <li><a href="https://mp.weixin.qq.com/s?__biz=MzE5ODk2NjUwOA==&amp;mid=2247498509&amp;idx=1&amp;sn=4c94142865902ecb3ddb22214602ebdc">猫笔刀-跌900点的概率</a></li>
+      <li><a href="https://www.21jingji.com/article/20260929/herald/9334c508d6f6cba94ed31747a2c28e28.html">21经济网-华为Mate90系列10月1日发布</a></li>
+      <li><a href="https://k.sina.com.cn/article_7857201856_1d45362c001908p8ca.html">新浪天气热点小时报 9月29日</a></li>
     </ul>
   </footer>
 
@@ -678,7 +698,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-29/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-29/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
