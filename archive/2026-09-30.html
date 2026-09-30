@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年9月30日 星期三</p>
-    <p class="updated">最后更新 07:00 · 共 10 条</p>
+    <p class="updated">最后更新 11:30 · 共 12 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,26 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>贷款广告不许再喊「秒到账」「低门槛」了</h3>
+        <p>《金融产品网络营销管理办法》今天起实施，网上推贷款的「秒到账」「低门槛」这类话术被明令禁止。以后再刷到这种广告，多半就是违规的，别点、别填资料，要借钱直接去银行或正规平台官方渠道。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>亚运国足1比2输给韩国，裁判判罚也上了热搜</h3>
+        <p>亚运男足比赛中国队1比2负于韩国，赛后网上除了讨论比分，还有不少人在吵裁判的判罚。今天饭桌上聊球，大概率会聊到这场。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>国庆头四天南方多雨,北方最适合出门</h3>
@@ -653,6 +673,8 @@
       <li><a href="https://www.chinanews.com.cn/cj/2026/09-21/10700602.shtml">中新网 平陆运河</a></li>
       <li><a href="https://news.qq.com/rain/a/20260908A08PDR00">腾讯新闻 AI新模型</a></li>
       <li><a href="https://www.macrumors.com/2026/09/13/ios-27-release-date-new-features/">MacRumors iOS 27</a></li>
+      <li><a href="https://news.qq.com/rain/a/20260930A01RHE00">腾讯新闻 早报9-30</a></li>
+      <li><a href="https://rebang.today/home?tab=weibo">rebang 微博热榜</a></li>
     </ul>
   </footer>
 
@@ -664,7 +686,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-09-30/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-09-30/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
