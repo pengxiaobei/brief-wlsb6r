@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年10月1日 星期四</p>
-    <p class="updated">最后更新 07:00 · 共 9 条</p>
+    <p class="updated">最后更新 11:30 · 共 10 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>国庆高速 7 天免费，只看座位数不看车型</h3>
+        <p>10 月 1 日 0 点到 7 日 24 点，7 座及以下的小客车上高速不收费，8、9 座的不在内，货车也不免。免不免看的是行驶证上写的核载人数，不是车看着大不大。返程别都挤在最后一天，7 日 24 点一过就恢复收费。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>今天起买首套房，国家帮你贴房贷利息</h3>
@@ -545,6 +559,10 @@
         <span class="label you">影响你</span>
         <h3>国庆 4、5 号有雨，出行时间错开</h3>
         <p>1 号到 3 号大部分地方多云，偶尔有阵雨；4 号到 5 号冷空气过来，转阴有小到中雨，局部大雨；6、7 号阴间多云。想出远门尽量放在前三天，4、5 号带伞，开车的路上留够时间。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>3 号起还有一股新冷空气，两股叠在一起，南北方不少地方气温会降到下半年最低。出门多带件外套，别只带伞。</p>
+        </div>
       </li>
 
       <li>
@@ -646,6 +664,7 @@
       <li><a href="https://www.cnbc.com/2026/09/30/ftc-ai-probe-openai-anthropic.html">CNBC</a></li>
       <li><a href="https://rebang.today/home?tab=weibo">微博热榜</a></li>
       <li><a href="https://k.sina.com.cn/article_7857201856_1d45362c001908penq.html">新浪科技热点小时报</a></li>
+      <li><a href="https://21jingji.com/article/20260930/herald/6609f0db050f543d4cc38f7bbdf90a6b.html">21经济网</a></li>
     </ul>
   </footer>
 
@@ -657,7 +676,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-10-01/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-10-01/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
