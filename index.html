@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年10月2日 星期五</p>
-    <p class="updated">最后更新 07:00 · 共 9 条</p>
+    <p class="updated">最后更新 11:30 · 共 10 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>开电车返程：5、6 号白天别在服务区等电</h3>
+        <p>国庆高速服务区充电排队严重，有人排了 5 个小时，还有车只剩 1% 电在路边趴窝。国家电网预计返程最挤的是 5 号 11 点到 21 点、6 号 10 点到 22 点，会在容易排队的站点加 435 个应急充电枪。开电车返程的，出发前充满，到服务区别等到快没电才充，尽量避开这两个时段。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>“儿童装”银鳕鱼吃出汞超标，家里有的先停</h3>
@@ -646,6 +660,7 @@
       <li><a href="https://www.bensbites.com/p/openai-devday-2026">Ben's Bites</a></li>
       <li><a href="https://k.sina.com.cn/article_7857201856_1d45362c001908pjna.html">新浪热点小时报</a></li>
       <li><a href="https://rebang.today/home?tab=weibo">热榜今日·微博</a></li>
+      <li><a href="https://www.sina.cn/weibo/detail/5349360543992639.html">新浪·高速充电排队</a></li>
     </ul>
   </footer>
 
@@ -657,7 +672,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-10-02/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-10-02/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
