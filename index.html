@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年10月3日 星期六</p>
-    <p class="updated">最后更新 07:00 · 共 8 条</p>
+    <p class="updated">最后更新 11:30 · 共 9 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>U23 国足点球胜乌兹别克斯坦，28 年来首次拿亚运奖牌</h3>
+        <p>亚运会男足铜牌战，国足的 U23 年轻队常规时间 2 比 2，点球大战赢下，拿了铜牌。门将李昊扑出两个点球，成了热搜里的“门神”。这是 1998 年之后第一次站上亚运领奖台。要分清：这是年轻队，和昨晚 0 比 5 输球的是不同的队伍。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>返程想不堵：5 号走最省心，今明两天加件外套</h3>
@@ -641,6 +655,7 @@
       <li><a href="https://news.ifeng.com/c/8wtbA7OgFPT">凤凰网 蔡天凤案</a></li>
       <li><a href="https://k.sina.com.cn/article_7857201856_1d45362c001908pnfc.html">新浪热点小时报</a></li>
       <li><a href="https://rebang.today/home?tab=weibo">rebang 微博热榜</a></li>
+      <li><a href="https://sports.sina.cn/2026-10-03/detail-initxsqi6416796.d.html">新浪体育 U23国足铜牌</a></li>
     </ul>
   </footer>
 
@@ -652,7 +667,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-10-03/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-10-03/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
