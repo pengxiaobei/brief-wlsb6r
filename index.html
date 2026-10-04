@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年10月4日 星期日</p>
-    <p class="updated">最后更新 07:00 · 共 10 条</p>
+    <p class="updated">最后更新 11:30 · 共 11 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label tech">科技</span>
+        <h3>iPhone 18 Pro Max 美版信号故障，国行不受影响</h3>
+        <p>苹果承认，部分美版 iPhone 18 Pro Max 在 AT&amp;T 网络下会彻底没信号，打不了电话、用不了流量，连紧急电话都可能受影响。原因是这个型号的美版用了高通的通信芯片，和运营商设置冲突，软件更新救不回已经坏掉的机器，苹果说会免费换新机。只有美版中招，国行和其他地区的版本用的是苹果自研芯片，不受影响。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>返程避高峰：5、6 号最堵，充电更要躲开</h3>
@@ -652,6 +666,7 @@
       <li><a href="https://finance.sina.com.cn/tech/digi/2026-10-02/doc-initvazf4664385.shtml">新浪科技 OpenAI</a></li>
       <li><a href="https://k.sina.com.cn/article_7857201856_1d45362c001908prjo.html">新浪斯诺克热点</a></li>
       <li><a href="https://www.ithome.com/0/968/138.htm">IT之家 GTA6</a></li>
+      <li><a href="https://www.sina.cn/weibo/detail/5350346151167118.html">新浪微博 iPhone 18 缺陷</a></li>
     </ul>
   </footer>
 
@@ -663,7 +678,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-10-04/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-10-04/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
