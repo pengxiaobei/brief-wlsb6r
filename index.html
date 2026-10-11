@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年10月11日 星期日</p>
-    <p class="updated">最后更新 07:00 · 共 8 条</p>
+    <p class="updated">最后更新 17:00 · 共 8 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -539,6 +539,10 @@
         <span class="label talk">在聊</span>
         <h3>郑钦文首次打进中网女单决赛</h3>
         <p>抖音热榜今天排第一。她这届一路过关，前面几轮有打满三盘的，也有对手中途伤退的。这是她第一次在中网打到决赛，今天可以留意比赛时间，聊天时有得说。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>决赛打完了，她夺冠了，拿下第一个中网冠军，也是中国选手时隔 14 年再夺一站 1000 赛冠军。比分我没查到，先不写。</p>
+        </div>
       </li>
 
       <li>
@@ -648,7 +652,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-10-11/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-10-11/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
