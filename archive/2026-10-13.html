@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年10月13日 星期二</p>
-    <p class="updated">最后更新 17:00 · 共 8 条</p>
+    <p class="updated">最后更新 07:00 · 共 9 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>07:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>尊界V800刹车踏板：第三方检测说没裂</h3>
+        <p>10月8日有测评说，几台尊界V800紧急刹车测试时踏板支架断了，吵了好几天。现在车企找了中国汽研做第三方检测，热搜显示结果是踏板没出现裂纹和损坏。不过测评方和车企各说各的，完整检测报告我没查到原文，结论先别急着下。如果你家有这款车，留意车企后面的正式说明，厂家此前说会给已交付用户免费升级。</p>
+      </li>
+
+      <li class="divider">
+        <span>17:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>宜信被立案，创始人夫妇被采取强制措施</h3>
@@ -653,7 +667,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-10-13/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-10-13/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
