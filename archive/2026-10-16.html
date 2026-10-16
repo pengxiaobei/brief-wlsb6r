@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年10月16日 星期五</p>
-    <p class="updated">最后更新 07:00 · 共 3 条</p>
+    <p class="updated">最后更新 11:30 · 共 4 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>日本地震预警误报 9.9 级，手机全响</h3>
+        <p>日本气象厅误发了一条“千岛群岛 9.9 级地震”的预警，从北海道到东海一带手机集体响铃，新干线也一度急停，几分钟后撤回。气象厅说是系统算错了，不是被黑客攻击，实际只是俄罗斯那边一次 6 级多的地震。最近要去日本的人不用担心，这次没有真地震，也没有海啸。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label tech">科技</span>
         <h3>谷歌新一代 Gemini 4 上线，可直接调用</h3>
@@ -610,6 +624,7 @@
       <li><a href="https://rebang.today/home?tab=douyin">抖音热榜（rebang.today）</a></li>
       <li><a href="https://juejin.cn/post/7696150979600351247">掘金 AI 日报</a></li>
       <li><a href="https://m.sfccn.com/2026/10-13/1MMDE1MzNfMjI2ODI1Mg.html">第140届广交会亮点</a></li>
+      <li><a href="https://finance.sina.com.cn/tech/roll/2026-10-16/doc-inivmazi7705678.shtml">日本气象厅误报报道（新浪）</a></li>
     </ul>
   </footer>
 
@@ -621,7 +636,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-10-16/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-10-16/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
