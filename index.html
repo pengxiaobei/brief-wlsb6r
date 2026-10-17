@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年10月17日 星期六</p>
-    <p class="updated">最后更新 07:00 · 共 7 条</p>
+    <p class="updated">最后更新 17:00 · 共 8 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>11 月 1 日起，公司欠缴社保最高罚 3 倍</h3>
+        <p>税务总局把欠缴社保正式写进了全国统一的处罚标准：公司不缴或少缴，税务部门责令补缴后还不交，可以罚欠缴金额的 1 到 3 倍，11 月 1 日起执行。欠得不多的，按 1 倍罚。你可以趁现在翻一下自己的社保缴费记录，看看缴费基数和工资对不对得上；对不上就留好工资条、银行流水，先书面找公司要求补，不行再向税务部门或劳动监察投诉。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>冷空气南下大降温，台风暂不来中国</h3>
@@ -639,6 +653,7 @@
       <li><a href="https://auto.sina.cn/2026-10-02/detail-initufvv6235805.d.html">新浪汽车：Roadster</a></li>
       <li><a href="https://news.china.com/socialgd/10000169/20261010/49786170.html">中华网：油价调整</a></li>
       <li><a href="https://rebang.today/home?tab=douyin">抖音热榜（rebang.today）</a></li>
+      <li><a href="https://m.gmw.cn/2026-10/15/content_1304575578.htm">光明网：社保处罚裁量基准</a></li>
     </ul>
   </footer>
 
@@ -650,7 +665,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-10-17/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-10-17/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
