@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年10月22日 星期四</p>
-    <p class="updated">最后更新 07:00 · 共 8 条</p>
+    <p class="updated">最后更新 11:30 · 共 9 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>被蜱虫咬了，别硬拔，吃肉后几小时发痒要警惕</h3>
+        <p>热搜在聊蜱虫叮咬后可能对猪牛羊肉过敏，不是人人都会，也不是一咬就终身不能吃肉。鱼、鸡鸭不受影响。秋天去爬山、露营，回来检查头皮、腋下、腰间；被咬了别自己硬拔，去医院处理。如果吃完红肉两到六小时后起荨麻疹、呕吐或喘不上气，要尽快就医做检测。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>台风“蔷琵”要靠近了，路线还没定</h3>
@@ -640,6 +654,7 @@
       <li><a href="https://m.gmw.cn/2026-10/19/content_1304577047.htm">中国气象 · 台风蔷琵</a></li>
       <li><a href="https://www.news.cn/world/20261017/b0d5ab8eb6f848cebb268046d1a832b8/c.html">新华网 · 日美联合军演</a></li>
       <li><a href="https://tech.ifeng.com/c/8wIBIEziTnA">凤凰科技 · iPhone Duo 国行定价</a></li>
+      <li><a href="https://www.mayoclinic.org/zh-hans/diseases-conditions/alpha-gal-syndrome/symptoms-causes/syc-20428608">梅奥诊所 · α-半乳糖综合征</a></li>
     </ul>
   </footer>
 
@@ -651,7 +666,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-10-22/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-10-22/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
