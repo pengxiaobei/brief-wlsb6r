@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年10月23日 星期五</p>
-    <p class="updated">最后更新 07:00 · 共 10 条</p>
+    <p class="updated">最后更新 17:00 · 共 12 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,10 +535,34 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>国办发文：AI 抢饭碗，政府要兜底培训</h3>
+        <p>国务院办公厅发了份文件，专门应对 AI 对工作的冲击，分 6 方面 18 项任务。主要两招：一是扶持 AI 相关的新岗位，比如中西部承接数据标注这类活；二是给劳动者做 AI 专项培训，高校也增设 AI 小专业。担心岗位被替代的，可以留意本地人社部门接下来的免费培训名额。</p>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>暖气费有人“打折代缴”，是骗局</h3>
+        <p>供暖季快到了，微信、闲鱼和小区群里有人说能九五折、九折代缴暖气费，自称供热公司“内部人员”。热力公司说从没授权过个人代收，这种多半是骗钱，或者拿你的钱帮别人洗钱，自己银行卡还可能被冻结。暖气费只走营业厅、官方 App 或支付宝微信的生活缴费入口。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>西藏那曲7.0级地震，已致16人遇难</h3>
         <p>昨晚10点半左右，那曲巴青县发生7.0级地震，目前16人遇难、46人受伤，是今年国内最大的一次地震。青藏铁路途经的列车被紧急扣停检查，近期要去西藏或有人在路上的，先查一下车次有没有受影响。震后余震不断，当地已启动应急响应，救援队连夜赶去。</p>
+        <div class="update">
+          <span>17:00 更新</span>
+          <p>伤亡数字更新：目前是 16 人遇难、76 人受伤，受伤的比早上说的 46 人多了不少。</p>
+        </div>
       </li>
 
       <li>
@@ -655,6 +679,8 @@
       <li><a href="https://rebang.today/home?tab=weibo">rebang 微博热榜</a></li>
       <li><a href="https://rebang.today/home?tab=douyin">rebang 抖音热榜</a></li>
       <li><a href="https://www.aitop100.cn/ai-daily-2026-10-22">AITOP100</a></li>
+      <li><a href="https://www.news.cn/politics/20261023/f21a5777774749daa0eed451c81f4002/c.html">新华网·国办AI就业意见</a></li>
+      <li><a href="https://news.bjd.com.cn/2026/10/18/11998943.shtml">北京日报·警惕打折代缴</a></li>
     </ul>
   </footer>
 
@@ -666,7 +692,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-10-23/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-10-23/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
