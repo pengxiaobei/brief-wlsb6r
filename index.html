@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年10月24日 星期六</p>
-    <p class="updated">最后更新 07:00 · 共 5 条</p>
+    <p class="updated">最后更新 11:30 · 共 6 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>医保个人账户的钱，可以给家人用了</h3>
+        <p>职工医保个人账户里的余额，现在全国都能分给家里人用：配偶、父母、子女、兄弟姐妹、祖父母、孙辈都算，对方参加的是职工医保还是居民医保都行。在国家医保服务平台 App 的「医保钱包」里设个额度，双方同意就能建立关系，一个人可以同时共济给好几个人。账户里闲着的钱，给爸妈看病买药就能花上。双方所在地都得已开通才行，先在 App 里查一下。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>西藏那曲 7.0 级地震，已致 16 人遇难</h3>
@@ -623,6 +637,7 @@
       <li><a href="https://m.21jingji.com/article/20261023/herald/ce674722ad9b046e2315d136c2aaec7f.html">21财经（台风预警）</a></li>
       <li><a href="https://www.qianzhan.com/indynews/detail/282/141028-fa96bd4c.html">前瞻网（油价）</a></li>
       <li><a href="https://rebang.today/home?tab=weibo">热榜（微博/抖音）</a></li>
+      <li><a href="https://www.news.cn/fortune/20260109/d1c76db1dead4925964dfe8ae8c74c5a/c.html">新华网（医保共济）</a></li>
     </ul>
   </footer>
 
@@ -634,7 +649,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-10-24/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-10-24/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
