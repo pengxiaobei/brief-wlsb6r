@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年10月27日 星期二</p>
-    <p class="updated">最后更新 07:00 · 共 7 条</p>
+    <p class="updated">最后更新 11:30 · 共 8 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>姆巴佩被曝涉华言论，多家平台和品牌切割</h3>
+        <p>热搜第一在吵这个：皇马球员姆巴佩被指在采访里说了伤害中国人感情的话，懂球帝说内容不予翻译，东鹏特饮宣布终止全部合作，咪咕撤下了他的进球视频。具体说了什么至今没有公开，有说法称和表情包有关，但没得到原始采访证实。他本人和皇马还没回应，聊的时候别把没证实的细节当真。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label tech">科技</span>
         <h3>Anthropic 公开招股书，要在纳斯达克上市</h3>
@@ -635,6 +649,7 @@
       <li><a href="https://www.bjnews.com.cn/detail/1792051754129227.html">新京报</a></li>
       <li><a href="https://m.gmw.cn/2026-10/19/content_1304577104.htm">光明网</a></li>
       <li><a href="https://www.sec.gov/Archives/edgar/data/0002130357/000162828026067168/anthropicpbc-sx1.htm">SEC EDGAR</a></li>
+      <li><a href="https://www.sohu.com/a/1093199264_120200071">懂球帝声明 / 搜狐</a></li>
     </ul>
   </footer>
 
@@ -646,7 +661,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-10-27/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-10-27/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
