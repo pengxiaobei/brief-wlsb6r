@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年10月29日 星期四</p>
-    <p class="updated">最后更新 07:00 · 共 9 条</p>
+    <p class="updated">最后更新 11:30 · 共 10 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>五中全会闭幕：二十一大定在明年下半年</h3>
+        <p>中央委员会的五中全会 10 月 26 日到 29 日在北京开，今天闭幕并发布公报，会议主题是全面从严治党，也就是管党员干部的纪律和作风。微博热搜显示，公报里说党的二十一大明年下半年在北京召开。这是五年一次的换届大会，时间点算是定下来了，具体细节等官方全文。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>今晚 24 点油价大概率上调，白天加满</h3>
@@ -650,6 +664,7 @@
       <li><a href="https://finance.ifeng.com">凤凰网</a></li>
       <li><a href="https://www.huxiu.com">虎嗅</a></li>
       <li><a href="https://rebang.today">rebang 热榜</a></li>
+      <li><a href="https://www.qstheory.cn">求是网</a></li>
     </ul>
   </footer>
 
@@ -661,7 +676,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-10-29/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-10-29/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
