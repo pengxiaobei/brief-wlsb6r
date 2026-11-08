@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年11月8日 星期日</p>
-    <p class="updated">最后更新 07:00 · 共 6 条</p>
+    <p class="updated">最后更新 17:00 · 共 7 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>17:00 新增</span>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>商南命案嫌犯已死亡，全城搜捕结束</h3>
+        <p>陕西商南 4 日凌晨发生的命案，造成 3 人死亡、2 名出警人员受伤。警方通报说，嫌犯 6 日在离县城 25 公里的深山废弃房屋里被发现，已经自杀身亡，起因是感情纠纷，案子还在进一步调查。当地商户之前一直提心吊胆，现在可以放心了。网上流传的受害人关系等细节，警方还没证实，别随手转。</p>
+      </li>
+
+      <li class="divider">
+        <span>07:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>立冬周末华北东北大雪，明天起降温</h3>
@@ -628,6 +642,7 @@
       <li><a href="https://www.news.cn/world/20251212/b1ca5232d1af4b26a5f4f580e51c3af0/c.html">新华网：APEC 深圳会议日期</a></li>
       <li><a href="https://finance.sina.cn/2026-10-07/detail-iniukhkn6215555.d.html">新浪财经：央行购金</a></li>
       <li><a href="https://www.itbear.com.cn/html/2026-07/1467348.html">ITBear：巴基斯坦航天员</a></li>
+      <li><a href="https://www.sina.cn/news/detail/5362260333823996.html">新浪新闻：商南案嫌犯自杀身亡</a></li>
     </ul>
   </footer>
 
@@ -639,7 +654,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-11-08/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-11-08/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
