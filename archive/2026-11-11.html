@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
+<title>今天 + 本周 · 2026年8月5日</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; }
+  h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
+  ul, ol { padding: 0; list-style: none; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<style>
+  :root {
+    --paper:       #FAFBFC;
+    --ink:         #0F1418;
+    --ink-body:    #333F49;
+    --ink-faint:   #7A8792;
+    --hair:        #E3E8ED;
+    --fill:        #F0F3F6;
+
+    --talk:        #14625E;
+    --talk-fill:   #E4F0EE;
+    --you:         #A83E10;
+    --you-fill:    #FCEBE1;
+    --tech:        #35558A;
+    --tech-fill:   #E6ECF6;
+
+    --sans: "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Microsoft YaHei", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:     #0F1216;
+      --ink:       #EAEFF4;
+      --ink-body:  #B3BFC9;
+      --ink-faint: #75828D;
+      --hair:      #232A31;
+      --fill:      #191F25;
+
+      --talk:      #5CC0B8;
+      --talk-fill: #122E2C;
+      --you:       #F2884F;
+      --you-fill:  #331B0F;
+      --tech:      #8AAEE0;
+      --tech-fill: #182233;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:     #0F1216;
+    --ink:       #EAEFF4;
+    --ink-body:  #B3BFC9;
+    --ink-faint: #75828D;
+    --hair:      #232A31;
+    --fill:      #191F25;
+    --talk:      #5CC0B8;
+    --talk-fill: #122E2C;
+    --you:       #F2884F;
+    --you-fill:  #331B0F;
+    --tech:      #8AAEE0;
+    --tech-fill: #182233;
+  }
+
+  :root[data-theme="light"] {
+    --paper:     #FAFBFC;
+    --ink:       #0F1418;
+    --ink-body:  #333F49;
+    --ink-faint: #7A8792;
+    --hair:      #E3E8ED;
+    --fill:      #F0F3F6;
+    --talk:      #14625E;
+    --talk-fill: #E4F0EE;
+    --you:       #A83E10;
+    --you-fill:  #FCEBE1;
+    --tech:      #35558A;
+    --tech-fill: #E6ECF6;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink-body);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .sheet {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 44px 22px 100px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ---------- 报头 ---------- */
+
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .masthead h1 {
+    margin: 0;
+    font-size: clamp(30px, 8vw, 40px);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+
+  .masthead .date {
+    font-size: 15px;
+    color: var(--ink-faint);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* 一天跑三轮，打开第一眼要能看到「更新到哪了」 */
+  .masthead .updated {
+    font-size: 13.5px;
+    color: var(--ink-faint);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .masthead .updated:empty { display: none; }
+
+  /* ---------- 大区标题 ---------- */
+
+  .part {
+    margin-top: 68px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .part > h2 {
+    margin: 0;
+    font-size: clamp(26px, 7vw, 32px);
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  .part > .sub {
+    margin: 10px 0 0;
+    font-size: 15.5px;
+    color: var(--ink-faint);
+    line-height: 1.7;
+  }
+
+  .part > .sub strong { color: var(--ink-body); font-weight: 600; }
+
+  /* ---------- 今天：五条 ---------- */
+
+  .today {
+    list-style: none;
+    margin: 40px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+  }
+
+  .today li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    align-self: flex-start;
+    padding: 3px 10px;
+    border-radius: 3px;
+    line-height: 1.6;
+  }
+
+  .label.talk { color: var(--talk); background: var(--talk-fill); }
+  .label.you  { color: var(--you);  background: var(--you-fill); }
+  .label.tech { color: var(--tech); background: var(--tech-fill); }
+
+  .today h3 {
+    margin: 0;
+    font-size: clamp(21px, 5.4vw, 24px);
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+
+  /* 轮次分界：往下是早先几轮发的，读者上次多半已经看过 */
+  .today li.divider {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    margin: 4px 0;
+  }
+
+  .today li.divider::before,
+  .today li.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--hair);
+  }
+
+  .today li.divider span {
+    font-size: 14px;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+
+  .today p {
+    margin: 0;
+    font-size: 16.5px;
+    line-height: 1.85;
+    color: var(--ink-body);
+  }
+
+  /* 最新一轮的标记。只在当天跑过不止一轮时出现——
+     首轮当天页面上不该有任何分段痕迹。 */
+  .today li.newmark {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: -26px;   /* 抵掉一部分 gap，让它贴住下面第一条 */
+  }
+
+  .today li.newmark span {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+    padding: 3px 10px;
+    border-radius: 3px;
+    color: var(--paper);
+    background: var(--you);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* 后面几轮补的新进展：原文一个字不改，变化挂在下面。
+     放在 .today p 之后 —— 两条选择器权重相同，靠顺序取胜。 */
+  .update {
+    background: var(--fill);
+    border-left: 3px solid var(--you);
+    border-radius: 0 3px 3px 0;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .update span {
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--you);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .update p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--ink);
+  }
+
+  /* ---------- 本周：趋势 ---------- */
+
+  .trends {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  .trend {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .trend h3 {
+    margin: 0;
+    font-size: clamp(23px, 6vw, 27px);
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+
+  /* 阶段条：四段，亮起当前所在的那段 */
+  .stage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+  }
+
+  .stage i {
+    font-style: normal;
+    font-size: 12.5px;
+    font-weight: 600;
+    text-align: center;
+    padding: 7px 2px;
+    background: var(--fill);
+    color: var(--ink-faint);
+    line-height: 1.5;
+    border-radius: 2px;
+  }
+
+  /* 亮起的那段用底色做字，浅色主题下是白字，深色主题下是深字——两边都够对比 */
+  .stage i.on { color: var(--paper); }
+
+  .stage.up   i.on { background: var(--talk); }
+  .stage.hot  i.on { background: var(--you); }
+  .stage.cold i.on { background: var(--tech); }
+
+  .facts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .facts li {
+    font-size: 16.5px;
+    line-height: 1.8;
+    color: var(--ink-body);
+    padding-left: 18px;
+    position: relative;
+  }
+
+  .facts li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.82em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--hair);
+  }
+
+  /* 猫笔刀那一段：直接复用 .facts 的圆点列表，只补一个上边距 */
+  .facts.column { margin-top: 40px; }
+
+  .facts b {
+    color: var(--ink);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .verdict {
+    background: var(--fill);
+    border-radius: 4px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .verdict::before {
+    content: "说人话";
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--ink-faint);
+  }
+
+  .verdict p {
+    margin: 0;
+    font-size: 16.5px;
+    line-height: 1.85;
+    color: var(--ink);
+  }
+
+  .verdict strong { font-weight: 700; }
+
+  /* ---------- 尺子 ---------- */
+
+  .ruler {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .ruler h3 {
+    margin: 0;
+    font-size: clamp(22px, 5.6vw, 26px);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+
+  .ruler p { margin: 0; font-size: 16.5px; line-height: 1.85; }
+
+  .ruler p strong { color: var(--ink); font-weight: 700; }
+
+  .signals {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .signals li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .signals span {
+    font-size: 16.5px;
+    color: var(--ink);
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  .signals em {
+    font-style: normal;
+    font-size: 14.5px;
+    color: var(--ink-faint);
+    line-height: 1.6;
+  }
+
+  .signals li:nth-child(-n+2) em { color: var(--talk); }
+  .signals li:nth-last-child(-n+2) em { color: var(--you); }
+
+  /* ---------- 说明 ---------- */
+
+  .colophon {
+    margin-top: 76px;
+    padding-top: 28px;
+    border-top: 1px solid var(--hair);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .colophon h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .colophon p {
+    margin: 0;
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: var(--ink-body);
+  }
+
+  .colophon p strong { color: var(--ink); font-weight: 700; }
+
+  .src {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
+
+  .src a {
+    color: var(--ink-faint);
+    text-decoration: none;
+    border-bottom: 1px solid var(--hair);
+    padding-bottom: 1px;
+  }
+
+  .src a:hover,
+  .src a:focus-visible { color: var(--talk); border-bottom-color: var(--talk); }
+
+  a:focus-visible { outline: 2px solid var(--talk); outline-offset: 3px; border-radius: 2px; }
+
+  /* 发现服务器上已经跑过新的一轮时浮出来 */
+  .refresh {
+    position: fixed;
+    left: 50%;
+    bottom: calc(24px + env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    z-index: 10;
+    border: 0;
+    border-radius: 999px;
+    padding: 11px 22px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--paper);
+    background: var(--you);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+
+  @media (max-width: 380px) {
+    .stage i { font-size: 11.5px; padding: 6px 1px; }
+  }
+</style>
+
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>今天 + 本周</h1>
+    <p class="date">2026年11月11日 星期三</p>
+    <p class="updated">最后更新 17:00 · 共 8 条</p>
+  </header>
+
+  <!-- ===================== 今天 ===================== -->
+  <section class="part">
+    <h2>今天</h2>
+
+    <ol class="today">
+      <li>
+        <span class="label you">影响你</span>
+        <h3>拼多多送货上门新规，网传 13 号生效</h3>
+        <p>微博热搜上说，拼多多的“送货上门”新规 11 月 13 日起生效。我只查到平台发过修改条款的征求意见，其中有一条是：不许商家诱导你改成放代收点。生效日期没找到官方说法，别当准信。买了带“送货上门”标识的东西，快递被硬放驿站，可以拿这条去找平台投诉。</p>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>美国 10 月物价超预期，12 月加息几乎板上钉钉</h3>
+        <p>美国 10 月物价比上月涨了 0.4%，比市场预想的 0.3% 高。这等于给美联储 12 月加息又添了理由，据猫笔刀引用的数据，市场押加息 0.25 个百分点的概率已到 86%。加息一般会让美元资产更吃香、黄金和比特币承压。手里有美元、海外基金的人，心里有个数就行。</p>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>吃降糖减肥针前，先查一次眼底</h3>
+        <p>司美格鲁肽这类降糖、减肥针，欧盟和英国的药监部门已提醒，有极少数人会出现视力突然下降，大约一万人里有一个。已经有糖尿病眼底病变的人，血糖降得太快也可能诱发眼底出血。打这类针之前，先去查个眼底，打了之后眼睛突然看不清，别拖，马上就医。</p>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>学龄人口见顶，学校资源要重新调配</h3>
+        <p>孩子数量按学段先后到了顶点：小学已经在 2023 年见顶，初中预计今年见顶，高中是 2029 年。后面的做法是，空出来的校舍和老师在幼儿园、小学、初中之间互相调配。家里有孩子的，学区、招生人数这几年可能会有变化，要多留意本地教育部门的通知。</p>
+      </li>
+
+      <li>
+        <span class="label tech">科技</span>
+        <h3>Anthropic 传最快 11 月中旬上市</h3>
+        <p>做 Claude 的 Anthropic 据说在抓紧上市，快的话 11 月中旬挂牌，最多募 644 亿美元。估值从最高时喊的 2 万亿美元，回落到 1.2 万亿到 1.3 万亿美元。英伟达、微软、台积电这些合作方会认购一部分。这是猫笔刀转述的传闻，没有官方确认。另一家 OpenAI 上市要等到 2027 年上半年。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>金鸡奖揭晓，高叶、梁家辉拿下影后影帝</h3>
+        <p>第 39 届金鸡奖昨晚颁出，高叶拿了最佳女主角，梁家辉拿了最佳男主角，成了影史上第二位三次封帝的人。最佳导演爆冷，也让不少人意外。高叶听到名字愣了几秒后哭了，朱一龙在台下哽咽着祝贺她。想接话的话，这几个点够用。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>花坛藏尸案，凶手审讯画面首次公开</h3>
+        <p>花坛藏尸案的凶手审讯画面第一次放出来，热搜上有 80 多万人在看。这起案子这几天一直是社交平台上的话题，想接话先看一下画面里的说法，别信各种二手猜测。</p>
+      </li>
+
+      <li>
+        <span class="label talk">在聊</span>
+        <h3>上门维修师傅，5 个里只有 2 个说了实话</h3>
+        <p>有人找了 5 个上门维修师傅查同一个小毛病，结果只有 2 个说了实话，其他人要么夸大故障、要么报高价。家里要修东西，多问两家、先问清楚怎么收费，修之前让师傅说出具体哪里坏了，比修完再吵强得多。</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ 猫笔刀（抓不到就整块不输出）============ -->
+  <section class="part">
+    <h2>猫笔刀昨晚说了什么</h2>
+    <p class="sub">《晃晃悠悠又一天》 · 11月10日晚</p>
+
+    <ul class="facts column">
+      <li>他补充说，算力中心为什么扎堆在新加坡：那里不适合建，电紧张、天热散热贵。</li>
+      <li>但新加坡有 20 多条海底光缆上岸，政治稳定、法律成熟，跨国公司看重这种确定性。</li>
+      <li>他说美国禁售芯片后，有人把芯片放在第三国，国内远程调用，算力转租成了生意。</li>
+      <li>他说这次 48 亿的芯片主要放在马来西亚机房，那里地多电便宜。</li>
+      <li>他觉得资金来源是匿名转账，有多层离岸公司隔着，美国只能走缓慢的司法协助。</li>
+      <li>A股今天成交 1.5 万亿，还是低迷。他说要回到 2 万亿以上，才算走出贫血。</li>
+      <li>他说影视板块蹭上了 AI 短剧概念，这几天领涨，但他对传统影视公司不看好。</li>
+      <li>他的判断是，AI 短剧最有确定性的是平台公司，内容生产商从来不是好生意，要预防回撤。</li>
+      <li>美国 10 月 CPI 环比涨 0.4%，高于预期的 0.3%，黄金、比特币小幅跳水。</li>
+      <li>他觉得 12 月加息避不开了，市场押加息 0.25% 的概率是 86%。</li>
+      <li>他说美国药监局称司美格鲁肽类药可能致盲，所以用药前建议先查眼底。</li>
+      <li>泡泡玛特连续回购，股价回到 146，他说 150 是敏感线。</li>
+    </ul>
+  </section>
+
+  <!-- ===================== 本周 ===================== -->
+  <section class="part">
+    <h2>本周：什么在冒头，什么在凉</h2>
+
+    <div class="trends">
+
+      <article class="trend">
+        <h3>这周没动静</h3>
+        <div class="verdict">
+          <p>名单上 32 项全部维持原状，没有换阶段的，也没有新冒出来的。</p>
+        </div>
+      </article>
+
+      <article class="trend">
+        <h3>名单全景</h3>
+        <ul class="facts">
+          <li><b>刚冒头</b>　笔尖密逃、数字排毒 / 功能机复兴、NSDR / 非睡眠深度休息、负重徒步、无酒精特调酒、社交跑团、安静读书局、厨房女巫风</li>
+          <li><b>正在起飞</b>　汽车音响改装、笼式网球、无人酒馆、全民观鸟、肌电 / 神经腕带、睡眠旅游、腰旗橄榄球、机器狗当宠物</li>
+          <li><b>已经很热</b>　视频播客、网咖 2.0、富养前额叶、旅游兴趣班、人形机器人 / 具身智能、搭子经济 / 付费陪伴、情绪消费 / 体验经济、拼布 / 布艺缝纫、HYROX 混合体能赛、床车旅行、奔县游</li>
+          <li><b>在降温</b>　白酒特饮、原生 AI 硬件、拼豆、即时零售、Labubu / 潮玩</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <footer class="colophon">
+    <p class="note">内容为 11 月 11 日。</p>
+
+    <h2>来源</h2>
+    <ul class="src">
+      <li><a href="https://rebang.today/home?tab=weibo">微博热榜（rebang.today）</a></li>
+      <li><a href="https://rebang.today/home?tab=douyin">抖音热榜（rebang.today）</a></li>
+      <li><a href="https://www.guancha.cn/economy/2026_08_10_826814.shtml">观察者网 拼多多送货上门</a></li>
+      <li><a href="https://news.bjd.com.cn/2026/09/24/11972029.shtml">北京日报 学龄人口变化</a></li>
+    </ul>
+  </footer>
+
+</div>
+
+<script>
+// 一天跑三轮，但 GitHub Pages 对 HTML 有 10 分钟缓存 ——
+// 不主动查的话，17:30 打开很可能拿到的还是 11:30 那一版。
+(function () {
+  if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
+
+  var built = "2026-11-11/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var shown = false;
+
+  function show() {
+    shown = true;
+    var b = document.createElement("button");
+    b.className = "refresh";
+    b.textContent = "有新内容，点这里刷新";
+    b.onclick = function () {
+      // 带上时间戳绕开缓存，光 reload() 可能还是拿旧的
+      location.replace(location.pathname + "?v=" + Date.now());
+    };
+    document.body.appendChild(b);
+  }
+
+  function check() {
+    if (shown) return;
+    fetch("today.json?t=" + Date.now(), { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || shown) return;
+        if ((d.stamp || "") + "/" + ((d.runs || []).length) !== built) show();
+      })
+      .catch(function () {});   // 没网就当无事发生，不要打扰读者
+  }
+
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) check();
+  });
+  check();
+})();
+</script>
+
+</body>
+</html>
