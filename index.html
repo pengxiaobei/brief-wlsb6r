@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年11月11日 星期三</p>
-    <p class="updated">最后更新 17:00 · 共 8 条</p>
+    <p class="updated">最后更新 11:30 · 共 9 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -535,6 +535,20 @@
     <h2>今天</h2>
 
     <ol class="today">
+      <li class="newmark">
+        <span>11:30 新增</span>
+      </li>
+
+      <li>
+        <span class="label you">影响你</span>
+        <h3>油价周四晚上要降，加油可以再等等</h3>
+        <p>按机构的测算，11 月 12 日晚 24 点，汽柴油每升大约降 0.21 到 0.25 元，一箱 50 升能省一两块钱。这是预测，最后以发改委正式公告为准。油箱不急着见底的话，等过了 12 号晚上再加更划算。</p>
+      </li>
+
+      <li class="divider">
+        <span>17:00 发的</span>
+      </li>
+
       <li>
         <span class="label you">影响你</span>
         <h3>拼多多送货上门新规，网传 13 号生效</h3>
@@ -640,6 +654,7 @@
       <li><a href="https://rebang.today/home?tab=douyin">抖音热榜（rebang.today）</a></li>
       <li><a href="https://www.guancha.cn/economy/2026_08_10_826814.shtml">观察者网 拼多多送货上门</a></li>
       <li><a href="https://news.bjd.com.cn/2026/09/24/11972029.shtml">北京日报 学龄人口变化</a></li>
+      <li><a href="https://news.10jqka.com.cn/20261106/c681555537.shtml">同花顺 油价预测</a></li>
     </ul>
   </footer>
 
@@ -651,7 +666,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-11-11/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-11-11/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
