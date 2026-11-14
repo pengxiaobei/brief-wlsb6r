@@ -527,7 +527,7 @@
   <header class="masthead">
     <h1>今天 + 本周</h1>
     <p class="date">2026年11月14日 星期六</p>
-    <p class="updated">最后更新 17:00 · 共 10 条</p>
+    <p class="updated">最后更新 11:30 · 共 10 条</p>
   </header>
 
   <!-- ===================== 今天 ===================== -->
@@ -539,6 +539,10 @@
         <span class="label you">影响你</span>
         <h3>下周二起深圳开 APEC，出行留意通知</h3>
         <p>亚太经合组织（APEC）领导人会议 11 月 18、19 日在深圳开，这是中国时隔 12 年再办。会议期间，开会地点附近一般会有交通管控。这几天要去深圳或在深圳通勤的，出门前看一眼当地的交通通知，具体范围以官方公告为准。</p>
+        <div class="update">
+          <span>11:30 更新</span>
+          <p>细则出来了：11 月 16 日到 20 日货车临时限行；会场周边道路电动自行车（民生行业除外）禁止通行；深圳口岸办建议跨境货运、校车、私家车在这一周工作日错峰过关。</p>
+        </div>
       </li>
 
       <li>
@@ -651,6 +655,7 @@
       <li><a href="https://rebang.today/home?tab=douyin">抖音热榜（rebang.today）</a></li>
       <li><a href="https://www.yicai.com">第一财经</a></li>
       <li><a href="https://www.mfa.gov.cn">外交部</a></li>
+      <li><a href="https://www.sz.gov.cn">深圳市政府 APEC 交通保障方案</a></li>
     </ul>
   </footer>
 
@@ -662,7 +667,7 @@
 (function () {
   if (location.pathname.indexOf("/archive/") !== -1) return;  // 存档页是死的，不用查
 
-  var built = "2026-11-14/1";   // "<stamp>/<跑过几轮>"，build.py 灌进来
+  var built = "2026-11-14/2";   // "<stamp>/<跑过几轮>"，build.py 灌进来
   var shown = false;
 
   function show() {
